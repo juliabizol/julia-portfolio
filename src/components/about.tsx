@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const stats = [
   { value: "8+", label: "Years Exp." },
   { value: "40+", label: "Shipped" },
@@ -13,18 +15,22 @@ export function About() {
   return (
     <section id="about" className="px-20 py-24">
       <div className="flex items-center gap-20">
-        {/* Photo placeholder */}
-        <div className="relative h-[500px] w-[400px] shrink-0 overflow-hidden rounded-2xl border border-slate-700 bg-[#331f61]">
+        {/* Photo */}
+        <div className="relative h-[500px] w-[400px] shrink-0 overflow-hidden rounded-2xl border border-slate-700">
+          <Image
+            src="/julia.jpeg"
+            alt="Julia Bizol"
+            fill
+            className="object-cover object-top"
+            priority
+          />
           <div
-            className="absolute bottom-0 right-0 h-[200px] w-[200px] rounded-full opacity-60"
+            className="absolute bottom-0 right-0 h-[200px] w-[200px] rounded-full opacity-40"
             style={{
               background: "radial-gradient(circle, #7c3aed, transparent 70%)",
               filter: "blur(60px)",
             }}
           />
-          <p className="absolute inset-0 flex items-center justify-center text-[14px] font-medium text-slate-500">
-            Your Photo Here
-          </p>
         </div>
 
         {/* Content */}
