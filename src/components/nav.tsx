@@ -21,9 +21,9 @@ export function Nav({ activeSection }: { activeSection?: string }) {
           <a
             key={l.label}
             href={l.href}
-            className={`text-[15px] font-medium transition-colors hover:text-purple-400 ${
+            className={`text-[15px] font-medium transition-colors hover:text-purple-300 ${
               activeSection === l.label.toLowerCase()
-                ? "text-purple-400"
+                ? "text-purple-300"
                 : "text-slate-300"
             }`}
           >
@@ -34,7 +34,7 @@ export function Nav({ activeSection }: { activeSection?: string }) {
 
       <a
         href="#contact"
-        className="bg-purple-500 hover:bg-purple-400 transition-colors text-white text-[14px] font-medium px-5 py-[10px] rounded-full"
+        className="bg-purple-800 hover:bg-purple-700 transition-colors text-white text-[14px] font-medium px-5 py-[10px] rounded-full"
       >
         Let&apos;s Talk
       </a>

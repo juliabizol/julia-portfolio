@@ -26,9 +26,8 @@ const tools = ["Figma", "Maze", "Hotjar", "Miro", "Notion", "Jira", "Lottie", "F
 export function Process() {
   return (
     <section id="process" className="px-20 pt-20 pb-20">
-      {/* Header */}
       <div className="mb-14 flex flex-col gap-4">
-        <p className="text-[13px] font-medium tracking-[0.03em] text-purple-400">
+        <p className="text-[13px] font-medium tracking-[0.03em] text-purple-300">
           HOW I WORK
         </p>
         <h2 className="text-[40px] font-bold tracking-[-0.01em] text-white">
@@ -40,31 +39,23 @@ export function Process() {
         </p>
       </div>
 
-      {/* Steps */}
       <div className="grid grid-cols-4 gap-6">
         {steps.map((step) => (
           <div
             key={step.num}
             className="flex flex-col gap-4 rounded-xl border border-slate-700 bg-slate-800 p-7"
           >
-            <span className="w-fit rounded-full bg-purple-700/40 px-3 py-1.5 text-[12px] font-bold tracking-[0.02em] text-purple-400">
+            <span className="w-fit rounded-full bg-purple-900/50 px-3 py-1.5 text-[12px] font-bold tracking-[0.02em] text-purple-300">
               {step.num}
             </span>
-            <h3 className="text-[20px] font-semibold text-white">
-              {step.title}
-            </h3>
-            <p className="text-[14px] leading-[22px] text-slate-300">
-              {step.desc}
-            </p>
+            <h3 className="text-[20px] font-semibold text-white">{step.title}</h3>
+            <p className="text-[14px] leading-[22px] text-slate-300">{step.desc}</p>
           </div>
         ))}
       </div>
 
-      {/* Tools */}
       <div className="mt-16 flex flex-col gap-5">
-        <h3 className="text-[18px] font-semibold text-white">
-          Tools &amp; Methods
-        </h3>
+        <h3 className="text-[18px] font-semibold text-white">Tools &amp; Methods</h3>
         <div className="flex flex-wrap gap-3">
           {tools.map((tool) => (
             <span

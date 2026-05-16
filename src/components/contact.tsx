@@ -11,14 +11,14 @@ export function Contact() {
       <div
         className="pointer-events-none absolute left-[-100px] bottom-0 h-[600px] w-[600px] rounded-full opacity-12"
         style={{
-          background: "radial-gradient(circle, #7c3aed 0%, transparent 70%)",
+          background: "radial-gradient(circle, #6b21a8 0%, transparent 70%)",
           filter: "blur(100px)",
         }}
       />
 
       {/* Main content */}
       <div className="flex flex-1 flex-col items-center justify-center gap-10 px-20 py-32 text-center">
-        <p className="text-[13px] font-medium tracking-[0.03em] text-purple-400">
+        <p className="text-[13px] font-medium tracking-[0.03em] text-purple-300">
           GET IN TOUCH
         </p>
 
@@ -36,7 +36,7 @@ export function Contact() {
 
         <a
           href="mailto:juliabizol@gmail.com"
-          className="rounded-full bg-purple-500 hover:bg-purple-400 transition-colors px-10 py-[18px] text-[16px] font-semibold text-white"
+          className="rounded-full bg-purple-800 hover:bg-purple-700 transition-colors px-10 py-[18px] text-[16px] font-semibold text-white"
         >
           juliabizol@gmail.com
         </a>

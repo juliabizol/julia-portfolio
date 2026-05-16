@@ -27,7 +27,7 @@ export function About() {
           <div
             className="absolute bottom-0 right-0 h-[200px] w-[200px] rounded-full opacity-40"
             style={{
-              background: "radial-gradient(circle, #7c3aed, transparent 70%)",
+              background: "radial-gradient(circle, #6b21a8, transparent 70%)",
               filter: "blur(60px)",
             }}
           />
@@ -35,7 +35,7 @@ export function About() {
 
         {/* Content */}
         <div className="flex flex-1 flex-col gap-7">
-          <p className="text-[13px] font-medium tracking-[0.03em] text-purple-400">
+          <p className="text-[13px] font-medium tracking-[0.03em] text-purple-300">
             ABOUT ME
           </p>
 
@@ -58,7 +58,7 @@ export function About() {
           <div className="flex gap-12">
             {stats.map((s) => (
               <div key={s.label} className="flex flex-col gap-1">
-                <span className="text-[32px] font-bold text-purple-500">
+                <span className="text-[32px] font-bold text-purple-800">
                   {s.value}
                 </span>
                 <span className="text-[13px] text-slate-400">{s.label}</span>

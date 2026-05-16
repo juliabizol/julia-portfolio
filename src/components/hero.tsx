@@ -3,18 +3,17 @@ export function Hero() {
     <section className="relative flex flex-col items-center justify-center min-h-[calc(100vh-72px)] px-40 py-24 overflow-hidden text-center">
       {/* Purple glow orb */}
       <div
-        className="pointer-events-none absolute right-[-50px] top-[-100px] h-[700px] w-[700px] rounded-full opacity-15"
+        className="pointer-events-none absolute right-[-50px] top-[-100px] h-[700px] w-[700px] rounded-full opacity-20"
         style={{
-          background:
-            "radial-gradient(circle, #7c3aed 0%, transparent 70%)",
+          background: "radial-gradient(circle, #6b21a8 0%, transparent 70%)",
           filter: "blur(80px)",
         }}
       />
 
       {/* Available badge */}
-      <div className="mb-8 flex items-center gap-1.5 rounded-full bg-purple-700/40 px-3 py-1.5">
-        <span className="h-1.5 w-1.5 rounded-full bg-purple-500" />
-        <span className="text-[13px] font-medium text-purple-400">
+      <div className="mb-8 flex items-center gap-1.5 rounded-full bg-purple-900/50 px-3 py-1.5">
+        <span className="h-1.5 w-1.5 rounded-full bg-purple-800" />
+        <span className="text-[13px] font-medium text-purple-300">
           Available for Freelance
         </span>
       </div>
@@ -37,7 +36,7 @@ export function Hero() {
       <div className="mt-10 flex items-center gap-4">
         <a
           href="#work"
-          className="rounded-full bg-purple-500 hover:bg-purple-400 transition-colors px-7 py-[14px] text-[15px] font-semibold text-white"
+          className="rounded-full bg-purple-800 hover:bg-purple-700 transition-colors px-7 py-[14px] text-[15px] font-semibold text-white"
         >
           View My Work
         </a>
