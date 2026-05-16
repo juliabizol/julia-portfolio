@@ -152,7 +152,7 @@ export default async function CaseStudyPage({
               <h3 className="text-[18px] md:text-[20px] font-semibold text-white mb-4 md:mb-5">Methods</h3>
               <div className="flex flex-wrap gap-2">
                 {project.research.methods.map((m) => (
-                  <span key={m} className="rounded-lg border border-slate-700 bg-slate-800 px-3 md:px-4 py-1.5 md:py-2 text-[13px] md:text-[14px] font-medium text-slate-300">
+                  <span key={m} className="rounded-lg border border-slate-700 bg-slate-800/50 px-3 md:px-4 py-1.5 md:py-2 text-[13px] md:text-[14px] font-medium text-slate-300">
                     {m}
                   </span>
                 ))}
@@ -180,7 +180,7 @@ export default async function CaseStudyPage({
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 mb-8 md:mb-12">
             {project.process.map((step, i) => (
-              <div key={step.step} className="flex flex-col gap-3 md:gap-4 rounded-xl border border-slate-700 bg-slate-800 p-5 md:p-6">
+              <div key={step.step} className="flex flex-col gap-3 md:gap-4 rounded-xl border border-slate-700 bg-slate-800/50 p-5 md:p-6">
                 <span className="w-fit rounded-full bg-purple-900/50 px-3 py-1 text-[12px] font-bold text-purple-300">
                   {String(i + 1).padStart(2, "0")}
                 </span>
@@ -222,7 +222,7 @@ export default async function CaseStudyPage({
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 md:gap-6">
             {project.outcomes.map((o) => (
-              <div key={o.label} className="flex flex-col gap-2 md:gap-3 rounded-xl border border-slate-700 bg-slate-800 p-6 md:p-8">
+              <div key={o.label} className="flex flex-col gap-2 md:gap-3 rounded-xl border border-slate-700 bg-slate-800/50 p-6 md:p-8">
                 <span className="text-[40px] md:text-[48px] font-bold leading-none text-purple-300">
                   {o.value}
                 </span>

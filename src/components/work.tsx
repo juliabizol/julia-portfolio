@@ -25,7 +25,7 @@ function ProjectCard({
   return (
     <Link
       href={`/work/${slug}`}
-      className="group flex flex-col overflow-hidden rounded-xl border border-slate-700 bg-slate-800 transition-colors hover:border-purple-800/60"
+      className="group flex flex-col overflow-hidden rounded-xl border border-slate-700 bg-slate-800/50 transition-colors hover:border-purple-800/60"
     >
       <div className={`h-[200px] md:h-[220px] w-full bg-gradient-to-br ${accent}`} />
       <div className="flex flex-col gap-3 p-5 md:p-6">
