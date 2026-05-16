@@ -1,23 +1,5 @@
-const projects = [
-  {
-    title: "Checkout Flow Redesign",
-    tags: ["UX Research", "Product"],
-    desc: "Reduced cart abandonment by 34% through contextual research and iterative prototyping.",
-    accent: "from-purple-900/70 to-slate-800",
-  },
-  {
-    title: "Design System @ Scale",
-    tags: ["Systems", "Tokens"],
-    desc: "Built a component library used across 6 product teams, cutting design-to-dev handoff time in half.",
-    accent: "from-violet-900/70 to-slate-800",
-  },
-  {
-    title: "Mobile Onboarding Flow",
-    tags: ["Mobile", "Research"],
-    desc: "Redesigned the first-run experience, lifting 7-day retention by 22% across iOS and Android.",
-    accent: "from-purple-800/60 to-slate-800",
-  },
-];
+import Link from "next/link";
+import { projects } from "@/lib/projects";
 
 function Badge({ label }: { label: string }) {
   return (
@@ -27,9 +9,24 @@ function Badge({ label }: { label: string }) {
   );
 }
 
-function ProjectCard({ title, tags, desc, accent }: (typeof projects)[0]) {
+function ProjectCard({
+  slug,
+  title,
+  tags,
+  desc,
+  accent,
+}: {
+  slug: string;
+  title: string;
+  tags: string[];
+  desc: string;
+  accent: string;
+}) {
   return (
-    <div className="flex flex-1 flex-col overflow-hidden rounded-xl border border-slate-700 bg-slate-800 transition-colors hover:border-purple-800/60">
+    <Link
+      href={`/work/${slug}`}
+      className="group flex flex-1 flex-col overflow-hidden rounded-xl border border-slate-700 bg-slate-800 transition-colors hover:border-purple-800/60"
+    >
       <div className={`h-[220px] w-full bg-gradient-to-br ${accent}`} />
       <div className="flex flex-col gap-3 p-6">
         <div className="flex gap-1.5">
@@ -39,11 +36,11 @@ function ProjectCard({ title, tags, desc, accent }: (typeof projects)[0]) {
         </div>
         <h3 className="text-[19px] font-semibold text-white">{title}</h3>
         <p className="text-[14px] leading-[22px] text-slate-300">{desc}</p>
-        <span className="text-[13px] font-medium text-purple-300">
+        <span className="text-[13px] font-medium text-purple-300 group-hover:underline">
           View Case Study →
         </span>
       </div>
-    </div>
+    </Link>
   );
 }
 
@@ -63,7 +60,14 @@ export function Work() {
       </div>
       <div className="flex gap-6">
         {projects.map((p) => (
-          <ProjectCard key={p.title} {...p} />
+          <ProjectCard
+            key={p.slug}
+            slug={p.slug}
+            title={p.title}
+            tags={p.tags}
+            desc={p.summary}
+            accent={p.accent}
+          />
         ))}
       </div>
     </section>

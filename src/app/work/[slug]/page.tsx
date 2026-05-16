@@ -1,0 +1,324 @@
+import { notFound } from "next/navigation";
+import Link from "next/link";
+import { getProject, projects } from "@/lib/projects";
+import { StickyNav } from "@/components/nav";
+
+export function generateStaticParams() {
+  return projects.map((p) => ({ slug: p.slug }));
+}
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}) {
+  const { slug } = await params;
+  const project = getProject(slug);
+  if (!project) return {};
+  return {
+    title: `${project.title} — Julia Bizol`,
+    description: project.summary,
+  };
+}
+
+// ─── Reusable sub-components ──────────────────────────────────────────────────
+
+function SectionLabel({ children }: { children: React.ReactNode }) {
+  return (
+    <p className="text-[13px] font-medium tracking-[0.03em] text-purple-300 mb-4">
+      {children}
+    </p>
+  );
+}
+
+function ImagePlaceholder({
+  height = "h-[480px]",
+  gradient,
+}: {
+  height?: string;
+  gradient: string;
+}) {
+  return (
+    <div
+      className={`w-full ${height} rounded-2xl bg-gradient-to-br ${gradient} border border-slate-700`}
+    />
+  );
+}
+
+// ─── Page ─────────────────────────────────────────────────────────────────────
+
+export default async function CaseStudyPage({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}) {
+  const { slug } = await params;
+  const project = getProject(slug);
+  if (!project) notFound();
+
+  const nextProject = projects[(projects.findIndex((p) => p.slug === slug) + 1) % projects.length];
+
+  return (
+    <div className="flex flex-col min-h-screen bg-slate-950">
+      <StickyNav />
+
+      <main className="flex flex-col">
+
+        {/* ── Back link ── */}
+        <div className="px-20 pt-10">
+          <Link
+            href="/#work"
+            className="inline-flex items-center gap-2 text-[14px] font-medium text-slate-400 hover:text-white transition-colors"
+          >
+            ← Back to Work
+          </Link>
+        </div>
+
+        {/* ── Hero ── */}
+        <section className="px-20 pt-10 pb-16">
+          <div className="flex flex-wrap gap-2 mb-6">
+            {project.tags.map((tag) => (
+              <span
+                key={tag}
+                className="rounded-full bg-purple-900/50 px-[10px] py-1 text-[11px] font-medium text-purple-300"
+              >
+                {tag}
+              </span>
+            ))}
+          </div>
+
+          <h1 className="text-[56px] font-bold leading-[64px] tracking-[-0.02em] text-white max-w-[860px] mb-6">
+            {project.title}
+          </h1>
+
+          <p className="text-[20px] leading-[32px] text-slate-300 max-w-[680px] mb-12">
+            {project.summary}
+          </p>
+
+          {/* Metrics */}
+          <div className="flex gap-12 pb-12 border-b border-slate-800">
+            {project.metrics.map((m) => (
+              <div key={m.label} className="flex flex-col gap-1">
+                <span className="text-[36px] font-bold text-purple-300 leading-none">
+                  {m.value}
+                </span>
+                <span className="text-[13px] text-slate-400">{m.label}</span>
+              </div>
+            ))}
+          </div>
+
+          {/* Hero image */}
+          <div className="mt-12">
+            <ImagePlaceholder height="h-[540px]" gradient={project.accent} />
+          </div>
+        </section>
+
+        {/* ── Overview ── */}
+        <section className="px-20 py-16 border-t border-slate-800">
+          <div className="grid grid-cols-[280px_1fr] gap-20">
+            {/* Meta */}
+            <div className="flex flex-col gap-6">
+              {[
+                { label: "Role", value: project.role },
+                { label: "Timeline", value: project.timeline },
+                { label: "Team", value: project.team },
+                { label: "Tools", value: project.tools.join(", ") },
+              ].map((item) => (
+                <div key={item.label} className="flex flex-col gap-1">
+                  <span className="text-[12px] font-medium tracking-[0.05em] text-slate-500 uppercase">
+                    {item.label}
+                  </span>
+                  <span className="text-[15px] text-slate-200">{item.value}</span>
+                </div>
+              ))}
+            </div>
+
+            {/* Context */}
+            <div>
+              <SectionLabel>OVERVIEW</SectionLabel>
+              <p className="text-[17px] leading-[28px] text-slate-300">
+                {project.context}
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* ── Problem ── */}
+        <section className="px-20 py-16 border-t border-slate-800">
+          <div className="max-w-[760px]">
+            <SectionLabel>THE PROBLEM</SectionLabel>
+            <h2 className="text-[36px] font-bold leading-[44px] tracking-[-0.01em] text-white mb-6">
+              {project.problem.heading}
+            </h2>
+            <p className="text-[17px] leading-[28px] text-slate-300">
+              {project.problem.body}
+            </p>
+          </div>
+          <div className="mt-12">
+            <ImagePlaceholder height="h-[360px]" gradient={project.accent} />
+          </div>
+        </section>
+
+        {/* ── Research ── */}
+        <section className="px-20 py-16 border-t border-slate-800">
+          <SectionLabel>RESEARCH &amp; DISCOVERY</SectionLabel>
+
+          <div className="grid grid-cols-2 gap-16">
+            {/* Methods */}
+            <div>
+              <h3 className="text-[20px] font-semibold text-white mb-5">
+                Methods
+              </h3>
+              <div className="flex flex-wrap gap-2">
+                {project.research.methods.map((m) => (
+                  <span
+                    key={m}
+                    className="rounded-lg border border-slate-700 bg-slate-800 px-4 py-2 text-[14px] font-medium text-slate-300"
+                  >
+                    {m}
+                  </span>
+                ))}
+              </div>
+            </div>
+
+            {/* Findings */}
+            <div>
+              <h3 className="text-[20px] font-semibold text-white mb-5">
+                Key Findings
+              </h3>
+              <ul className="flex flex-col gap-4">
+                {project.research.findings.map((f, i) => (
+                  <li key={i} className="flex gap-3 text-[15px] leading-[24px] text-slate-300">
+                    <span className="mt-1 h-2 w-2 shrink-0 rounded-full bg-purple-500" />
+                    {f}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        {/* ── Design Process ── */}
+        <section className="px-20 py-16 border-t border-slate-800">
+          <SectionLabel>DESIGN PROCESS</SectionLabel>
+          <h2 className="text-[36px] font-bold tracking-[-0.01em] text-white mb-12">
+            How we got there.
+          </h2>
+
+          <div className="grid grid-cols-4 gap-6 mb-12">
+            {project.process.map((step, i) => (
+              <div
+                key={step.step}
+                className="flex flex-col gap-4 rounded-xl border border-slate-700 bg-slate-800 p-6"
+              >
+                <span className="w-fit rounded-full bg-purple-900/50 px-3 py-1 text-[12px] font-bold text-purple-300">
+                  {String(i + 1).padStart(2, "0")}
+                </span>
+                <h4 className="text-[16px] font-semibold text-white">{step.step}</h4>
+                <p className="text-[14px] leading-[22px] text-slate-400">
+                  {step.description}
+                </p>
+              </div>
+            ))}
+          </div>
+
+          {/* Process image placeholders */}
+          <div className="grid grid-cols-2 gap-6">
+            <ImagePlaceholder height="h-[300px]" gradient={project.accent} />
+            <ImagePlaceholder height="h-[300px]" gradient="from-slate-700 to-slate-800" />
+          </div>
+        </section>
+
+        {/* ── Solution ── */}
+        <section className="px-20 py-16 border-t border-slate-800">
+          <div className="max-w-[760px] mb-12">
+            <SectionLabel>THE SOLUTION</SectionLabel>
+            <h2 className="text-[36px] font-bold leading-[44px] tracking-[-0.01em] text-white mb-6">
+              {project.solution.heading}
+            </h2>
+            <p className="text-[17px] leading-[28px] text-slate-300">
+              {project.solution.body}
+            </p>
+          </div>
+          <ImagePlaceholder height="h-[560px]" gradient={project.accent} />
+          <div className="grid grid-cols-3 gap-6 mt-6">
+            {[0, 1, 2].map((i) => (
+              <ImagePlaceholder
+                key={i}
+                height="h-[260px]"
+                gradient="from-slate-700 to-slate-800"
+              />
+            ))}
+          </div>
+        </section>
+
+        {/* ── Outcomes ── */}
+        <section className="px-20 py-16 border-t border-slate-800">
+          <SectionLabel>OUTCOMES</SectionLabel>
+          <h2 className="text-[36px] font-bold tracking-[-0.01em] text-white mb-12">
+            Results &amp; Impact
+          </h2>
+
+          <div className="grid grid-cols-3 gap-6">
+            {project.outcomes.map((o) => (
+              <div
+                key={o.label}
+                className="flex flex-col gap-3 rounded-xl border border-slate-700 bg-slate-800 p-8"
+              >
+                <span className="text-[48px] font-bold leading-none text-purple-300">
+                  {o.value}
+                </span>
+                <span className="text-[16px] font-semibold text-white">
+                  {o.label}
+                </span>
+                <p className="text-[14px] leading-[22px] text-slate-400">
+                  {o.description}
+                </p>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* ── Next case study ── */}
+        <section className="border-t border-slate-800">
+          <Link
+            href={`/work/${nextProject.slug}`}
+            className="group flex items-center justify-between px-20 py-12 hover:bg-slate-900/50 transition-colors"
+          >
+            <div className="flex flex-col gap-2">
+              <span className="text-[13px] font-medium tracking-[0.03em] text-slate-500">
+                NEXT CASE STUDY
+              </span>
+              <span className="text-[28px] font-bold text-white group-hover:text-purple-300 transition-colors">
+                {nextProject.title}
+              </span>
+              <div className="flex gap-2 mt-1">
+                {nextProject.tags.map((t) => (
+                  <span
+                    key={t}
+                    className="rounded-full bg-purple-900/50 px-[10px] py-1 text-[11px] font-medium text-purple-300"
+                  >
+                    {t}
+                  </span>
+                ))}
+              </div>
+            </div>
+            <span className="text-[32px] text-slate-600 group-hover:text-purple-300 group-hover:translate-x-2 transition-all">
+              →
+            </span>
+          </Link>
+        </section>
+
+        {/* ── Footer ── */}
+        <footer className="flex items-center justify-between border-t border-slate-800 px-20 py-4">
+          <p className="text-[13px] text-slate-500">
+            © 2026 Julia Bizol · All rights reserved
+          </p>
+          <p className="text-[13px] text-slate-500">
+            Designed in Figma · Built with Next.js
+          </p>
+        </footer>
+      </main>
+    </div>
+  );
+}
