@@ -46,7 +46,7 @@ export function Contact() {
               href={s.href}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-[14px] font-medium text-slate-500 hover:text-slate-300 transition-colors"
+              className="text-[14px] font-medium text-slate-400 hover:text-slate-200 transition-colors"
             >
               {s.label}
             </a>
