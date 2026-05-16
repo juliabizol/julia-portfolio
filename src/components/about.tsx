@@ -16,12 +16,13 @@ export function About() {
     <section id="about" className="px-5 md:px-10 lg:px-20 py-16 md:py-24">
       <div className="flex flex-col lg:flex-row items-start lg:items-center gap-10 lg:gap-20">
         {/* Photo */}
-        <div className="relative w-full lg:w-[400px] lg:shrink-0 h-[320px] sm:h-[400px] lg:h-[500px] overflow-hidden rounded-2xl border border-slate-700">
+        <div className="relative w-full lg:w-[400px] lg:shrink-0 h-[360px] sm:h-[460px] lg:h-[500px] overflow-hidden rounded-2xl border border-slate-700">
           <Image
             src="/julia.jpeg"
             alt="Julia Bizol"
             fill
-            className="object-cover object-top"
+            className="object-cover"
+            style={{ objectPosition: "center 20%" }}
             priority
           />
           <div
