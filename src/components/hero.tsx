@@ -48,7 +48,7 @@ export function Hero() {
       </div>
 
       {/* Scroll hint */}
-      <p className="mt-12 md:mt-16 text-[12px] text-slate-500">↓ scroll to explore</p>
+      <p className="mt-12 md:mt-16 text-[12px] text-slate-400">↓ scroll to explore</p>
     </section>
   );
 }

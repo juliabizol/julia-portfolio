@@ -59,7 +59,7 @@ export function About() {
           <div className="flex gap-8 md:gap-12">
             {stats.map((s) => (
               <div key={s.label} className="flex flex-col gap-1">
-                <span className="text-[28px] md:text-[32px] font-bold text-purple-800">
+                <span className="text-[28px] md:text-[32px] font-bold text-purple-300">
                   {s.value}
                 </span>
                 <span className="text-[12px] md:text-[13px] text-slate-400">{s.label}</span>
