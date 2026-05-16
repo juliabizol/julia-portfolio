@@ -1,5 +1,5 @@
 const socials = [
-  { label: "LinkedIn", href: "https://linkedin.com" },
+  { label: "LinkedIn", href: "https://linkedin.com/in/juliabizol" },
   { label: "Dribbble", href: "https://dribbble.com" },
   { label: "Read.cv", href: "https://read.cv" },
 ];
