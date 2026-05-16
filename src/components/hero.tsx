@@ -27,8 +27,8 @@ export function Hero() {
 
       {/* Subtitle */}
       <p className="mt-6 md:mt-8 max-w-[540px] lg:max-w-[680px] text-[16px] md:text-[18px] leading-[26px] md:leading-[28px] text-slate-300">
-        Senior UX Designer with 8+ years crafting digital experiences for B2B
-        and consumer products. Based in São Paulo.
+        Senior UX Designer with 8+ years of experience turning complex problems
+        into intuitive, accessible experiences.
       </p>
 
       {/* CTAs */}
