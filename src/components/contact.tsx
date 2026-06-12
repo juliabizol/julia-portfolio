@@ -1,6 +1,5 @@
 const socials = [
   { label: "LinkedIn", href: "https://linkedin.com/in/juliabizol" },
-  { label: "Behance", href: "https://www.behance.net/juliabizol" },
 ];
 
 export function Contact() {
