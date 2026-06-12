@@ -57,7 +57,7 @@ export function Contact() {
       {/* Footer */}
       <div className="flex flex-col sm:flex-row items-center justify-between gap-1 border-t border-slate-800 px-5 md:px-10 lg:px-20 py-4">
         <p className="text-[12px] md:text-[13px] text-slate-500">
-          © 2026 Julia Bizol • Test Deploy
+          © 2026 Julia Bizol · All rights reserved
         </p>
         <p className="text-[12px] md:text-[13px] text-slate-500">
           Designed in Figma · Built with Next.js
