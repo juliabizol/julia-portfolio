@@ -1,8 +1,26 @@
+"use client";
+
+import { useState } from "react";
+
+const EMAIL = "juliabizol@gmail.com";
+
 const socials = [
   { label: "LinkedIn", href: "https://linkedin.com/in/juliabizol" },
 ];
 
 export function Contact() {
+  const [copied, setCopied] = useState(false);
+
+  const handleCopy = async () => {
+    try {
+      await navigator.clipboard.writeText(EMAIL);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000);
+    } catch {
+      // clipboard API unavailable
+    }
+  };
+
   return (
     <section id="contact" className="relative flex flex-col overflow-hidden">
       {/* Purple glow */}
@@ -31,12 +49,24 @@ export function Contact() {
           conversations. Drop me a line.
         </p>
 
-        <a
-          href="mailto:juliabizol@gmail.com"
-          className="rounded-full bg-purple-800 hover:bg-purple-700 transition-colors px-7 md:px-10 py-4 md:py-[18px] text-[15px] md:text-[16px] font-semibold text-white break-all sm:break-normal"
-        >
-          juliabizol@gmail.com
-        </a>
+        {/* Email copy widget */}
+        <div className="inline-flex items-center rounded-2xl border border-slate-700 bg-slate-800/50 overflow-hidden">
+          <span className="px-5 md:px-6 py-3.5 md:py-4 text-[15px] md:text-[16px] font-medium text-white select-all">
+            {EMAIL}
+          </span>
+          <div className="w-px self-stretch bg-slate-700" />
+          <button
+            onClick={handleCopy}
+            aria-label="Copy email address"
+            className={`px-4 md:px-5 py-3.5 md:py-4 text-[13px] md:text-[14px] font-medium transition-colors shrink-0 ${
+              copied
+                ? "text-purple-300"
+                : "text-slate-400 hover:text-white hover:bg-slate-700/50"
+            }`}
+          >
+            {copied ? "Copied!" : "Copy"}
+          </button>
+        </div>
 
         <div className="flex gap-6 md:gap-8">
           {socials.map((s) => (
