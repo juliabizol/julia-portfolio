@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { usePathname } from "next/navigation";
 import { projects } from "@/lib/projects";
 
@@ -35,6 +35,15 @@ export function Nav({ activeSection }: { activeSection?: string }) {
   const [workOpen, setWorkOpen] = useState(false);
   const [mobileWorkOpen, setMobileWorkOpen] = useState(false);
   const pathname = usePathname();
+  const closeTimeout = useRef<ReturnType<typeof setTimeout> | null>(null);
+
+  const openWork = () => {
+    if (closeTimeout.current) clearTimeout(closeTimeout.current);
+    setWorkOpen(true);
+  };
+  const scheduleCloseWork = () => {
+    closeTimeout.current = setTimeout(() => setWorkOpen(false), 150);
+  };
 
   const isWorkActive =
     pathname.startsWith("/work/") || activeSection === "work";
@@ -56,8 +65,8 @@ export function Nav({ activeSection }: { activeSection?: string }) {
         {/* Work dropdown */}
         <div
           className="relative"
-          onMouseEnter={() => setWorkOpen(true)}
-          onMouseLeave={() => setWorkOpen(false)}
+          onMouseEnter={openWork}
+          onMouseLeave={scheduleCloseWork}
         >
           <button
             className={`flex items-center gap-1.5 text-[15px] font-medium transition-colors hover:text-purple-300 ${
@@ -69,16 +78,24 @@ export function Nav({ activeSection }: { activeSection?: string }) {
           </button>
 
           {workOpen && (
-            <div className="absolute top-full left-1/2 -translate-x-1/2 mt-2 w-[224px] rounded-xl border border-slate-700 bg-slate-900 shadow-xl py-1.5 z-50">
-              {workProjects.map((p) => (
-                <Link
-                  key={p.href}
-                  href={p.href}
-                  className="block px-4 py-2.5 text-[14px] text-slate-300 hover:text-white hover:bg-slate-800 transition-colors"
-                >
-                  {p.label}
-                </Link>
-              ))}
+            // pt-2 turns the visual gap into transparent padding inside the
+            // descendant tree, so mouseleave never fires while crossing it.
+            <div
+              className="absolute top-full left-1/2 -translate-x-1/2 pt-2 w-[224px] z-50"
+              onMouseEnter={openWork}
+              onMouseLeave={scheduleCloseWork}
+            >
+              <div className="rounded-xl border border-slate-700 bg-slate-900 shadow-xl py-1.5">
+                {workProjects.map((p) => (
+                  <Link
+                    key={p.href}
+                    href={p.href}
+                    className="block px-4 py-2.5 text-[14px] text-slate-300 hover:text-white hover:bg-slate-800 transition-colors"
+                  >
+                    {p.label}
+                  </Link>
+                ))}
+              </div>
             </div>
           )}
         </div>
