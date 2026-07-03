@@ -62,7 +62,7 @@ export default async function CaseStudyPage({
             href="/#work"
             className="inline-flex items-center gap-2 text-[14px] font-medium text-slate-400 hover:text-white transition-colors"
           >
-            ← Back to Work
+            ← View all projects
           </Link>
         </div>
 
