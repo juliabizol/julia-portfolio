@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { StickyNav } from "@/components/nav";
 import { Process } from "@/components/process";
 import { Contact } from "@/components/contact";
@@ -78,34 +79,56 @@ export default function AboutPage() {
 
         {/* 1. Introduction */}
         <section className="px-5 md:px-10 lg:px-20 pt-16 md:pt-24 pb-16 md:pb-20">
-          <div className="max-w-[760px]">
-            <p className="text-[13px] font-medium tracking-[0.03em] text-purple-300 mb-5 md:mb-6">
-              ABOUT
-            </p>
-            <h1 className="text-[36px] sm:text-[48px] lg:text-[60px] font-bold leading-[1.1] tracking-[-0.02em] text-white mb-7 md:mb-9">
-              I turn complexity
-              <br />
-              into clarity.
-            </h1>
-            <p className="text-[16px] md:text-[18px] leading-[28px] md:leading-[30px] text-slate-300 mb-5">
-              I&apos;m a Senior UX Designer based in São Paulo with 8+ years
-              shaping digital products across startups and enterprise teams. My
-              work sits at the intersection of rigorous research, systems
-              thinking, and visual craft.
-            </p>
-            <p className="text-[16px] md:text-[18px] leading-[28px] md:leading-[30px] text-slate-300 mb-5">
-              I came up through graphic design, got hands-on with front-end code,
-              and moved into UX and product design when I realized that the most
-              impactful work happens at the seam between user needs and
-              engineering reality. That cross-disciplinary fluency — designing
-              with systems in mind, speaking the language of developers, and
-              anchoring every decision in research — is what I bring to every
-              team I join.
-            </p>
-            <p className="text-[16px] md:text-[18px] leading-[28px] md:leading-[30px] text-slate-300">
-              I believe great design is invisible. It just works — and people
-              never have to think about why.
-            </p>
+          <div className="flex flex-col lg:flex-row items-start lg:items-center gap-10 lg:gap-20">
+            {/* Photo */}
+            <div className="relative w-full lg:w-[400px] lg:shrink-0 h-[360px] sm:h-[460px] lg:h-[500px] overflow-hidden rounded-2xl border border-slate-700">
+              <Image
+                src="/julia.jpeg"
+                alt="Julia Bizol"
+                fill
+                className="object-cover"
+                style={{ objectPosition: "center 20%" }}
+                priority
+              />
+              <div
+                className="absolute bottom-0 right-0 h-[200px] w-[200px] rounded-full opacity-40 pointer-events-none"
+                style={{
+                  background: "radial-gradient(circle, #6b21a8, transparent 70%)",
+                  filter: "blur(60px)",
+                }}
+              />
+            </div>
+
+            {/* Text */}
+            <div className="max-w-[760px]">
+              <p className="text-[13px] font-medium tracking-[0.03em] text-purple-300 mb-5 md:mb-6">
+                ABOUT
+              </p>
+              <h1 className="text-[36px] sm:text-[48px] lg:text-[60px] font-bold leading-[1.1] tracking-[-0.02em] text-white mb-7 md:mb-9">
+                I turn complexity
+                <br />
+                into clarity.
+              </h1>
+              <p className="text-[16px] md:text-[18px] leading-[28px] md:leading-[30px] text-slate-300 mb-5">
+                I&apos;m a Senior UX Designer based in São Paulo with 8+ years
+                shaping digital products across startups and enterprise teams. My
+                work sits at the intersection of rigorous research, systems
+                thinking, and visual craft.
+              </p>
+              <p className="text-[16px] md:text-[18px] leading-[28px] md:leading-[30px] text-slate-300 mb-5">
+                I came up through graphic design, got hands-on with front-end code,
+                and moved into UX and product design when I realized that the most
+                impactful work happens at the seam between user needs and
+                engineering reality. That cross-disciplinary fluency — designing
+                with systems in mind, speaking the language of developers, and
+                anchoring every decision in research — is what I bring to every
+                team I join.
+              </p>
+              <p className="text-[16px] md:text-[18px] leading-[28px] md:leading-[30px] text-slate-300">
+                I believe great design is invisible. It just works — and people
+                never have to think about why.
+              </p>
+            </div>
           </div>
         </section>
 
