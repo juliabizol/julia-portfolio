@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 const stats = [
   { value: "8+", label: "Years Exp." },
@@ -82,6 +83,13 @@ export function About() {
               </div>
             ))}
           </div>
+
+          <Link
+            href="/about"
+            className="inline-flex items-center gap-1 text-[14px] font-medium text-purple-300 hover:text-purple-200 transition-colors"
+          >
+            Learn more about me →
+          </Link>
         </div>
       </div>
     </section>

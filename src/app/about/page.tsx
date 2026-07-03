@@ -1,0 +1,259 @@
+import { StickyNav } from "@/components/nav";
+import { Process } from "@/components/process";
+import { Contact } from "@/components/contact";
+
+export const metadata = {
+  title: "About — Julia Bizol",
+  description:
+    "Senior UX Designer based in São Paulo. 8+ years designing digital products at the intersection of research, systems thinking, and visual craft.",
+};
+
+const skills = [
+  "Product Design",
+  "UX Strategy",
+  "UX Research",
+  "Information Architecture",
+  "Design Systems",
+  "Usability Testing",
+  "Interaction Design",
+  "Front-end Collaboration",
+];
+
+const experience = [
+  {
+    period: "2022 – Present",
+    title: "Senior UX Designer",
+    org: "Confidential · Enterprise SaaS",
+    desc: "Leading end-to-end product design across multiple squads. Own the design system, drive research ops, and collaborate directly with engineering and product leadership to shape roadmap decisions.",
+  },
+  {
+    period: "2019 – 2022",
+    title: "UX / Product Designer",
+    org: "Confidential · B2C Mobile",
+    desc: "Transitioned from graphic design into UX full-time. Shipped features for iOS and Android, ran usability studies, and helped establish the first internal research practice.",
+  },
+  {
+    period: "2016 – 2019",
+    title: "Graphic Designer → Front-end Learner",
+    org: "Agency & Freelance",
+    desc: "Started in visual communication and brand design, then taught myself HTML, CSS, and JavaScript. That bridge between design and code became central to how I work.",
+  },
+];
+
+const achievements = [
+  {
+    label: "12 Awards",
+    desc: "Industry recognition for product and UX work across multiple categories.",
+  },
+  {
+    label: "Internal Recognition",
+    desc: "Nominated for Design Excellence award within the organization, two years running.",
+  },
+  {
+    label: "Notable Achievement",
+    desc: "Led the design systems initiative that reduced handoff time by 50% across 6 product teams.",
+  },
+];
+
+const testimonials = [
+  {
+    quote:
+      "Julia has a rare ability to translate ambiguous problems into clear, elegant solutions. She doesn't just design screens — she shapes how the team thinks about the product.",
+    name: "Placeholder Name",
+    title: "Product Manager · Confidential",
+  },
+  {
+    quote:
+      "Working with Julia made our handoff process feel effortless. She speaks the language of developers, and her documentation is some of the clearest I've ever seen.",
+    name: "Placeholder Name",
+    title: "Senior Engineer · Confidential",
+  },
+];
+
+export default function AboutPage() {
+  return (
+    <div className="flex flex-col min-h-screen bg-slate-950">
+      <StickyNav />
+      <main>
+
+        {/* 1. Introduction */}
+        <section className="px-5 md:px-10 lg:px-20 pt-16 md:pt-24 pb-16 md:pb-20">
+          <div className="max-w-[760px]">
+            <p className="text-[13px] font-medium tracking-[0.03em] text-purple-300 mb-5 md:mb-6">
+              ABOUT
+            </p>
+            <h1 className="text-[36px] sm:text-[48px] lg:text-[60px] font-bold leading-[1.1] tracking-[-0.02em] text-white mb-7 md:mb-9">
+              I turn complexity
+              <br />
+              into clarity.
+            </h1>
+            <p className="text-[16px] md:text-[18px] leading-[28px] md:leading-[30px] text-slate-300 mb-5">
+              I&apos;m a Senior UX Designer based in São Paulo with 8+ years
+              shaping digital products across startups and enterprise teams. My
+              work sits at the intersection of rigorous research, systems
+              thinking, and visual craft.
+            </p>
+            <p className="text-[16px] md:text-[18px] leading-[28px] md:leading-[30px] text-slate-300 mb-5">
+              I came up through graphic design, got hands-on with front-end code,
+              and moved into UX and product design when I realized that the most
+              impactful work happens at the seam between user needs and
+              engineering reality. That cross-disciplinary fluency — designing
+              with systems in mind, speaking the language of developers, and
+              anchoring every decision in research — is what I bring to every
+              team I join.
+            </p>
+            <p className="text-[16px] md:text-[18px] leading-[28px] md:leading-[30px] text-slate-300">
+              I believe great design is invisible. It just works — and people
+              never have to think about why.
+            </p>
+          </div>
+        </section>
+
+        {/* 2. Experience */}
+        <section className="px-5 md:px-10 lg:px-20 py-16 md:py-20 border-t border-slate-800">
+          <div className="mb-10 md:mb-14 flex flex-col gap-3">
+            <p className="text-[13px] font-medium tracking-[0.03em] text-purple-300">
+              EXPERIENCE
+            </p>
+            <h2 className="text-[32px] md:text-[40px] font-bold tracking-[-0.01em] text-white">
+              Career Story
+            </h2>
+            <p className="text-[16px] md:text-[17px] text-slate-300 max-w-xl">
+              A curated narrative, not a résumé. Here&apos;s how I got here.
+            </p>
+          </div>
+          <div className="flex flex-col">
+            {experience.map((item, i) => (
+              <div
+                key={i}
+                className="grid grid-cols-1 md:grid-cols-[200px_1fr] gap-4 md:gap-12 py-8 md:py-10 border-t border-slate-800"
+              >
+                <div>
+                  <p className="text-[13px] font-medium text-slate-500 mb-1">
+                    {item.period}
+                  </p>
+                  <p className="text-[15px] font-semibold text-white">
+                    {item.title}
+                  </p>
+                  <p className="text-[13px] text-slate-400 mt-0.5">{item.org}</p>
+                </div>
+                <p className="text-[15px] md:text-[16px] leading-[26px] text-slate-300">
+                  {item.desc}
+                </p>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* 3. Skills & Expertise */}
+        <section className="px-5 md:px-10 lg:px-20 py-16 md:py-20 border-t border-slate-800">
+          <div className="mb-10 md:mb-12 flex flex-col gap-3">
+            <p className="text-[13px] font-medium tracking-[0.03em] text-purple-300">
+              EXPERTISE
+            </p>
+            <h2 className="text-[32px] md:text-[40px] font-bold tracking-[-0.01em] text-white">
+              Skills &amp; Expertise
+            </h2>
+          </div>
+          <div className="flex flex-wrap gap-3">
+            {skills.map((skill) => (
+              <span
+                key={skill}
+                className="rounded-full border border-slate-700 bg-slate-800/50 px-4 md:px-5 py-2 md:py-2.5 text-[14px] md:text-[15px] font-medium text-slate-300"
+              >
+                {skill}
+              </span>
+            ))}
+          </div>
+        </section>
+
+        {/* 4. Recognition & Achievements */}
+        <section className="px-5 md:px-10 lg:px-20 py-16 md:py-20 border-t border-slate-800">
+          <div className="mb-10 md:mb-12 flex flex-col gap-3">
+            <p className="text-[13px] font-medium tracking-[0.03em] text-purple-300">
+              RECOGNITION
+            </p>
+            <h2 className="text-[32px] md:text-[40px] font-bold tracking-[-0.01em] text-white">
+              Awards &amp; Achievements
+            </h2>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
+            {achievements.map((item) => (
+              <div
+                key={item.label}
+                className="flex flex-col gap-3 rounded-xl border border-slate-700 bg-slate-800/50 p-6 md:p-7"
+              >
+                <h3 className="text-[17px] md:text-[18px] font-semibold text-white">
+                  {item.label}
+                </h3>
+                <p className="text-[14px] leading-[22px] text-slate-300">
+                  {item.desc}
+                </p>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* 5. Testimonials */}
+        <section className="px-5 md:px-10 lg:px-20 py-16 md:py-20 border-t border-slate-800">
+          <div className="mb-10 md:mb-12 flex flex-col gap-3">
+            <p className="text-[13px] font-medium tracking-[0.03em] text-purple-300">
+              TESTIMONIALS
+            </p>
+            <h2 className="text-[32px] md:text-[40px] font-bold tracking-[-0.01em] text-white">
+              What People Say
+            </h2>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
+            {testimonials.map((t, i) => (
+              <div
+                key={i}
+                className="flex flex-col gap-5 rounded-xl border border-slate-700 bg-slate-800/50 p-6 md:p-8"
+              >
+                <p className="text-[15px] md:text-[16px] leading-[26px] text-slate-300 italic">
+                  &ldquo;{t.quote}&rdquo;
+                </p>
+                <div className="flex flex-col gap-0.5 pt-3 border-t border-slate-700">
+                  <span className="text-[14px] font-semibold text-white">
+                    {t.name}
+                  </span>
+                  <span className="text-[12px] md:text-[13px] text-slate-400">
+                    {t.title}
+                  </span>
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* 6. My Process */}
+        <Process />
+
+        {/* 7. Resume Download */}
+        <section className="px-5 md:px-10 lg:px-20 py-16 md:py-20 border-t border-slate-800">
+          <div className="max-w-[600px]">
+            <p className="text-[13px] font-medium tracking-[0.03em] text-purple-300 mb-5">
+              RESUME
+            </p>
+            <h2 className="text-[32px] md:text-[40px] font-bold tracking-[-0.01em] text-white mb-4">
+              Want the full picture?
+            </h2>
+            <p className="text-[16px] md:text-[17px] leading-[26px] text-slate-300 mb-8">
+              Download my résumé for a complete overview of my experience,
+              skills, and education.
+            </p>
+            <a
+              href="/resume.pdf"
+              download
+              className="inline-block rounded-full bg-purple-800 hover:bg-purple-700 transition-colors text-white text-[15px] font-semibold px-7 py-4"
+            >
+              Download Résumé
+            </a>
+          </div>
+        </section>
+
+        <Contact />
+      </main>
+    </div>
+  );
+}

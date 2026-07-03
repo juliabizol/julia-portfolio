@@ -37,8 +37,8 @@ const LOREM_SHORT =
 
 export const projects: Project[] = [
   {
-    slug: "checkout-flow-redesign",
-    title: "Checkout Flow Redesign",
+    slug: "pet-compliance-platform",
+    title: "Pet Compliance Platform",
     tags: ["UX Research", "Product"],
     summary:
       "A 6-week sprint that reduced cart abandonment by 34% through contextual research and iterative prototyping.",
@@ -113,8 +113,8 @@ export const projects: Project[] = [
     accent: "from-purple-900/70 to-slate-800",
   },
   {
-    slug: "design-system-at-scale",
-    title: "Design System @ Scale",
+    slug: "design-system-evolution",
+    title: "Design System Evolution",
     tags: ["Systems", "Tokens"],
     summary:
       "Built a component library used across 6 product teams, cutting design-to-dev handoff time in half.",
@@ -177,8 +177,8 @@ export const projects: Project[] = [
     accent: "from-violet-900/70 to-slate-800",
   },
   {
-    slug: "mobile-onboarding-flow",
-    title: "Mobile Onboarding Flow",
+    slug: "surfs",
+    title: "Surfs",
     tags: ["Mobile", "Research"],
     summary:
       "Redesigned the first-run experience, lifting 7-day retention by 22% across iOS and Android.",

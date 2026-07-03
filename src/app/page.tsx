@@ -2,7 +2,6 @@ import { StickyNav } from "@/components/nav";
 import { Hero } from "@/components/hero";
 import { Work } from "@/components/work";
 import { About } from "@/components/about";
-import { Process } from "@/components/process";
 import { Contact } from "@/components/contact";
 
 export default function Home() {
@@ -13,7 +12,6 @@ export default function Home() {
         <Hero />
         <Work />
         <About />
-        <Process />
         <Contact />
       </main>
     </div>
