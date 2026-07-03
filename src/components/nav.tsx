@@ -53,12 +53,12 @@ export function Nav({ activeSection }: { activeSection?: string }) {
   return (
     <nav className="relative flex h-[64px] md:h-[72px] items-center justify-between px-5 md:px-10 lg:px-20 w-full shrink-0">
       {/* Logo */}
-      <Link
+      <a
         href="/"
         className="text-[17px] md:text-[18px] font-bold text-white tracking-tight hover:text-purple-300 transition-colors"
       >
         Julia Bizol
-      </Link>
+      </a>
 
       {/* Desktop links */}
       <div className="hidden md:flex items-center gap-8 lg:gap-10">
