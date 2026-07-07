@@ -247,13 +247,13 @@ export default async function CaseStudyPage({
             href={`/work/${nextProject.slug}`}
             className="group flex items-center gap-5 md:gap-8 px-5 md:px-10 lg:px-20 py-8 md:py-12 hover:bg-slate-900/50 transition-colors"
           >
-            <div className="relative hidden sm:block w-[120px] h-[80px] md:w-[180px] md:h-[120px] shrink-0 overflow-hidden rounded-xl border border-slate-700">
+            <div className="relative w-[72px] h-[52px] sm:w-[120px] sm:h-[80px] md:w-[180px] md:h-[120px] shrink-0 overflow-hidden rounded-lg sm:rounded-xl border border-slate-700">
               <Image
                 src={nextProject.image}
                 alt={nextProject.title}
                 fill
                 className="object-cover"
-                sizes="180px"
+                sizes="(min-width: 768px) 180px, (min-width: 640px) 120px, 72px"
               />
             </div>
             <div className="flex flex-col gap-2 min-w-0">
