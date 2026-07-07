@@ -245,7 +245,7 @@ export default async function CaseStudyPage({
         <section className="border-t border-slate-800">
           <Link
             href={`/work/${nextProject.slug}`}
-            className="group block px-5 md:px-10 lg:px-20 py-8 md:py-12 hover:bg-slate-900/50 transition-colors"
+            className="group block px-5 md:px-10 lg:px-20 py-8 md:py-12 hover:bg-slate-900/50 active:bg-slate-900/70 active:scale-[0.98] transition-all duration-150"
           >
             {/* Below md (768px): fully stacked layout */}
             <div className="flex flex-col gap-4 md:hidden">
