@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { projects } from "@/lib/projects";
 
@@ -14,20 +15,28 @@ function ProjectCard({
   title,
   tags,
   desc,
-  accent,
+  image,
 }: {
   slug: string;
   title: string;
   tags: string[];
   desc: string;
-  accent: string;
+  image: string;
 }) {
   return (
     <Link
       href={`/work/${slug}`}
       className="group flex flex-col overflow-hidden rounded-xl border border-slate-700 bg-slate-800/50 transition-colors hover:border-purple-800/60"
     >
-      <div className={`h-[200px] md:h-[220px] w-full bg-gradient-to-br ${accent}`} />
+      <div className="relative h-[200px] md:h-[220px] w-full">
+        <Image
+          src={image}
+          alt={title}
+          fill
+          className="object-cover"
+          sizes="(min-width: 768px) 33vw, 100vw"
+        />
+      </div>
       <div className="flex flex-col gap-3 p-5 md:p-6">
         <div className="flex flex-wrap gap-1.5">
           {tags.map((t) => (
@@ -66,7 +75,7 @@ export function Work() {
             title={p.title}
             tags={p.tags}
             desc={p.summary}
-            accent={p.accent}
+            image={p.image}
           />
         ))}
       </div>

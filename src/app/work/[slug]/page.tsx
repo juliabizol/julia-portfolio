@@ -1,4 +1,5 @@
 import { notFound } from "next/navigation";
+import Image from "next/image";
 import Link from "next/link";
 import { getProject, projects } from "@/lib/projects";
 import { StickyNav } from "@/components/nav";
@@ -96,8 +97,15 @@ export default async function CaseStudyPage({
             ))}
           </div>
 
-          <div className="mt-10 md:mt-12">
-            <ImagePlaceholder height="h-[240px] md:h-[400px] lg:h-[540px]" gradient={project.accent} />
+          <div className="relative mt-10 md:mt-12 w-full h-[240px] md:h-[400px] lg:h-[540px] overflow-hidden rounded-xl md:rounded-2xl border border-slate-700">
+            <Image
+              src={project.image}
+              alt={project.title}
+              fill
+              className="object-cover"
+              sizes="100vw"
+              priority
+            />
           </div>
         </section>
 
@@ -237,21 +245,32 @@ export default async function CaseStudyPage({
         <section className="border-t border-slate-800">
           <Link
             href={`/work/${nextProject.slug}`}
-            className="group flex items-center justify-between px-5 md:px-10 lg:px-20 py-8 md:py-12 hover:bg-slate-900/50 transition-colors"
+            className="group flex items-center justify-between gap-4 px-5 md:px-10 lg:px-20 py-8 md:py-12 hover:bg-slate-900/50 transition-colors"
           >
-            <div className="flex flex-col gap-2">
-              <span className="text-[12px] md:text-[13px] font-medium tracking-[0.03em] text-slate-500">
-                NEXT CASE STUDY
-              </span>
-              <span className="text-[20px] md:text-[28px] font-bold text-white group-hover:text-purple-300 transition-colors">
-                {nextProject.title}
-              </span>
-              <div className="flex flex-wrap gap-2 mt-1">
-                {nextProject.tags.map((t) => (
-                  <span key={t} className="rounded-full bg-purple-900/50 px-[10px] py-1 text-[11px] font-medium text-purple-300">
-                    {t}
-                  </span>
-                ))}
+            <div className="flex items-center gap-5 md:gap-8 min-w-0">
+              <div className="relative hidden sm:block w-[120px] h-[80px] md:w-[180px] md:h-[120px] shrink-0 overflow-hidden rounded-xl border border-slate-700">
+                <Image
+                  src={nextProject.image}
+                  alt={nextProject.title}
+                  fill
+                  className="object-cover"
+                  sizes="180px"
+                />
+              </div>
+              <div className="flex flex-col gap-2 min-w-0">
+                <span className="text-[12px] md:text-[13px] font-medium tracking-[0.03em] text-slate-500">
+                  NEXT CASE STUDY
+                </span>
+                <span className="text-[20px] md:text-[28px] font-bold text-white group-hover:text-purple-300 transition-colors">
+                  {nextProject.title}
+                </span>
+                <div className="flex flex-wrap gap-2 mt-1">
+                  {nextProject.tags.map((t) => (
+                    <span key={t} className="rounded-full bg-purple-900/50 px-[10px] py-1 text-[11px] font-medium text-purple-300">
+                      {t}
+                    </span>
+                  ))}
+                </div>
               </div>
             </div>
             <span className="text-[24px] md:text-[32px] text-slate-600 group-hover:text-purple-300 group-hover:translate-x-2 transition-all shrink-0 ml-4">

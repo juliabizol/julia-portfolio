@@ -27,6 +27,7 @@ export type Project = {
   };
   outcomes: { value: string; label: string; description: string }[];
   accent: string;
+  image: string;
 };
 
 const LOREM =
@@ -111,6 +112,7 @@ export const projects: Project[] = [
       },
     ],
     accent: "from-purple-900/70 to-slate-800",
+    image: "/projects/pet-compliance-platform.jpg",
   },
   {
     slug: "design-system-evolution",
@@ -175,6 +177,7 @@ export const projects: Project[] = [
       },
     ],
     accent: "from-violet-900/70 to-slate-800",
+    image: "/projects/design-system-evolution.jpg",
   },
   {
     slug: "surfs",
@@ -239,6 +242,7 @@ export const projects: Project[] = [
       },
     ],
     accent: "from-purple-800/60 to-slate-800",
+    image: "/projects/surfs.jpg",
   },
 ];
 
