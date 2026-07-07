@@ -305,13 +305,13 @@ export default async function CaseStudyPage({
 
             {/* sm and up: thumbnail beside a stacked label/title/tags column */}
             <div className="hidden sm:flex items-center gap-8">
-              <div className="relative w-[120px] h-[100px] md:w-[180px] md:h-[120px] shrink-0 overflow-hidden rounded-xl border border-slate-700">
+              <div className="relative w-[168px] h-[105px] md:w-[180px] md:h-[120px] shrink-0 overflow-hidden rounded-xl border border-slate-700">
                 <Image
                   src={nextProject.image}
                   alt={nextProject.title}
                   fill
                   className="object-cover"
-                  sizes="(min-width: 768px) 180px, 120px"
+                  sizes="(min-width: 768px) 180px, 168px"
                 />
               </div>
               <div className="flex flex-col gap-2 min-w-0">
