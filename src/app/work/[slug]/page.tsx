@@ -247,8 +247,34 @@ export default async function CaseStudyPage({
             href={`/work/${nextProject.slug}`}
             className="group block px-5 md:px-10 lg:px-20 py-8 md:py-12 hover:bg-slate-900/50 transition-colors"
           >
-            {/* Mobile layout: label, then thumbnail beside a stacked title+tags column */}
-            <div className="flex flex-col gap-3 sm:hidden">
+            {/* Extra-narrow layout (<389px): fully stacked to avoid cramped wrapping */}
+            <div className="flex flex-col gap-3 min-[389px]:hidden">
+              <span className="text-[12px] font-medium tracking-[0.03em] text-slate-500">
+                NEXT CASE STUDY
+              </span>
+              <div className="relative w-full h-[160px] overflow-hidden rounded-lg border border-slate-700">
+                <Image
+                  src={nextProject.image}
+                  alt={nextProject.title}
+                  fill
+                  className="object-cover"
+                  sizes="100vw"
+                />
+              </div>
+              <span className="text-[20px] font-bold text-white group-hover:text-purple-300 transition-colors">
+                {nextProject.title}
+              </span>
+              <div className="flex flex-wrap gap-2">
+                {nextProject.tags.map((t) => (
+                  <span key={t} className="rounded-full bg-purple-900/50 px-[10px] py-1 text-[11px] font-medium text-purple-300">
+                    {t}
+                  </span>
+                ))}
+              </div>
+            </div>
+
+            {/* 389px–sm: thumbnail beside a stacked title+tags column */}
+            <div className="hidden min-[389px]:flex min-[389px]:flex-col gap-3 sm:hidden">
               <span className="text-[12px] font-medium tracking-[0.03em] text-slate-500">
                 NEXT CASE STUDY
               </span>
