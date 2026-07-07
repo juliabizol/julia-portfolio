@@ -26,9 +26,9 @@ function ProjectCard({
   return (
     <Link
       href={`/work/${slug}`}
-      className="group flex flex-col overflow-hidden rounded-xl border border-slate-700 bg-slate-800/50 transition-colors hover:border-purple-800/60"
+      className="group flex h-full flex-col overflow-hidden rounded-xl border border-slate-700 bg-slate-800/50 transition-colors hover:border-purple-800/60"
     >
-      <div className="relative h-[200px] md:h-[220px] w-full">
+      <div className="relative h-[200px] md:h-[220px] w-full shrink-0">
         <Image
           src={image}
           alt={title}
@@ -37,15 +37,17 @@ function ProjectCard({
           sizes="(min-width: 768px) 33vw, 100vw"
         />
       </div>
-      <div className="flex flex-col gap-3 p-5 md:p-6">
-        <div className="flex flex-wrap gap-1.5">
+      <div className="flex flex-1 flex-col gap-3 p-5 md:p-6 min-w-0">
+        <div className="flex flex-nowrap gap-1.5 overflow-hidden">
           {tags.map((t) => (
             <Badge key={t} label={t} />
           ))}
         </div>
-        <h3 className="text-[17px] md:text-[19px] font-semibold text-white">{title}</h3>
+        <h3 className="line-clamp-2 min-h-[48px] md:min-h-[52px] text-[17px] md:text-[19px] leading-[24px] md:leading-[26px] font-semibold text-white">
+          {title}
+        </h3>
         <p className="text-[14px] leading-[22px] text-slate-300">{desc}</p>
-        <span className="text-[13px] font-medium text-purple-300 group-hover:underline">
+        <span className="mt-auto pt-1 text-[13px] font-medium text-purple-300 group-hover:underline">
           View Case Study →
         </span>
       </div>
@@ -67,7 +69,7 @@ export function Work() {
           A selection of projects across product, research, and systems design.
         </p>
       </div>
-      <div className="flex flex-col md:flex-row gap-5 md:gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-6">
         {projects.map((p) => (
           <ProjectCard
             key={p.slug}
