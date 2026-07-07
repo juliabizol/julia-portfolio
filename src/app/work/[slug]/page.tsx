@@ -247,21 +247,21 @@ export default async function CaseStudyPage({
             href={`/work/${nextProject.slug}`}
             className="group block px-5 md:px-10 lg:px-20 py-8 md:py-12 hover:bg-slate-900/50 transition-colors"
           >
-            {/* Extra-narrow layout (<389px): fully stacked to avoid cramped wrapping */}
-            <div className="flex flex-col gap-3 min-[389px]:hidden">
+            {/* Below md (768px): fully stacked layout */}
+            <div className="flex flex-col gap-4 md:hidden">
               <span className="text-[12px] font-medium tracking-[0.03em] text-slate-500">
                 NEXT CASE STUDY
               </span>
-              <div className="relative w-full h-[160px] overflow-hidden rounded-lg border border-slate-700">
+              <div className="relative w-full aspect-[8/5] overflow-hidden rounded-xl border border-slate-700 bg-slate-900">
                 <Image
                   src={nextProject.image}
                   alt={nextProject.title}
                   fill
-                  className="object-cover"
+                  className="object-contain"
                   sizes="100vw"
                 />
               </div>
-              <span className="text-[20px] font-bold text-white group-hover:text-purple-300 transition-colors">
+              <span className="text-[22px] font-bold text-white group-hover:text-purple-300 transition-colors">
                 {nextProject.title}
               </span>
               <div className="flex flex-wrap gap-2">
@@ -273,45 +273,15 @@ export default async function CaseStudyPage({
               </div>
             </div>
 
-            {/* 389px–sm: thumbnail beside a stacked title+tags column */}
-            <div className="hidden min-[389px]:flex min-[389px]:flex-col gap-3 sm:hidden">
-              <span className="text-[12px] font-medium tracking-[0.03em] text-slate-500">
-                NEXT CASE STUDY
-              </span>
-              <div className="flex items-start gap-4">
-                <div className="relative w-[88px] h-[64px] shrink-0 overflow-hidden rounded-lg border border-slate-700">
-                  <Image
-                    src={nextProject.image}
-                    alt={nextProject.title}
-                    fill
-                    className="object-cover"
-                    sizes="88px"
-                  />
-                </div>
-                <div className="flex flex-col gap-2 min-w-0">
-                  <span className="text-[20px] font-bold text-white group-hover:text-purple-300 transition-colors">
-                    {nextProject.title}
-                  </span>
-                  <div className="flex flex-wrap gap-2">
-                    {nextProject.tags.map((t) => (
-                      <span key={t} className="rounded-full bg-purple-900/50 px-[10px] py-1 text-[11px] font-medium text-purple-300">
-                        {t}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* sm and up: thumbnail beside a stacked label/title/tags column */}
-            <div className="hidden sm:flex items-center gap-8">
-              <div className="relative w-[168px] h-[105px] md:w-[180px] md:h-[120px] shrink-0 overflow-hidden rounded-xl border border-slate-700">
+            {/* md and up: thumbnail beside a stacked label/title/tags column */}
+            <div className="hidden md:flex items-center gap-8">
+              <div className="relative w-[180px] h-[120px] shrink-0 overflow-hidden rounded-xl border border-slate-700">
                 <Image
                   src={nextProject.image}
                   alt={nextProject.title}
                   fill
                   className="object-cover"
-                  sizes="(min-width: 768px) 180px, 168px"
+                  sizes="180px"
                 />
               </div>
               <div className="flex flex-col gap-2 min-w-0">
