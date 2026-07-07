@@ -247,12 +247,12 @@ export default async function CaseStudyPage({
             href={`/work/${nextProject.slug}`}
             className="group block px-5 md:px-10 lg:px-20 py-8 md:py-12 hover:bg-slate-900/50 transition-colors"
           >
-            {/* Mobile layout: label, then thumbnail+title+arrow row, then tags */}
+            {/* Mobile layout: label, then thumbnail beside a stacked title+tags column */}
             <div className="flex flex-col gap-3 sm:hidden">
               <span className="text-[12px] font-medium tracking-[0.03em] text-slate-500">
                 NEXT CASE STUDY
               </span>
-              <div className="flex items-center gap-4">
+              <div className="flex items-start gap-4">
                 <div className="relative w-[88px] h-[64px] shrink-0 overflow-hidden rounded-lg border border-slate-700">
                   <Image
                     src={nextProject.image}
@@ -262,19 +262,18 @@ export default async function CaseStudyPage({
                     sizes="88px"
                   />
                 </div>
-                <span className="text-[20px] font-bold text-white group-hover:text-purple-300 transition-colors min-w-0">
-                  {nextProject.title}{" "}
-                  <span className="inline-block text-slate-600 group-hover:text-purple-300 group-hover:translate-x-2 transition-all">
-                    →
+                <div className="flex flex-col gap-2 min-w-0">
+                  <span className="text-[20px] font-bold text-white group-hover:text-purple-300 transition-colors">
+                    {nextProject.title}
                   </span>
-                </span>
-              </div>
-              <div className="flex flex-wrap gap-2">
-                {nextProject.tags.map((t) => (
-                  <span key={t} className="rounded-full bg-purple-900/50 px-[10px] py-1 text-[11px] font-medium text-purple-300">
-                    {t}
-                  </span>
-                ))}
+                  <div className="flex flex-wrap gap-2">
+                    {nextProject.tags.map((t) => (
+                      <span key={t} className="rounded-full bg-purple-900/50 px-[10px] py-1 text-[11px] font-medium text-purple-300">
+                        {t}
+                      </span>
+                    ))}
+                  </div>
+                </div>
               </div>
             </div>
 
