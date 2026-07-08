@@ -14,7 +14,7 @@ export function Hero() {
       <div className="mb-6 md:mb-8 flex items-center gap-1.5 rounded-full bg-purple-900/50 px-3 py-1.5">
         <span className="h-1.5 w-1.5 rounded-full bg-purple-800" />
         <span className="text-[13px] font-medium text-purple-300">
-          Available for Freelance
+          Available
         </span>
       </div>
 
@@ -22,7 +22,7 @@ export function Hero() {
       <h1 className="max-w-[900px] text-[40px] sm:text-[56px] lg:text-[72px] font-bold leading-[1.1] lg:leading-[80px] tracking-[-0.02em] text-white">
         Designing Products
         <br />
-        People Love to Use
+        That Make Sense
       </h1>
 
       {/* Subtitle */}
