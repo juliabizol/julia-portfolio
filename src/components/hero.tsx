@@ -12,7 +12,7 @@ export function Hero() {
 
       {/* Available badge */}
       <div className="mb-6 md:mb-8 flex items-center gap-1.5 rounded-full bg-purple-900/50 px-3 py-1.5">
-        <span className="h-1.5 w-1.5 rounded-full bg-purple-800" />
+        <span className="h-1.5 w-1.5 rounded-full bg-green-500" />
         <span className="text-[13px] font-medium text-purple-300">
           Available
         </span>
@@ -27,8 +27,8 @@ export function Hero() {
 
       {/* Subtitle */}
       <p className="mt-6 md:mt-8 max-w-[540px] lg:max-w-[680px] text-[16px] md:text-[18px] leading-[26px] md:leading-[28px] text-slate-300">
-        Senior UX Designer with 8+ years of experience turning complex problems
-        into intuitive, accessible experiences.
+        I&apos;m a Senior UX Designer with 9 years of experience turning complex
+        problems into thoughtful, intuitive products.
       </p>
 
       {/* CTAs */}
