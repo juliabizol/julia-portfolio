@@ -134,7 +134,7 @@ export function Contact() {
           © 2026 Julia Bizol · All rights reserved
         </p>
         <p className="text-[12px] md:text-[13px] text-slate-500">
-          Designed in Figma · Built with Next.js
+          Designed and built by Julia Bizol
         </p>
       </div>
     </section>
