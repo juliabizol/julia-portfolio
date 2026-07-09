@@ -20,9 +20,9 @@ export function Hero() {
 
       {/* Headline */}
       <h1 className="max-w-[900px] text-[40px] sm:text-[56px] lg:text-[72px] font-bold leading-[1.1] lg:leading-[80px] tracking-[-0.02em] text-white">
-        Designing Products
+        Designing products
         <br />
-        That Make Sense
+        that make sense
       </h1>
 
       {/* Subtitle */}
@@ -38,13 +38,13 @@ export function Hero() {
           href="#work"
           className="w-full sm:w-auto text-center rounded-full bg-purple-800 hover:bg-purple-700 transition-colors px-7 py-[14px] text-[15px] font-semibold text-white"
         >
-          View My Work
+          View my work
         </a>
         <a
           href="#contact"
           className="w-full sm:w-auto text-center rounded-full border border-slate-700 hover:border-slate-500 transition-colors px-7 py-[14px] text-[15px] font-semibold text-white"
         >
-          Get in Touch
+          Get in touch
         </a>
       </div>
     </section>

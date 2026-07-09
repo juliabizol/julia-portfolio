@@ -116,7 +116,7 @@ export function Nav({ activeSection }: { activeSection?: string }) {
         href="/#contact"
         className="hidden md:block bg-purple-800 hover:bg-purple-700 transition-colors text-white text-[14px] font-medium px-5 py-[10px] rounded-full"
       >
-        Let&apos;s Talk
+        Let&apos;s talk
       </a>
 
       {/* Mobile hamburger */}
@@ -172,7 +172,7 @@ export function Nav({ activeSection }: { activeSection?: string }) {
               onClick={() => setMenuOpen(false)}
               className="inline-block bg-purple-800 hover:bg-purple-700 text-white text-[14px] font-medium px-5 py-[10px] rounded-full"
             >
-              Let&apos;s Talk
+              Let&apos;s talk
             </a>
           </div>
         </div>

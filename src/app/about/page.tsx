@@ -270,7 +270,7 @@ export default function AboutPage() {
               download
               className="inline-block rounded-full bg-purple-800 hover:bg-purple-700 transition-colors text-white text-[15px] font-semibold px-7 py-4"
             >
-              Download Résumé
+              Download résumé
             </a>
           </div>
         </section>
