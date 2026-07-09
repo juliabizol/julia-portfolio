@@ -39,14 +39,14 @@ export function Contact() {
         </p>
 
         <h2 className="max-w-[900px] text-[36px] sm:text-[48px] lg:text-[64px] font-bold leading-[1.1] lg:leading-[72px] tracking-[-0.02em] text-white">
-          Let&apos;s build something
+          Let&apos;s solve something
           <br />
-          people love.
+          meaningful together.
         </h2>
 
         <p className="max-w-[520px] text-[16px] md:text-[18px] leading-[26px] md:leading-[28px] text-slate-300">
-          I&apos;m always open to interesting projects, collaborations, and
-          conversations. Drop me a line.
+          Whether you&apos;re building a new product, improving an existing
+          one, or simply want to connect, I&apos;d love to hear from you.
         </p>
 
         {/* Email copy widget */}
