@@ -66,7 +66,7 @@ export function Work() {
           Case Studies
         </h2>
         <p className="text-[16px] md:text-[17px] text-slate-300">
-          A selection of projects across product, research, and systems design.
+          A selection of projects that demonstrate my approach to solving complex product problems.
         </p>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-6">
