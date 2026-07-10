@@ -76,7 +76,7 @@ const testimonials = [
   },
   {
     quote:
-      "Julia consistently demonstrated professionalism, ownership, and a commitment to quality. She connects with clients, continuously seeks new knowledge, and is the kind of professional I would always want on my teams.",
+      "Julia consistently demonstrated professionalism, ownership, and a commitment to quality. She communicates effectively, continuously seeks new knowledge, and is the kind of professional I would always want on my teams.",
     name: "Victor Melo",
     title: "Project Manager · Former Manager",
   },
