@@ -10,14 +10,15 @@ export const metadata = {
 };
 
 const skills = [
-  "Product Design",
-  "UX Strategy",
-  "UX Research",
-  "Information Architecture",
-  "Design Systems",
+  "Product Thinking",
+  "Product Discovery",
+  "User Research",
+  "Product Analytics",
   "Usability Testing",
   "Interaction Design",
-  "Front-end Collaboration",
+  "Design Systems",
+  "Accessibility",
+  "AI Product Design",
 ];
 
 const experience = [
@@ -188,7 +189,7 @@ export default function AboutPage() {
               EXPERTISE
             </p>
             <h2 className="text-[32px] md:text-[40px] font-bold tracking-[-0.01em] text-white">
-              Skills &amp; Expertise
+              Core Capabilities
             </h2>
           </div>
           <div className="flex flex-wrap gap-3">
