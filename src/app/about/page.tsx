@@ -25,7 +25,7 @@ const experience = [
     period: "2024 – 2026",
     title: "Product Designer",
     org: "PetScreening · Pet & Hospitality Technology",
-    desc: "Led product design across consumer products and platforms supporting complex operational workflows, balancing user needs, business goals, and technical constraints. Conducted discovery, user research, and usability testing, collaborated closely with Product and Engineering, contributed to a scalable Design System, and explored AI-powered product experiences.",
+    desc: "Led product design across consumer products and platforms supporting complex operational workflows, balancing user needs, business goals, and technical constraints. Combined product analytics, user research, and usability testing to identify opportunities, validate ideas, and guide product decisions. Collaborated closely with Product and Engineering, contributed to a scalable Design System, and explored AI-powered product experiences.",
   },
   {
     period: "2021 – 2024",
