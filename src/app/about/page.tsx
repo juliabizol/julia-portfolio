@@ -70,7 +70,7 @@ const achievements = [
 const testimonials = [
   {
     quote:
-      "Julia has a great ability to understand user needs and turn insights into practical, effective solutions. She also shared her expertise by leading a UX workshop that was incredibly valuable for our team. I highly recommend her as a dedicated and knowledgeable UX professional.",
+      "Julia has a great ability to understand user needs and turn insights into practical, effective solutions. She also shared her expertise by leading a UX workshop that was incredibly valuable for our team. Her dedication, knowledge, and collaborative mindset made a lasting impact, and I highly recommend her as a UX professional.",
     name: "Gustavo Felix Gomes",
     title: "Data Engineer",
   },
