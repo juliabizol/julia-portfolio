@@ -182,16 +182,46 @@ export default function AboutPage() {
           </div>
 
           {/* Resume CTA continuation */}
-          <div className="mt-14 md:mt-16 pt-14 md:pt-16 border-t border-slate-800 max-w-[600px]">
-            <p className="text-[16px] md:text-[17px] leading-[26px] text-slate-300 mb-8">
+          <div className="mt-14 md:mt-16 border-t border-slate-800" />
+          <div className="pt-14 md:pt-16 max-w-[600px]">
+            <p className="text-[16px] md:text-[17px] leading-[26px] text-slate-300 mb-6">
               Download my résumé for a more detailed overview of my
               experience, projects, and accomplishments.
             </p>
             <a
               href="/resume.pdf"
               download
-              className="inline-block rounded-full border border-slate-700 hover:border-slate-500 transition-colors px-7 py-[14px] text-[15px] font-semibold text-white"
+              className="inline-flex items-center gap-2 rounded-full border border-slate-700 hover:border-slate-500 transition-colors px-7 py-[14px] text-[15px] font-semibold text-white"
             >
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+                <path
+                  d="M7 10l5 5 5-5"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+                <path
+                  d="M12 15V3"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+              </svg>
               Download résumé
             </a>
           </div>
