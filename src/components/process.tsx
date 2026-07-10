@@ -1,27 +1,25 @@
 const steps = [
   {
     num: "01",
-    title: "Discover",
-    desc: "Deep-dive into user needs through interviews, contextual inquiry, and existing data. No assumptions — just listening.",
+    title: "Understand the Problem",
+    desc: "I begin by understanding users, business goals, technical constraints, and existing data before proposing solutions.",
   },
   {
     num: "02",
-    title: "Define",
-    desc: "Synthesize research into clear problem statements, personas, and opportunity areas. Align the team around what matters.",
+    title: "Explore & Validate",
+    desc: "I use research, product analytics, usability testing, and rapid prototyping to explore opportunities, validate ideas, and reduce uncertainty.",
   },
   {
     num: "03",
-    title: "Design",
-    desc: "Rapid sketches to high-fidelity prototypes. Iterate quickly, test early, and refine based on real feedback.",
+    title: "Design with Systems",
+    desc: "I design scalable experiences that balance usability, accessibility, consistency, and long-term maintainability.",
   },
   {
     num: "04",
-    title: "Deliver",
-    desc: "Handoff pixel-perfect specs with documented rationale. I stay involved through development to ensure quality.",
+    title: "Collaborate & Iterate",
+    desc: "I partner closely with Product and Engineering, refining solutions through feedback, implementation, and continuous improvement.",
   },
 ];
-
-const tools = ["Figma", "Maze", "Hotjar", "Miro", "Notion", "Jira", "Lottie", "Framer"];
 
 export function Process() {
   return (
@@ -31,11 +29,12 @@ export function Process() {
           HOW I WORK
         </p>
         <h2 className="text-[32px] md:text-[40px] font-bold tracking-[-0.01em] text-white">
-          My Process
+          How I Approach Product Design
         </h2>
         <p className="text-[16px] md:text-[17px] text-slate-300 max-w-xl">
-          I follow a structured approach while staying flexible enough to adapt
-          to each project&apos;s unique needs.
+          Every product is different, but my approach remains consistent:
+          understand the problem, collaborate closely, validate decisions
+          with evidence, and iterate continuously.
         </p>
       </div>
 
@@ -55,23 +54,6 @@ export function Process() {
             <p className="text-[14px] leading-[22px] text-slate-300">{step.desc}</p>
           </div>
         ))}
-      </div>
-
-      {/* Tools */}
-      <div className="mt-12 md:mt-16 flex flex-col gap-4 md:gap-5">
-        <h3 className="text-[17px] md:text-[18px] font-semibold text-white">
-          Tools &amp; Methods
-        </h3>
-        <div className="flex flex-wrap gap-2 md:gap-3">
-          {tools.map((tool) => (
-            <span
-              key={tool}
-              className="rounded-lg border border-slate-700 bg-slate-700/50 px-3 md:px-4 py-2 md:py-2.5 text-[13px] md:text-[14px] font-medium text-slate-300"
-            >
-              {tool}
-            </span>
-          ))}
-        </div>
       </div>
     </section>
   );
