@@ -22,22 +22,34 @@ const skills = [
 
 const experience = [
   {
-    period: "2022 – Present",
+    period: "2024 – 2026",
+    title: "Product Designer",
+    org: "PetScreening · Pet & Hospitality Technology",
+    desc: "Led product design across consumer products and platforms supporting complex operational workflows, balancing user needs, business goals, and technical constraints. Conducted discovery, user research, and usability testing, collaborated closely with Product and Engineering, contributed to a scalable Design System, and explored AI-powered product experiences.",
+  },
+  {
+    period: "2021 – 2024",
     title: "Senior UX Designer",
-    org: "Confidential · Enterprise SaaS",
-    desc: "Leading end-to-end product design across multiple squads. Own the design system, drive research ops, and collaborate directly with engineering and product leadership to shape roadmap decisions.",
+    org: "McFadyen Digital · E-commerce & Marketplaces",
+    desc: "Designed end-to-end experiences for enterprise e-commerce and marketplace products, translating complex business requirements into intuitive user experiences. Facilitated workshops, presented UX strategies to stakeholders, and partnered with cross-functional teams across multiple B2B and B2C engagements, including Fortune 500 clients. Promoted to Senior UX Designer and twice recognized with the Unsung Hero Award.",
   },
   {
-    period: "2019 – 2022",
-    title: "UX / Product Designer",
-    org: "Confidential · B2C Mobile",
-    desc: "Transitioned from graphic design into UX full-time. Shipped features for iOS and Android, ran usability studies, and helped establish the first internal research practice.",
+    period: "2020 – 2021",
+    title: "UX/UI Designer",
+    org: "Henry Schein · Healthcare Technology",
+    desc: "Improved the customer experience of a B2B e-commerce platform through UX improvements, responsive design, and close collaboration with Marketing and Engineering, strengthening usability and information architecture across key customer journeys.",
   },
   {
-    period: "2016 – 2019",
-    title: "Graphic Designer → Front-end Learner",
-    org: "Agency & Freelance",
-    desc: "Started in visual communication and brand design, then taught myself HTML, CSS, and JavaScript. That bridge between design and code became central to how I work.",
+    period: "2015 – 2020",
+    title: "Product Designer / UX/UI Designer",
+    org: "AutoImpact · Automotive Technology",
+    desc: "Built the company's digital products from research through implementation, conducting field research, designing mobile applications, websites, and customer-facing experiences while working directly with business stakeholders to translate user needs into practical product solutions.",
+  },
+  {
+    period: "2014 – 2015",
+    title: "UI Designer",
+    org: "Shaw and Partners · Digital Product Agency",
+    desc: "Began my design career creating responsive websites and digital experiences for U.S. clients, building the visual design foundation that later evolved into product design.",
   },
 ];
 
@@ -139,10 +151,11 @@ export default function AboutPage() {
               EXPERIENCE
             </p>
             <h2 className="text-[32px] md:text-[40px] font-bold tracking-[-0.01em] text-white">
-              Career Story
+              Career Journey
             </h2>
             <p className="text-[16px] md:text-[17px] text-slate-300 max-w-xl">
-              A curated narrative, not a résumé. Here&apos;s how I got here.
+              The experiences that shaped how I think, collaborate, and design
+              products today.
             </p>
           </div>
           <div className="flex flex-col">
