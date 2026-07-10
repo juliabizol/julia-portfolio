@@ -180,6 +180,21 @@ export default function AboutPage() {
               </div>
             ))}
           </div>
+
+          {/* Resume CTA continuation */}
+          <div className="mt-14 md:mt-16 pt-14 md:pt-16 border-t border-slate-800 max-w-[600px]">
+            <p className="text-[16px] md:text-[17px] leading-[26px] text-slate-300 mb-8">
+              Download my résumé for a more detailed overview of my
+              experience, projects, and accomplishments.
+            </p>
+            <a
+              href="/resume.pdf"
+              download
+              className="inline-block rounded-full border border-slate-700 hover:border-slate-500 transition-colors px-7 py-[14px] text-[15px] font-semibold text-white"
+            >
+              Download résumé
+            </a>
+          </div>
         </section>
 
         {/* 3. Skills & Expertise */}
@@ -265,29 +280,6 @@ export default function AboutPage() {
 
         {/* 6. My Process */}
         <Process />
-
-        {/* 7. Resume Download */}
-        <section className="px-5 md:px-10 lg:px-20 py-16 md:py-20 border-t border-slate-800">
-          <div className="max-w-[600px]">
-            <p className="text-[13px] font-medium tracking-[0.03em] text-purple-300 mb-5">
-              RESUME
-            </p>
-            <h2 className="text-[32px] md:text-[40px] font-bold tracking-[-0.01em] text-white mb-4">
-              Want the full picture?
-            </h2>
-            <p className="text-[16px] md:text-[17px] leading-[26px] text-slate-300 mb-8">
-              Download my résumé for a complete overview of my experience,
-              skills, and education.
-            </p>
-            <a
-              href="/resume.pdf"
-              download
-              className="inline-block rounded-full bg-purple-800 hover:bg-purple-700 transition-colors text-white text-[15px] font-semibold px-7 py-4"
-            >
-              Download résumé
-            </a>
-          </div>
-        </section>
 
         <Contact />
       </main>
