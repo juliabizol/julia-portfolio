@@ -56,16 +56,14 @@ const experience = [
 
 const achievements = [
   {
-    label: "12 Awards",
-    desc: "Industry recognition for product and UX work across multiple categories.",
+    label: "Winner, AI Ideathon",
+    meta: "IXDA Florianópolis · 2026",
+    desc: "Won first place in an AI-focused ideathon by developing a solution to a real-world problem through collaborative product thinking and rapid prototyping.",
   },
   {
-    label: "Internal Recognition",
-    desc: "Nominated for Design Excellence award within the organization, two years running.",
-  },
-  {
-    label: "Notable Achievement",
-    desc: "Led the design systems initiative that reduced handoff time by 50% across 6 product teams.",
+    label: "Unsung Hero Award",
+    meta: "McFadyen Digital · Two-time recipient",
+    desc: "Recognized twice for exceptional client focus, ownership, collaboration, and commitment to delivering high-quality work.",
   },
 ];
 
@@ -259,7 +257,7 @@ export default function AboutPage() {
               Awards &amp; Achievements
             </h2>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6">
             {achievements.map((item) => (
               <div
                 key={item.label}
@@ -268,6 +266,7 @@ export default function AboutPage() {
                 <h3 className="text-[17px] md:text-[18px] font-semibold text-white">
                   {item.label}
                 </h3>
+                <p className="text-[13px] text-slate-400">{item.meta}</p>
                 <p className="text-[14px] leading-[22px] text-slate-300">
                   {item.desc}
                 </p>
