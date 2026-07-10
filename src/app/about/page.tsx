@@ -56,9 +56,9 @@ const experience = [
 
 const achievements = [
   {
-    label: "Winner, AI Ideathon",
+    label: "Winner, AI Ideathon (Hackathon)",
     meta: "IXDA Florianópolis · 2026",
-    desc: "Won first place in an AI-focused ideathon by developing a solution to a real-world problem through collaborative product thinking and rapid prototyping.",
+    desc: "Won first place in the AI Ideathon, an AI-focused hackathon, by developing a solution to a real-world problem through collaborative product thinking and rapid prototyping.",
   },
   {
     label: "Unsung Hero Award",
