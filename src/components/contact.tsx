@@ -8,7 +8,7 @@ const socials = [
   { label: "LinkedIn", href: "https://linkedin.com/in/juliabizol" },
 ];
 
-export function Contact() {
+export function Contact({ divider = false }: { divider?: boolean }) {
   const [copied, setCopied] = useState(false);
 
   const handleCopy = async () => {
@@ -22,7 +22,10 @@ export function Contact() {
   };
 
   return (
-    <section id="contact" className="relative flex flex-col overflow-hidden">
+    <section
+      id="contact"
+      className={`relative flex flex-col overflow-hidden ${divider ? "border-t border-slate-800" : ""}`}
+    >
       {/* Purple glow */}
       <div
         className="pointer-events-none absolute left-[-100px] bottom-0 h-[400px] w-[400px] md:h-[600px] md:w-[600px] rounded-full opacity-12"

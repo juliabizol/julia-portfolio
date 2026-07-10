@@ -308,9 +308,9 @@ export default function AboutPage() {
         </section>
 
         {/* 6. My Process */}
-        <Process />
+        <Process divider />
 
-        <Contact />
+        <Contact divider />
       </main>
     </div>
   );
