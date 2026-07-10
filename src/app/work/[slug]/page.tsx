@@ -180,14 +180,14 @@ export default async function CaseStudyPage({
           </div>
         </section>
 
-        {/* Design Process */}
+        {/* Approach */}
         <section className={section}>
-          <SectionLabel>DESIGN PROCESS</SectionLabel>
+          <SectionLabel>APPROACH</SectionLabel>
           <h2 className="text-[26px] md:text-[36px] font-bold tracking-[-0.01em] text-white mb-8 md:mb-12">
             How we got there.
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 mb-8 md:mb-12">
-            {project.process.map((step, i) => (
+            {project.approach.map((step, i) => (
               <div key={step.step} className="flex flex-col gap-3 md:gap-4 rounded-xl border border-slate-700 bg-slate-800/50 p-5 md:p-6">
                 <span className="w-fit rounded-full bg-purple-900/50 px-3 py-1 text-[12px] font-bold text-purple-300">
                   {String(i + 1).padStart(2, "0")}
@@ -215,9 +215,29 @@ export default async function CaseStudyPage({
             </p>
           </div>
           <ImagePlaceholder height="h-[240px] md:h-[400px] lg:h-[560px]" gradient={project.accent} />
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 md:gap-6 mt-4 md:mt-6">
-            {[0, 1, 2].map((i) => (
-              <ImagePlaceholder key={i} height="h-[180px] md:h-[260px]" gradient="from-slate-700 to-slate-800" />
+        </section>
+
+        {/* Key Design Decisions */}
+        <section className={section}>
+          <SectionLabel>KEY DESIGN DECISIONS</SectionLabel>
+          <h2 className="text-[26px] md:text-[36px] font-bold tracking-[-0.01em] text-white mb-5 md:mb-6">
+            The decisions that shaped this project.
+          </h2>
+          <p className="text-[15px] md:text-[17px] leading-[26px] md:leading-[28px] text-slate-300 max-w-[760px] mb-8 md:mb-12">
+            {project.decisionsIntro}
+          </p>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
+            {project.decisions.map((d, i) => (
+              <div
+                key={i}
+                className="flex flex-col gap-4 rounded-xl border border-slate-700 bg-slate-800/50 p-5 md:p-6"
+              >
+                <ImagePlaceholder height="h-[160px] md:h-[200px]" gradient="from-slate-700 to-slate-800" />
+                <h4 className="text-[15px] md:text-[16px] font-semibold text-white">{d.title}</h4>
+                <p className="text-[13px] md:text-[14px] leading-[21px] md:leading-[22px] text-slate-400">
+                  {d.description}
+                </p>
+              </div>
             ))}
           </div>
         </section>
@@ -236,6 +256,33 @@ export default async function CaseStudyPage({
                 </span>
                 <span className="text-[15px] md:text-[16px] font-semibold text-white">{o.label}</span>
                 <p className="text-[13px] md:text-[14px] leading-[21px] md:leading-[22px] text-slate-400">{o.description}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* Key Learnings */}
+        <section className={section}>
+          <SectionLabel>KEY LEARNINGS</SectionLabel>
+          <h2 className="text-[26px] md:text-[36px] font-bold tracking-[-0.01em] text-white mb-5 md:mb-6">
+            What this project taught me.
+          </h2>
+          <p className="text-[15px] md:text-[17px] leading-[26px] md:leading-[28px] text-slate-300 max-w-[760px] mb-8 md:mb-12">
+            {project.learningsIntro}
+          </p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
+            {project.learnings.map((l, i) => (
+              <div
+                key={i}
+                className="flex flex-col gap-3 md:gap-4 rounded-xl border border-slate-700 bg-slate-800/50 p-5 md:p-6"
+              >
+                <span className="w-fit rounded-full bg-purple-900/50 px-3 py-1 text-[12px] font-bold text-purple-300">
+                  {String(i + 1).padStart(2, "0")}
+                </span>
+                <h4 className="text-[15px] md:text-[16px] font-semibold text-white">{l.title}</h4>
+                <p className="text-[13px] md:text-[14px] leading-[21px] md:leading-[22px] text-slate-400">
+                  {l.description}
+                </p>
               </div>
             ))}
           </div>

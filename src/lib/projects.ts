@@ -17,7 +17,7 @@ export type Project = {
     methods: string[];
     findings: string[];
   };
-  process: {
+  approach: {
     step: string;
     description: string;
   }[];
@@ -25,7 +25,11 @@ export type Project = {
     heading: string;
     body: string;
   };
+  decisionsIntro: string;
+  decisions: { title: string; description: string }[];
   outcomes: { value: string; label: string; description: string }[];
+  learningsIntro: string;
+  learnings: { title: string; description: string }[];
   accent: string;
   image: string;
 };
@@ -72,21 +76,21 @@ export const projects: Project[] = [
         "Guest checkout was buried 2 levels deep in the UI",
       ],
     },
-    process: [
+    approach: [
       {
-        step: "Define & Frame",
+        step: "Phase One",
         description: LOREM_SHORT,
       },
       {
-        step: "Ideate & Sketch",
+        step: "Phase Two",
         description: LOREM_SHORT,
       },
       {
-        step: "Prototype & Test",
+        step: "Phase Three",
         description: LOREM_SHORT,
       },
       {
-        step: "Refine & Handoff",
+        step: "Phase Four",
         description: LOREM_SHORT,
       },
     ],
@@ -94,6 +98,12 @@ export const projects: Project[] = [
       heading: "A streamlined 3-step checkout with progressive disclosure.",
       body: LOREM + " " + LOREM_SHORT,
     },
+    decisionsIntro: LOREM_SHORT,
+    decisions: [
+      { title: "Decision One", description: LOREM_SHORT },
+      { title: "Decision Two", description: LOREM_SHORT },
+      { title: "Decision Three", description: LOREM_SHORT },
+    ],
     outcomes: [
       {
         value: "34%",
@@ -110,6 +120,13 @@ export const projects: Project[] = [
         label: "App store rating",
         description: "Average rating after checkout redesign shipped",
       },
+    ],
+    learningsIntro: LOREM_SHORT,
+    learnings: [
+      { title: "Learning One", description: LOREM_SHORT },
+      { title: "Learning Two", description: LOREM_SHORT },
+      { title: "Learning Three", description: LOREM_SHORT },
+      { title: "Learning Four", description: LOREM_SHORT },
     ],
     accent: "from-purple-900/70 to-slate-800",
     image: "/projects/pet-compliance-platform.jpg",
@@ -149,16 +166,22 @@ export const projects: Project[] = [
         "Designers had no single source of truth for spacing and typography",
       ],
     },
-    process: [
-      { step: "Audit & Inventory", description: LOREM_SHORT },
-      { step: "Token Architecture", description: LOREM_SHORT },
-      { step: "Component Build", description: LOREM_SHORT },
-      { step: "Adoption & Docs", description: LOREM_SHORT },
+    approach: [
+      { step: "Phase One", description: LOREM_SHORT },
+      { step: "Phase Two", description: LOREM_SHORT },
+      { step: "Phase Three", description: LOREM_SHORT },
+      { step: "Phase Four", description: LOREM_SHORT },
     ],
     solution: {
       heading: "One source of truth. Every team, every platform.",
       body: LOREM + " " + LOREM_SHORT,
     },
+    decisionsIntro: LOREM_SHORT,
+    decisions: [
+      { title: "Decision One", description: LOREM_SHORT },
+      { title: "Decision Two", description: LOREM_SHORT },
+      { title: "Decision Three", description: LOREM_SHORT },
+    ],
     outcomes: [
       {
         value: "50%",
@@ -175,6 +198,13 @@ export const projects: Project[] = [
         label: "Components",
         description: "Components shipped across web and mobile",
       },
+    ],
+    learningsIntro: LOREM_SHORT,
+    learnings: [
+      { title: "Learning One", description: LOREM_SHORT },
+      { title: "Learning Two", description: LOREM_SHORT },
+      { title: "Learning Three", description: LOREM_SHORT },
+      { title: "Learning Four", description: LOREM_SHORT },
     ],
     accent: "from-violet-900/70 to-slate-800",
     image: "/projects/design-system-evolution.jpg",
@@ -214,16 +244,22 @@ export const projects: Project[] = [
         "Progress indicators were absent — users didn't know how long onboarding would take",
       ],
     },
-    process: [
-      { step: "Data Analysis", description: LOREM_SHORT },
-      { step: "Journey Mapping", description: LOREM_SHORT },
-      { step: "Concept Testing", description: LOREM_SHORT },
-      { step: "Ship & Iterate", description: LOREM_SHORT },
+    approach: [
+      { step: "Phase One", description: LOREM_SHORT },
+      { step: "Phase Two", description: LOREM_SHORT },
+      { step: "Phase Three", description: LOREM_SHORT },
+      { step: "Phase Four", description: LOREM_SHORT },
     ],
     solution: {
       heading: "Value first. Ask questions second.",
       body: LOREM + " " + LOREM_SHORT,
     },
+    decisionsIntro: LOREM_SHORT,
+    decisions: [
+      { title: "Decision One", description: LOREM_SHORT },
+      { title: "Decision Two", description: LOREM_SHORT },
+      { title: "Decision Three", description: LOREM_SHORT },
+    ],
     outcomes: [
       {
         value: "22%",
@@ -240,6 +276,13 @@ export const projects: Project[] = [
         label: "Time to value",
         description: "Reduction in time from install to first key action",
       },
+    ],
+    learningsIntro: LOREM_SHORT,
+    learnings: [
+      { title: "Learning One", description: LOREM_SHORT },
+      { title: "Learning Two", description: LOREM_SHORT },
+      { title: "Learning Three", description: LOREM_SHORT },
+      { title: "Learning Four", description: LOREM_SHORT },
     ],
     accent: "from-purple-800/60 to-slate-800",
     image: "/projects/surfs.jpg",
