@@ -102,7 +102,7 @@ export default function AboutPage() {
             {/* Text */}
             <div className="max-w-[760px]">
               <p className="text-[13px] font-medium tracking-[0.03em] text-purple-300 mb-5 md:mb-6">
-                ABOUT
+                ABOUT ME
               </p>
               <h1 className="text-[36px] sm:text-[48px] lg:text-[60px] font-bold leading-[1.1] tracking-[-0.02em] text-white mb-7 md:mb-9">
                 I turn complexity
@@ -110,23 +110,23 @@ export default function AboutPage() {
                 into clarity.
               </h1>
               <p className="text-[16px] md:text-[18px] leading-[28px] md:leading-[30px] text-slate-300 mb-5">
-                I&apos;m a Senior UX Designer based in São Paulo with 8+ years
-                shaping digital products across startups and enterprise teams. My
-                work sits at the intersection of rigorous research, systems
-                thinking, and visual craft.
+                Over the past nine years, I&apos;ve worked on products with very
+                different users, constraints, and business models. What has
+                stayed the same is what motivates me: understanding complex
+                problems, asking better questions, and helping teams build
+                products that are useful, scalable, and grounded in thoughtful
+                decisions.
               </p>
               <p className="text-[16px] md:text-[18px] leading-[28px] md:leading-[30px] text-slate-300 mb-5">
-                I came up through graphic design, got hands-on with front-end code,
-                and moved into UX and product design when I realized that the most
-                impactful work happens at the seam between user needs and
-                engineering reality. That cross-disciplinary fluency — designing
-                with systems in mind, speaking the language of developers, and
-                anchoring every decision in research — is what I bring to every
-                team I join.
+                I enjoy working in close partnership with Product and
+                Engineering, bringing research, product thinking, and evidence
+                together to help teams make better product decisions.
               </p>
               <p className="text-[16px] md:text-[18px] leading-[28px] md:leading-[30px] text-slate-300">
-                I believe great design is invisible. It just works — and people
-                never have to think about why.
+                Whether I&apos;m improving an existing product, designing a new
+                experience, or building the foundations of a Design System,
+                I&apos;m driven by curiosity, collaboration, and the belief that
+                better decisions lead to better products.
               </p>
             </div>
           </div>
