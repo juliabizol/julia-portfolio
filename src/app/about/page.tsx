@@ -189,7 +189,7 @@ export default function AboutPage() {
               experience, projects, and accomplishments.
             </p>
             <a
-              href="/resume.pdf"
+              href="/Julia_Bizol_Resume.pdf"
               download
               className="inline-flex items-center gap-2 rounded-full border border-slate-700 hover:border-slate-500 transition-colors px-7 py-[14px] text-[15px] font-semibold text-white"
             >
