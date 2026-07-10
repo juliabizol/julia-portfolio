@@ -162,7 +162,7 @@ export default async function CaseStudyPage({
               <h3 className="text-[18px] md:text-[20px] font-semibold text-white mb-4 md:mb-5">Methods</h3>
               <div className="flex flex-wrap gap-2">
                 {project.research.methods.map((m) => (
-                  <span key={m} className="rounded-lg border border-slate-700 bg-slate-800/50 px-3 md:px-4 py-1.5 md:py-2 text-[13px] md:text-[14px] font-medium text-slate-300">
+                  <span key={m} className="rounded-full border border-slate-700 bg-slate-800/50 px-4 md:px-5 py-2 md:py-2.5 text-[14px] md:text-[15px] font-medium text-slate-300">
                     {m}
                   </span>
                 ))}
