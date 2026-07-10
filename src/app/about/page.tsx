@@ -70,15 +70,15 @@ const achievements = [
 const testimonials = [
   {
     quote:
-      "Julia has a rare ability to translate ambiguous problems into clear, elegant solutions. She doesn't just design screens — she shapes how the team thinks about the product.",
-    name: "Placeholder Name",
-    title: "Product Manager · Confidential",
+      "Julia has a great ability to understand user needs and turn insights into practical, effective solutions. She also shared her expertise by leading a UX workshop that was incredibly valuable for our team.",
+    name: "Gustavo Felix Gomes",
+    title: "Data Engineer",
   },
   {
     quote:
-      "Working with Julia made our handoff process feel effortless. She speaks the language of developers, and her documentation is some of the clearest I've ever seen.",
-    name: "Placeholder Name",
-    title: "Senior Engineer · Confidential",
+      "Julia consistently demonstrated professionalism, ownership, and a commitment to quality. She connects with clients, continuously seeks new knowledge, and is the kind of professional I would always want on my teams.",
+    name: "Victor Melo",
+    title: "Project Manager · Former Manager",
   },
 ];
 
