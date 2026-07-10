@@ -182,7 +182,7 @@ export default function AboutPage() {
           </div>
 
           {/* Resume CTA continuation */}
-          <div className="mt-14 md:mt-16 border-t border-slate-800" />
+          <div className="border-t border-slate-800" />
           <div className="pt-14 md:pt-16 max-w-[600px]">
             <p className="text-[16px] md:text-[17px] leading-[26px] text-slate-300 mb-6">
               Download my résumé for a more detailed overview of my
