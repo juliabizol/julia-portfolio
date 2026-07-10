@@ -139,7 +139,7 @@ export default async function CaseStudyPage({
         {/* Problem */}
         <section className={section}>
           <div className="max-w-[760px]">
-            <SectionLabel>THE PROBLEM</SectionLabel>
+            <SectionLabel>PROBLEM</SectionLabel>
             <h2 className="text-[26px] md:text-[36px] font-bold leading-[1.2] md:leading-[44px] tracking-[-0.01em] text-white mb-5 md:mb-6">
               {project.problem.heading}
             </h2>
@@ -206,7 +206,7 @@ export default async function CaseStudyPage({
         {/* Solution */}
         <section className={section}>
           <div className="max-w-[760px] mb-10 md:mb-12">
-            <SectionLabel>THE SOLUTION</SectionLabel>
+            <SectionLabel>SOLUTION</SectionLabel>
             <h2 className="text-[26px] md:text-[36px] font-bold leading-[1.2] md:leading-[44px] tracking-[-0.01em] text-white mb-5 md:mb-6">
               {project.solution.heading}
             </h2>
@@ -226,17 +226,28 @@ export default async function CaseStudyPage({
           <p className="text-[15px] md:text-[17px] leading-[26px] md:leading-[28px] text-slate-300 max-w-[760px] mb-8 md:mb-12">
             {project.decisionsIntro}
           </p>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
+          <div className="flex flex-col">
             {project.decisions.map((d, i) => (
               <div
                 key={i}
-                className="flex flex-col gap-4 rounded-xl border border-slate-700 bg-slate-800/50 p-5 md:p-6"
+                className={`flex flex-col lg:items-center gap-8 lg:gap-16 py-10 md:py-14 border-t border-slate-800 lg:flex-row ${
+                  i % 2 === 1 ? "lg:flex-row-reverse" : ""
+                }`}
               >
-                <ImagePlaceholder height="h-[160px] md:h-[200px]" gradient="from-slate-700 to-slate-800" />
-                <h4 className="text-[15px] md:text-[16px] font-semibold text-white">{d.title}</h4>
-                <p className="text-[13px] md:text-[14px] leading-[21px] md:leading-[22px] text-slate-400">
-                  {d.description}
-                </p>
+                <div className="flex flex-1 flex-col gap-4 md:gap-5">
+                  <span className="w-fit rounded-full bg-purple-900/50 px-3 py-1 text-[12px] font-bold text-purple-300">
+                    {String(i + 1).padStart(2, "0")}
+                  </span>
+                  <h3 className="text-[20px] md:text-[24px] font-semibold text-white">
+                    {d.title}
+                  </h3>
+                  <p className="text-[14px] md:text-[16px] leading-[22px] md:leading-[26px] text-slate-300">
+                    {d.description}
+                  </p>
+                </div>
+                <div className="w-full flex-1">
+                  <ImagePlaceholder height="h-[240px] md:h-[340px]" gradient="from-slate-700 to-slate-800" />
+                </div>
               </div>
             ))}
           </div>
@@ -244,7 +255,7 @@ export default async function CaseStudyPage({
 
         {/* Outcomes */}
         <section className={section}>
-          <SectionLabel>OUTCOMES</SectionLabel>
+          <SectionLabel>RESULTS &amp; IMPACT</SectionLabel>
           <h2 className="text-[26px] md:text-[36px] font-bold tracking-[-0.01em] text-white mb-8 md:mb-12">
             Results &amp; Impact
           </h2>
