@@ -111,8 +111,14 @@ export default async function CaseStudyPage({
 
         {/* Overview */}
         <section className={section}>
-          <div className="grid grid-cols-1 lg:grid-cols-[240px_1fr] gap-10 lg:gap-20">
-            <div className="flex flex-row flex-wrap lg:flex-col gap-6 lg:gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-[1fr_240px] gap-10 md:gap-16 lg:gap-20">
+            <div>
+              <SectionLabel>OVERVIEW</SectionLabel>
+              <p className="text-[15px] md:text-[17px] leading-[26px] md:leading-[28px] text-slate-300">
+                {project.context}
+              </p>
+            </div>
+            <div className="flex flex-row flex-wrap md:flex-col gap-6 md:gap-6">
               {[
                 { label: "Role", value: project.role },
                 { label: "Timeline", value: project.timeline },
@@ -127,28 +133,24 @@ export default async function CaseStudyPage({
                 </div>
               ))}
             </div>
-            <div>
-              <SectionLabel>OVERVIEW</SectionLabel>
-              <p className="text-[15px] md:text-[17px] leading-[26px] md:leading-[28px] text-slate-300">
-                {project.context}
-              </p>
-            </div>
           </div>
         </section>
 
-        {/* Problem */}
+        {/* Problem & Context */}
         <section className={section}>
-          <div className="max-w-[760px]">
-            <SectionLabel>PROBLEM</SectionLabel>
-            <h2 className="text-[26px] md:text-[36px] font-bold leading-[1.2] md:leading-[44px] tracking-[-0.01em] text-white mb-5 md:mb-6">
-              {project.problem.heading}
-            </h2>
-            <p className="text-[15px] md:text-[17px] leading-[26px] md:leading-[28px] text-slate-300">
-              {project.problem.body}
-            </p>
-          </div>
-          <div className="mt-10 md:mt-12">
-            <ImagePlaceholder height="h-[220px] md:h-[360px]" gradient={project.accent} />
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-start">
+            <div>
+              <SectionLabel>PROBLEM &amp; CONTEXT</SectionLabel>
+              <h2 className="text-[26px] md:text-[36px] font-bold leading-[1.2] md:leading-[44px] tracking-[-0.01em] text-white mb-5 md:mb-6">
+                {project.problem.heading}
+              </h2>
+              <p className="text-[15px] md:text-[17px] leading-[26px] md:leading-[28px] text-slate-300">
+                {project.problem.body}
+              </p>
+            </div>
+            <div>
+              <ImagePlaceholder height="h-[240px] md:h-[320px] lg:h-[380px]" gradient={project.accent} />
+            </div>
           </div>
         </section>
 
@@ -205,21 +207,25 @@ export default async function CaseStudyPage({
 
         {/* Solution */}
         <section className={section}>
-          <div className="max-w-[760px] mb-10 md:mb-12">
-            <SectionLabel>SOLUTION</SectionLabel>
-            <h2 className="text-[26px] md:text-[36px] font-bold leading-[1.2] md:leading-[44px] tracking-[-0.01em] text-white mb-5 md:mb-6">
-              {project.solution.heading}
-            </h2>
-            <p className="text-[15px] md:text-[17px] leading-[26px] md:leading-[28px] text-slate-300">
-              {project.solution.body}
-            </p>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-start">
+            <div>
+              <SectionLabel>SOLUTION</SectionLabel>
+              <h2 className="text-[26px] md:text-[36px] font-bold leading-[1.2] md:leading-[44px] tracking-[-0.01em] text-white mb-5 md:mb-6">
+                {project.solution.heading}
+              </h2>
+              <p className="text-[15px] md:text-[17px] leading-[26px] md:leading-[28px] text-slate-300">
+                {project.solution.body}
+              </p>
+            </div>
+            <div>
+              <ImagePlaceholder height="h-[240px] md:h-[320px] lg:h-[380px]" gradient={project.accent} />
+            </div>
           </div>
-          <ImagePlaceholder height="h-[240px] md:h-[400px] lg:h-[560px]" gradient={project.accent} />
         </section>
 
-        {/* Key Design Decisions */}
+        {/* Design Decisions */}
         <section className={section}>
-          <SectionLabel>KEY DESIGN DECISIONS</SectionLabel>
+          <SectionLabel>DESIGN DECISIONS</SectionLabel>
           <h2 className="text-[26px] md:text-[36px] font-bold tracking-[-0.01em] text-white mb-5 md:mb-6">
             The decisions that shaped this project.
           </h2>
