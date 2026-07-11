@@ -126,7 +126,7 @@ export default async function CaseStudyPage({
                 { label: "Tools", value: project.tools.join(", ") },
               ].map((item) => (
                 <div key={item.label} className="flex flex-col gap-1 min-w-[140px]">
-                  <span className="text-[11px] md:text-[12px] font-medium tracking-[0.05em] text-slate-500 uppercase">
+                  <span className="text-[11px] md:text-[12px] font-medium tracking-[0.05em] text-slate-400 uppercase">
                     {item.label}
                   </span>
                   <span className="text-[14px] md:text-[15px] text-slate-200">{item.value}</span>
@@ -313,7 +313,7 @@ export default async function CaseStudyPage({
           >
             {/* Below md (768px): fully stacked layout */}
             <div className="flex flex-col gap-4 md:hidden">
-              <span className="text-[12px] font-medium tracking-[0.03em] text-slate-500">
+              <span className="text-[12px] font-medium tracking-[0.03em] text-slate-400">
                 NEXT CASE STUDY
               </span>
               <div className="relative w-full aspect-[8/5] overflow-hidden rounded-xl border border-slate-700 bg-slate-900">
@@ -349,7 +349,7 @@ export default async function CaseStudyPage({
                 />
               </div>
               <div className="flex flex-col gap-2 min-w-0">
-                <span className="text-[13px] font-medium tracking-[0.03em] text-slate-500">
+                <span className="text-[13px] font-medium tracking-[0.03em] text-slate-400">
                   NEXT CASE STUDY
                 </span>
                 <span className="text-[28px] font-bold text-white group-hover:text-purple-300 transition-colors">
@@ -372,10 +372,10 @@ export default async function CaseStudyPage({
 
         {/* Footer */}
         <footer className="flex flex-col sm:flex-row items-center justify-between gap-1 border-t border-slate-800 px-5 md:px-10 lg:px-20 py-4">
-          <p className="text-[12px] md:text-[13px] text-slate-500">
+          <p className="text-[12px] md:text-[13px] text-slate-400">
             © 2026 Julia Bizol · All rights reserved
           </p>
-          <p className="text-[12px] md:text-[13px] text-slate-500">
+          <p className="text-[12px] md:text-[13px] text-slate-400">
             Designed and built by Julia Bizol
           </p>
         </footer>

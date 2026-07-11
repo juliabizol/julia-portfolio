@@ -164,7 +164,7 @@ export default function AboutPage() {
                 className="grid grid-cols-1 md:grid-cols-[200px_1fr] gap-4 md:gap-12 py-8 md:py-10 border-t border-slate-800"
               >
                 <div>
-                  <p className="text-[13px] font-medium text-slate-500 mb-1">
+                  <p className="text-[13px] font-medium text-slate-400 mb-1">
                     {item.period}
                   </p>
                   <p className="text-[15px] font-semibold text-white">
