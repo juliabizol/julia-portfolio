@@ -4,6 +4,7 @@ export type Project = {
   tags: string[];
   summary: string;
   metrics: { value: string; label: string }[];
+  industry: string;
   role: string;
   timeline: string;
   team: string;
@@ -52,13 +53,14 @@ export const projects: Project[] = [
       { value: "6 weeks", label: "Project timeline" },
       { value: "3", label: "Platforms (web, iOS, Android)" },
     ],
+    industry: "Pet & Hospitality Technology",
     role: "Lead UX Designer",
     timeline: "Jan – Feb 2024",
     team: "1 UX Designer, 2 Engineers, 1 PM",
     tools: ["Figma", "Maze", "Hotjar", "Notion"],
     context: LOREM,
     problem: {
-      heading: "Users were abandoning at the payment step.",
+      heading: "Users were abandoning at the payment step",
       body: LOREM + " " + LOREM_SHORT,
     },
     research: {
@@ -95,7 +97,7 @@ export const projects: Project[] = [
       },
     ],
     solution: {
-      heading: "A streamlined 3-step checkout with progressive disclosure.",
+      heading: "A streamlined 3-step checkout with progressive disclosure",
       body: LOREM + " " + LOREM_SHORT,
     },
     decisionsIntro: LOREM_SHORT,
@@ -142,13 +144,14 @@ export const projects: Project[] = [
       { value: "6 teams", label: "Across the org" },
       { value: "200+", label: "Components shipped" },
     ],
+    industry: "Enterprise SaaS",
     role: "Design Systems Lead",
     timeline: "Mar – Aug 2024",
     team: "2 UX Designers, 3 Frontend Engineers, 1 PM",
     tools: ["Figma", "Storybook", "Tokens Studio", "Jira"],
     context: LOREM,
     problem: {
-      heading: "Six teams, six different design languages.",
+      heading: "Six teams, six different design languages",
       body: LOREM + " " + LOREM_SHORT,
     },
     research: {
@@ -173,7 +176,7 @@ export const projects: Project[] = [
       { step: "Phase Four", description: LOREM_SHORT },
     ],
     solution: {
-      heading: "One source of truth. Every team, every platform.",
+      heading: "One source of truth. Every team, every platform",
       body: LOREM + " " + LOREM_SHORT,
     },
     decisionsIntro: LOREM_SHORT,
@@ -220,13 +223,14 @@ export const projects: Project[] = [
       { value: "iOS + Android", label: "Platforms" },
       { value: "4 weeks", label: "Research to launch" },
     ],
+    industry: "Consumer Mobile",
     role: "Senior UX Designer",
     timeline: "Sep – Oct 2024",
     team: "1 UX Designer, 2 Mobile Engineers, 1 PM, 1 Data Analyst",
     tools: ["Figma", "Maze", "Amplitude", "Lottie"],
     context: LOREM,
     problem: {
-      heading: "60% of new users never saw the core product.",
+      heading: "60% of new users never saw the core product",
       body: LOREM + " " + LOREM_SHORT,
     },
     research: {
@@ -251,7 +255,7 @@ export const projects: Project[] = [
       { step: "Phase Four", description: LOREM_SHORT },
     ],
     solution: {
-      heading: "Value first. Ask questions second.",
+      heading: "Value first. Ask questions second",
       body: LOREM + " " + LOREM_SHORT,
     },
     decisionsIntro: LOREM_SHORT,

@@ -114,12 +114,16 @@ export default async function CaseStudyPage({
           <div className="grid grid-cols-1 md:grid-cols-[1fr_240px] gap-10 md:gap-16 lg:gap-20">
             <div>
               <SectionLabel>OVERVIEW</SectionLabel>
+              <h2 className="text-[26px] md:text-[36px] font-bold leading-[1.2] md:leading-[44px] tracking-[-0.01em] text-white mb-5 md:mb-6">
+                Understanding the project
+              </h2>
               <p className="text-[15px] md:text-[17px] leading-[26px] md:leading-[28px] text-slate-300">
                 {project.context}
               </p>
             </div>
             <div className="flex flex-row flex-wrap md:flex-col gap-6 md:gap-6">
               {[
+                { label: "Industry", value: project.industry },
                 { label: "Role", value: project.role },
                 { label: "Timeline", value: project.timeline },
                 { label: "Team", value: project.team },
@@ -186,7 +190,7 @@ export default async function CaseStudyPage({
         <section className={section}>
           <SectionLabel>APPROACH</SectionLabel>
           <h2 className="text-[26px] md:text-[36px] font-bold tracking-[-0.01em] text-white mb-8 md:mb-12">
-            How we got there.
+            How we got there
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 mb-8 md:mb-12">
             {project.approach.map((step, i) => (
@@ -227,7 +231,7 @@ export default async function CaseStudyPage({
         <section className={`${px} pt-12 md:pt-16 border-t border-slate-800`}>
           <SectionLabel>DESIGN DECISIONS</SectionLabel>
           <h2 className="text-[26px] md:text-[36px] font-bold tracking-[-0.01em] text-white mb-5 md:mb-6">
-            The decisions that shaped this project.
+            The decisions that shaped this project
           </h2>
           <p className="text-[15px] md:text-[17px] leading-[26px] md:leading-[28px] text-slate-300 max-w-[760px] mb-8 md:mb-12">
             {project.decisionsIntro}
@@ -282,7 +286,7 @@ export default async function CaseStudyPage({
         <section className={section}>
           <SectionLabel>KEY LEARNINGS</SectionLabel>
           <h2 className="text-[26px] md:text-[36px] font-bold tracking-[-0.01em] text-white mb-5 md:mb-6">
-            What this project taught me.
+            What this project taught me
           </h2>
           <p className="text-[15px] md:text-[17px] leading-[26px] md:leading-[28px] text-slate-300 max-w-[760px] mb-8 md:mb-12">
             {project.learningsIntro}
@@ -309,7 +313,7 @@ export default async function CaseStudyPage({
         <section className={section}>
           <SectionLabel>MORE WORK</SectionLabel>
           <h2 className="text-[26px] md:text-[36px] font-bold tracking-[-0.01em] text-white mb-8 md:mb-12">
-            Explore more case studies.
+            Explore more case studies
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-6">
             {otherProjects.map((p) => (
