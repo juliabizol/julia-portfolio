@@ -43,7 +43,7 @@ export function ProjectCard({
             <Badge key={t} label={t} />
           ))}
         </div>
-        <h3 className="line-clamp-2 min-h-[48px] md:min-h-[52px] text-[17px] md:text-[19px] leading-[24px] md:leading-[26px] font-semibold text-white">
+        <h3 className="line-clamp-2 text-[17px] md:text-[19px] leading-[24px] md:leading-[26px] font-semibold text-white">
           {title}
         </h3>
         <p className="text-[14px] leading-[22px] text-slate-300">{desc}</p>
