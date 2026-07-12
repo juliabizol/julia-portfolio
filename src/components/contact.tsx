@@ -4,8 +4,45 @@ import { useState } from "react";
 
 const EMAIL = "juliabizol@gmail.com";
 
+function LinkedInIcon() {
+  return (
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+      <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+    </svg>
+  );
+}
+
+function DownloadIcon() {
+  return (
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path
+        d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M7 10l5 5 5-5"
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M12 15V3"
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+}
+
 const socials = [
-  { label: "LinkedIn", href: "https://linkedin.com/in/juliabizol" },
+  { label: "LinkedIn", href: "https://linkedin.com/in/juliabizol", icon: LinkedInIcon, download: false },
+  { label: "Download résumé", href: "/Julia_Bizol_Resume.pdf", icon: DownloadIcon, download: true },
 ];
 
 export function Contact({ divider = false }: { divider?: boolean }) {
@@ -42,7 +79,7 @@ export function Contact({ divider = false }: { divider?: boolean }) {
         </p>
 
         <h2 className="max-w-[900px] text-[36px] sm:text-[48px] lg:text-[64px] font-bold leading-[1.1] lg:leading-[72px] tracking-[-0.02em] text-white">
-          Let&apos;s solve something
+          Let&apos;s build something
           <br />
           meaningful together.
         </h2>
@@ -116,15 +153,17 @@ export function Contact({ divider = false }: { divider?: boolean }) {
           </button>
         </div>
 
-        <div className="flex gap-6 md:gap-8">
+        <div className="flex flex-wrap justify-center gap-6 md:gap-8">
           {socials.map((s) => (
             <a
               key={s.label}
               href={s.href}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-[14px] font-medium text-slate-400 hover:text-slate-200 transition-colors"
+              {...(s.download
+                ? { download: true }
+                : { target: "_blank", rel: "noopener noreferrer" })}
+              className="inline-flex items-center gap-2 text-[14px] font-medium text-slate-400 hover:text-slate-200 transition-colors"
             >
+              <s.icon />
               {s.label}
             </a>
           ))}

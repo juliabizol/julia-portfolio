@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { getProject, projects } from "@/lib/projects";
 import { StickyNav } from "@/components/nav";
+import { ProjectCard } from "@/components/work";
 
 export function generateStaticParams() {
   return projects.map((p) => ({ slug: p.slug }));
@@ -45,8 +46,7 @@ export default async function CaseStudyPage({
   const project = getProject(slug);
   if (!project) notFound();
 
-  const nextProject =
-    projects[(projects.findIndex((p) => p.slug === slug) + 1) % projects.length];
+  const otherProjects = projects.filter((p) => p.slug !== slug);
 
   const px = "px-5 md:px-10 lg:px-20";
   const section = `${px} py-12 md:py-16 border-t border-slate-800`;
@@ -305,69 +305,24 @@ export default async function CaseStudyPage({
           </div>
         </section>
 
-        {/* Next case study */}
-        <section className="border-t border-slate-800">
-          <Link
-            href={`/work/${nextProject.slug}`}
-            className="group block px-5 md:px-10 lg:px-20 py-8 md:py-12 hover:bg-slate-900/50 active:bg-slate-900/70 active:scale-[0.98] transition-all duration-150"
-          >
-            {/* Below md (768px): fully stacked layout */}
-            <div className="flex flex-col gap-4 md:hidden">
-              <span className="text-[12px] font-medium tracking-[0.03em] text-slate-400">
-                NEXT CASE STUDY
-              </span>
-              <div className="relative w-full aspect-[8/5] overflow-hidden rounded-xl border border-slate-700 bg-slate-900">
-                <Image
-                  src={nextProject.image}
-                  alt={nextProject.title}
-                  fill
-                  className="object-contain"
-                  sizes="100vw"
-                />
-              </div>
-              <span className="text-[22px] font-bold text-white group-hover:text-purple-300 transition-colors">
-                {nextProject.title}
-              </span>
-              <div className="flex flex-wrap gap-2">
-                {nextProject.tags.map((t) => (
-                  <span key={t} className="rounded-full bg-purple-900/50 px-[10px] py-1 text-[11px] font-medium text-purple-300">
-                    {t}
-                  </span>
-                ))}
-              </div>
-            </div>
-
-            {/* md and up: thumbnail beside a stacked label/title/tags column */}
-            <div className="hidden md:flex items-center gap-8">
-              <div className="relative w-[180px] h-[120px] shrink-0 overflow-hidden rounded-xl border border-slate-700">
-                <Image
-                  src={nextProject.image}
-                  alt={nextProject.title}
-                  fill
-                  className="object-cover"
-                  sizes="180px"
-                />
-              </div>
-              <div className="flex flex-col gap-2 min-w-0">
-                <span className="text-[13px] font-medium tracking-[0.03em] text-slate-400">
-                  NEXT CASE STUDY
-                </span>
-                <span className="text-[28px] font-bold text-white group-hover:text-purple-300 transition-colors">
-                  {nextProject.title}{" "}
-                  <span className="inline-block text-slate-600 group-hover:text-purple-300 group-hover:translate-x-2 transition-all">
-                    →
-                  </span>
-                </span>
-                <div className="flex flex-wrap gap-2 mt-1">
-                  {nextProject.tags.map((t) => (
-                    <span key={t} className="rounded-full bg-purple-900/50 px-[10px] py-1 text-[11px] font-medium text-purple-300">
-                      {t}
-                    </span>
-                  ))}
-                </div>
-              </div>
-            </div>
-          </Link>
+        {/* More Work */}
+        <section className={section}>
+          <SectionLabel>MORE WORK</SectionLabel>
+          <h2 className="text-[26px] md:text-[36px] font-bold tracking-[-0.01em] text-white mb-8 md:mb-12">
+            Explore more case studies.
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-6">
+            {otherProjects.map((p) => (
+              <ProjectCard
+                key={p.slug}
+                slug={p.slug}
+                title={p.title}
+                tags={p.tags}
+                desc={p.summary}
+                image={p.image}
+              />
+            ))}
+          </div>
         </section>
 
         {/* Footer */}

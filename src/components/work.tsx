@@ -10,7 +10,7 @@ function Badge({ label }: { label: string }) {
   );
 }
 
-function ProjectCard({
+export function ProjectCard({
   slug,
   title,
   tags,
