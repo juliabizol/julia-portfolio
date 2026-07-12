@@ -110,7 +110,7 @@ export function Contact({ divider = false }: { divider?: boolean }) {
         <h2 className="max-w-[900px] text-[36px] sm:text-[48px] lg:text-[64px] font-bold leading-[1.1] lg:leading-[72px] tracking-[-0.02em] text-white">
           Let&apos;s build something
           <br />
-          meaningful together.
+          meaningful together
         </h2>
 
         <p className="max-w-[520px] text-[16px] md:text-[18px] leading-[26px] md:leading-[28px] text-slate-300">
@@ -120,10 +120,10 @@ export function Contact({ divider = false }: { divider?: boolean }) {
 
         {/* Email copy widget */}
         <div className="inline-flex items-center gap-3 rounded-xl border border-purple-300/20 bg-[#0B1220] p-3">
-          <div className="flex items-center justify-center rounded-lg bg-[#172135] p-2">
+          <div className="flex items-center justify-center rounded-lg bg-[#172135] p-2.5">
             <svg
-              width="20"
-              height="20"
+              width="16"
+              height="16"
               viewBox="0 0 20 20"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
