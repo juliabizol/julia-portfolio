@@ -74,7 +74,7 @@ export function About() {
 
           <Link
             href="/about"
-            className="inline-flex items-center gap-1 text-[14px] font-medium text-purple-300 hover:text-purple-200 transition-colors"
+            className="inline-flex items-center gap-1 text-[14px] font-medium text-purple-300 hover:text-white transition-colors"
           >
             Learn more about me →
           </Link>

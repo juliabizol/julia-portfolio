@@ -47,7 +47,7 @@ export function ProjectCard({
           {title}
         </h3>
         <p className="text-[14px] leading-[22px] text-slate-300">{desc}</p>
-        <span className="mt-auto pt-1 text-[13px] font-medium text-purple-300 group-hover:underline">
+        <span className="mt-auto pt-1 text-[13px] font-medium text-purple-300 transition-colors group-hover:text-white">
           View case study →
         </span>
       </div>

@@ -161,7 +161,7 @@ export function Contact({ divider = false }: { divider?: boolean }) {
               {...(s.download
                 ? { download: true }
                 : { target: "_blank", rel: "noopener noreferrer" })}
-              className="inline-flex items-center gap-2 text-[14px] font-medium text-slate-400 hover:text-slate-200 transition-colors"
+              className="inline-flex items-center gap-2 text-[14px] font-medium text-slate-400 hover:text-white transition-colors"
             >
               <s.icon />
               {s.label}
