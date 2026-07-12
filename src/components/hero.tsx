@@ -1,3 +1,5 @@
+import { Tag } from "@/components/tag";
+
 export function Hero() {
   return (
     <section className="relative flex flex-col items-center px-5 sm:px-12 lg:px-40 py-14 md:py-20 lg:py-24 overflow-hidden text-center">
@@ -11,12 +13,15 @@ export function Hero() {
       />
 
       {/* Available badge */}
-      <div className="mb-6 md:mb-8 flex items-center gap-1.5 rounded-full bg-purple-900/50 px-3 py-1.5">
-        <span className="h-1.5 w-1.5 rounded-full bg-green-500" />
-        <span className="text-[13px] font-medium text-purple-300">
-          Available
-        </span>
-      </div>
+      <Tag
+        variant="accent"
+        size="md"
+        dot
+        dotClassName="bg-green-500"
+        className="mb-6 md:mb-8"
+      >
+        Available
+      </Tag>
 
       {/* Headline */}
       <h1 className="max-w-[900px] text-[40px] sm:text-[56px] lg:text-[72px] font-bold leading-[1.1] lg:leading-[80px] tracking-[-0.02em] text-white">

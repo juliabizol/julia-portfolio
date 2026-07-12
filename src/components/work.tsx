@@ -1,14 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { projects } from "@/lib/projects";
-
-function Badge({ label }: { label: string }) {
-  return (
-    <span className="rounded-full bg-purple-900/50 px-[10px] py-1 text-[11px] font-medium text-purple-300">
-      {label}
-    </span>
-  );
-}
+import { Tag } from "@/components/tag";
 
 export function ProjectCard({
   slug,
@@ -40,7 +33,9 @@ export function ProjectCard({
       <div className="flex flex-1 flex-col gap-3 p-5 md:p-6 min-w-0">
         <div className="flex flex-nowrap gap-1.5 overflow-hidden">
           {tags.map((t) => (
-            <Badge key={t} label={t} />
+            <Tag key={t} variant="accent" size="sm">
+              {t}
+            </Tag>
           ))}
         </div>
         <h3 className="line-clamp-2 text-[17px] md:text-[19px] leading-[24px] md:leading-[26px] font-semibold text-white">

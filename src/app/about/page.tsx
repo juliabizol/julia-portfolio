@@ -2,6 +2,7 @@ import Image from "next/image";
 import { StickyNav } from "@/components/nav";
 import { Process } from "@/components/process";
 import { Contact } from "@/components/contact";
+import { Tag } from "@/components/tag";
 
 export const metadata = {
   title: "About — Julia Bizol",
@@ -237,12 +238,9 @@ export default function AboutPage() {
           </div>
           <div className="flex flex-wrap gap-3">
             {skills.map((skill) => (
-              <span
-                key={skill}
-                className="rounded-full border border-slate-700 bg-slate-800/50 px-4 md:px-5 py-2 md:py-2.5 text-[14px] md:text-[15px] font-medium text-slate-300"
-              >
+              <Tag key={skill} variant="neutral" size="md">
                 {skill}
-              </span>
+              </Tag>
             ))}
           </div>
         </section>

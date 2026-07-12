@@ -4,6 +4,7 @@ import Link from "next/link";
 import { getProject, projects } from "@/lib/projects";
 import { StickyNav } from "@/components/nav";
 import { ProjectCard } from "@/components/work";
+import { Tag } from "@/components/tag";
 
 export function generateStaticParams() {
   return projects.map((p) => ({ slug: p.slug }));
@@ -71,9 +72,9 @@ export default async function CaseStudyPage({
         <section className={`${px} pt-8 md:pt-10 pb-12 md:pb-16`}>
           <div className="flex flex-wrap gap-2 mb-5 md:mb-6">
             {project.tags.map((tag) => (
-              <span key={tag} className="rounded-full bg-purple-900/50 px-[10px] py-1 text-[11px] font-medium text-purple-300">
+              <Tag key={tag} variant="accent" size="md">
                 {tag}
-              </span>
+              </Tag>
             ))}
           </div>
 
@@ -166,9 +167,9 @@ export default async function CaseStudyPage({
               <h3 className="text-[18px] md:text-[20px] font-semibold text-white mb-4 md:mb-5">Methods</h3>
               <div className="flex flex-wrap gap-2">
                 {project.research.methods.map((m) => (
-                  <span key={m} className="rounded-full border border-slate-700 bg-slate-800/50 px-4 md:px-5 py-2 md:py-2.5 text-[14px] md:text-[15px] font-medium text-slate-300">
+                  <Tag key={m} variant="neutral" size="md">
                     {m}
-                  </span>
+                  </Tag>
                 ))}
               </div>
             </div>

@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { Tag } from "@/components/tag";
 
 const skills = [
   "Product Thinking",
@@ -63,12 +64,9 @@ export function About() {
           {/* Skills */}
           <div className="flex flex-wrap gap-2">
             {skills.map((skill) => (
-              <span
-                key={skill}
-                className="rounded-full border border-slate-700 bg-slate-700/50 px-3 md:px-[14px] py-1.5 md:py-2 text-[12px] md:text-[13px] font-medium text-slate-300"
-              >
+              <Tag key={skill} variant="neutral" size="md">
                 {skill}
-              </span>
+              </Tag>
             ))}
           </div>
 
