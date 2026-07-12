@@ -224,7 +224,7 @@ export default async function CaseStudyPage({
         </section>
 
         {/* Design Decisions */}
-        <section className={section}>
+        <section className={`${px} pt-12 md:pt-16 border-t border-slate-800`}>
           <SectionLabel>DESIGN DECISIONS</SectionLabel>
           <h2 className="text-[26px] md:text-[36px] font-bold tracking-[-0.01em] text-white mb-5 md:mb-6">
             The decisions that shaped this project.
