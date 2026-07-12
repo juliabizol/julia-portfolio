@@ -236,7 +236,7 @@ export default async function CaseStudyPage({
             {project.decisions.map((d, i) => (
               <div
                 key={i}
-                className={`flex flex-col lg:items-center gap-8 lg:gap-16 py-10 md:py-14 lg:flex-row ${
+                className={`flex flex-col lg:items-start gap-8 lg:gap-16 py-10 md:py-14 lg:flex-row ${
                   i === 0 ? "" : "border-t border-slate-800"
                 }`}
               >
