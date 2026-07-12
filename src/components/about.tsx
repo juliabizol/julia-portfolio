@@ -29,7 +29,7 @@ export function About() {
           <div
             className="absolute bottom-0 right-0 h-[200px] w-[200px] rounded-full opacity-40 pointer-events-none"
             style={{
-              background: "radial-gradient(circle, #6b21a8, transparent 70%)",
+              background: "radial-gradient(circle, var(--color-purple-800), transparent 70%)",
               filter: "blur(60px)",
             }}
           />
@@ -72,7 +72,7 @@ export function About() {
 
           <Link
             href="/about"
-            className="inline-flex items-center gap-1 text-[14px] font-medium text-purple-300 hover:text-white transition-colors"
+            className="inline-flex items-center gap-1 text-[14px] font-medium text-purple-300 hover:text-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950"
           >
             Learn more about me →
           </Link>

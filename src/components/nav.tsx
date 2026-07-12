@@ -55,7 +55,7 @@ export function Nav({ activeSection }: { activeSection?: string }) {
       {/* Logo */}
       <a
         href="/"
-        className="text-[17px] md:text-[18px] font-bold text-white tracking-tight hover:text-purple-300 transition-colors"
+        className="text-[17px] md:text-[18px] font-bold text-white tracking-tight hover:text-purple-300 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950"
       >
         Julia Bizol
       </a>
@@ -69,7 +69,7 @@ export function Nav({ activeSection }: { activeSection?: string }) {
           onMouseLeave={scheduleCloseWork}
         >
           <button
-            className={`flex items-center gap-1.5 text-[15px] font-medium transition-colors hover:text-purple-300 ${
+            className={`flex items-center gap-1.5 text-[15px] font-medium transition-colors hover:text-purple-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950 ${
               isWorkActive ? "text-purple-300" : "text-slate-300"
             }`}
           >
@@ -90,7 +90,7 @@ export function Nav({ activeSection }: { activeSection?: string }) {
                   <Link
                     key={p.href}
                     href={p.href}
-                    className="block px-4 py-2.5 text-[14px] text-slate-300 hover:text-white hover:bg-slate-800 transition-colors"
+                    className="block px-4 py-2.5 text-[14px] text-slate-300 hover:text-white hover:bg-slate-800 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950"
                   >
                     {p.label}
                   </Link>
@@ -103,7 +103,7 @@ export function Nav({ activeSection }: { activeSection?: string }) {
         {/* About */}
         <Link
           href="/about"
-          className={`text-[15px] font-medium transition-colors hover:text-purple-300 ${
+          className={`text-[15px] font-medium transition-colors hover:text-purple-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950 ${
             isAboutActive ? "text-purple-300" : "text-slate-300"
           }`}
         >
@@ -114,14 +114,14 @@ export function Nav({ activeSection }: { activeSection?: string }) {
       {/* Desktop CTA */}
       <a
         href="/#contact"
-        className="hidden md:block bg-purple-800 hover:bg-purple-700 transition-colors text-white text-[14px] font-medium px-5 py-[10px] rounded-full"
+        className="hidden md:block bg-purple-800 hover:bg-purple-700 transition-colors text-white text-[14px] font-medium px-5 py-[10px] rounded-full focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950"
       >
         Let&apos;s talk
       </a>
 
       {/* Mobile hamburger */}
       <button
-        className="md:hidden flex flex-col gap-[5px] p-2"
+        className="md:hidden flex flex-col gap-[5px] p-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950"
         onClick={() => setMenuOpen((v) => !v)}
         aria-label="Toggle menu"
       >
@@ -136,7 +136,7 @@ export function Nav({ activeSection }: { activeSection?: string }) {
           {/* Work expand */}
           <button
             onClick={() => setMobileWorkOpen((v) => !v)}
-            className="flex items-center justify-between px-5 py-3 text-[16px] font-medium text-slate-300 hover:text-white hover:bg-slate-800 transition-colors"
+            className="flex items-center justify-between px-5 py-3 text-[16px] font-medium text-slate-300 hover:text-white hover:bg-slate-800 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950"
           >
             Work
             <Chevron open={mobileWorkOpen} />
@@ -148,7 +148,7 @@ export function Nav({ activeSection }: { activeSection?: string }) {
                   key={p.href}
                   href={p.href}
                   onClick={() => setMenuOpen(false)}
-                  className="block px-8 py-2.5 text-[14px] text-slate-400 hover:text-white transition-colors"
+                  className="block px-8 py-2.5 text-[14px] text-slate-400 hover:text-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950"
                 >
                   {p.label}
                 </Link>
@@ -160,7 +160,7 @@ export function Nav({ activeSection }: { activeSection?: string }) {
           <Link
             href="/about"
             onClick={() => setMenuOpen(false)}
-            className="px-5 py-3 text-[16px] font-medium text-slate-300 hover:text-white hover:bg-slate-800 transition-colors"
+            className="px-5 py-3 text-[16px] font-medium text-slate-300 hover:text-white hover:bg-slate-800 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950"
           >
             About
           </Link>
@@ -170,7 +170,7 @@ export function Nav({ activeSection }: { activeSection?: string }) {
             <a
               href="/#contact"
               onClick={() => setMenuOpen(false)}
-              className="inline-block bg-purple-800 hover:bg-purple-700 text-white text-[14px] font-medium px-5 py-[10px] rounded-full"
+              className="inline-block bg-purple-800 hover:bg-purple-700 text-white text-[14px] font-medium px-5 py-[10px] rounded-full focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950"
             >
               Let&apos;s talk
             </a>

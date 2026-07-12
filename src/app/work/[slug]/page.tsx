@@ -62,7 +62,7 @@ export default async function CaseStudyPage({
         <div className={`${px} pt-8 md:pt-10`}>
           <Link
             href="/#work"
-            className="inline-flex items-center gap-2 text-[14px] font-medium text-slate-400 hover:text-white transition-colors"
+            className="inline-flex items-center gap-2 text-[14px] font-medium text-slate-400 hover:text-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950"
           >
             ← View all projects
           </Link>
@@ -131,7 +131,7 @@ export default async function CaseStudyPage({
                 { label: "Tools", value: project.tools.join(", ") },
               ].map((item) => (
                 <div key={item.label} className="flex flex-col gap-1 min-w-[140px]">
-                  <span className="text-[11px] md:text-[12px] font-medium tracking-[0.05em] text-slate-400 uppercase">
+                  <span className="text-[11px] md:text-[12px] font-medium tracking-wider text-slate-400 uppercase">
                     {item.label}
                   </span>
                   <span className="text-[14px] md:text-[15px] text-slate-200">{item.value}</span>

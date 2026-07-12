@@ -19,7 +19,7 @@ export function ProjectCard({
   return (
     <Link
       href={`/work/${slug}`}
-      className="group flex h-full flex-col overflow-hidden rounded-xl border border-slate-700 bg-slate-800/50 transition-colors hover:border-purple-800/60"
+      className="group flex h-full flex-col overflow-hidden rounded-xl border border-slate-700 bg-slate-800/50 transition-colors hover:border-purple-800/60 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950"
     >
       <div className="relative h-[200px] md:h-[220px] w-full shrink-0">
         <Image

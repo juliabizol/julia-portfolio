@@ -105,7 +105,7 @@ export default function AboutPage() {
               <div
                 className="absolute bottom-0 right-0 h-[200px] w-[200px] rounded-full opacity-40 pointer-events-none"
                 style={{
-                  background: "radial-gradient(circle, #6b21a8, transparent 70%)",
+                  background: "radial-gradient(circle, var(--color-purple-800), transparent 70%)",
                   filter: "blur(60px)",
                 }}
               />
@@ -190,7 +190,7 @@ export default function AboutPage() {
             <a
               href="/Julia_Bizol_Resume.pdf"
               download
-              className="inline-flex items-center gap-2 rounded-full border border-slate-700 hover:border-slate-500 transition-colors px-7 py-[14px] text-[15px] font-semibold text-white"
+              className="inline-flex items-center gap-2 rounded-full border border-slate-700 hover:border-slate-500 transition-colors px-7 py-[14px] text-[15px] font-semibold text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950"
             >
               <svg
                 width="16"
