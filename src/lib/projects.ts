@@ -69,8 +69,8 @@ export const projects: Project[] = [
     research: {
       methods: [
         "Product Analytics",
-        "User Research",
         "Usability Testing",
+        "Surveys",
         "Heuristic Evaluation",
       ],
       findings: [
