@@ -1,6 +1,7 @@
 import { notFound } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
+import { Check, TrendingUp } from "lucide-react";
 import { getProject, projects } from "@/lib/projects";
 import { StickyNav } from "@/components/nav";
 import { ProjectCard } from "@/components/work";
@@ -294,9 +295,19 @@ export default async function CaseStudyPage({
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 md:gap-6">
             {project.outcomes.map((o) => (
               <div key={o.label} className="flex flex-col gap-2 md:gap-3 rounded-xl border border-slate-700 bg-slate-800/50 p-6 md:p-8">
-                <span className="text-[40px] md:text-[48px] font-bold leading-none text-purple-300">
-                  {o.value}
-                </span>
+                {o.icon ? (
+                  <span className="text-purple-300">
+                    {o.icon === "check" ? (
+                      <Check className="h-10 w-10 md:h-12 md:w-12" strokeWidth={2} />
+                    ) : (
+                      <TrendingUp className="h-10 w-10 md:h-12 md:w-12" strokeWidth={2} />
+                    )}
+                  </span>
+                ) : (
+                  <span className="text-[40px] md:text-[48px] font-bold leading-none text-purple-300">
+                    {o.value}
+                  </span>
+                )}
                 <span className="text-[15px] md:text-[16px] font-semibold text-white">{o.label}</span>
                 <p className="text-[13px] md:text-[14px] leading-[21px] md:leading-[22px] text-slate-400">{o.description}</p>
               </div>

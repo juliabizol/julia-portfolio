@@ -29,7 +29,12 @@ export type Project = {
   };
   decisionsIntro: string;
   decisions: { title: string; description: string }[];
-  outcomes: { value: string; label: string; description: string }[];
+  outcomes: {
+    value: string;
+    label: string;
+    description: string;
+    icon?: "check" | "trending-up";
+  }[];
   learningsIntro: string;
   learnings: { title: string; description: string }[];
   accent: string;
@@ -128,19 +133,21 @@ export const projects: Project[] = [
     ],
     outcomes: [
       {
-        value: "34%",
-        label: "Cart abandonment",
-        description: "Reduction in cart abandonment rate post-launch",
+        value: "98%",
+        label: "Submission rate",
+        description: "Guests successfully completed and submitted their onboarding requests.",
       },
       {
-        value: "2.1×",
-        label: "Mobile conversion",
-        description: "Increase in mobile checkout completion",
+        value: "",
+        icon: "check",
+        label: "Positive user feedback",
+        description: "Survey responses consistently showed that guests found the onboarding process easy to complete.",
       },
       {
-        value: "4.7★",
-        label: "App store rating",
-        description: "Average rating after checkout redesign shipped",
+        value: "",
+        icon: "trending-up",
+        label: "Continuous product evolution",
+        description: "Evolved the guest experience through continuous improvements informed by product analytics, user feedback, and changing business requirements.",
       },
     ],
     learningsIntro: LOREM_SHORT,
