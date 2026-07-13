@@ -107,11 +107,24 @@ export const projects: Project[] = [
       body:
         "Rather than designing a single onboarding flow, I focused on creating a flexible experience that could adapt to each property's policies while remaining predictable and easy to complete.\n\nInformation was progressively revealed based on each guest's scenario, reducing unnecessary questions and helping users understand exactly what was required before submitting their request.\n\nThe experience supported multiple journeys, including guests traveling with pets, without pets, or with assistance animals, while keeping the overall flow simple, consistent, and easy to navigate.",
     },
-    decisionsIntro: LOREM_SHORT,
+    decisionsIntro:
+      "Each decision addressed a different source of friction across the guest journey, making the experience easier to understand, complete, and navigate with confidence.",
     decisions: [
-      { title: "Decision One", description: LOREM_SHORT },
-      { title: "Decision Two", description: LOREM_SHORT },
-      { title: "Decision Three", description: LOREM_SHORT },
+      {
+        title: "Reducing cognitive load through progressive disclosure",
+        description:
+          "Instead of asking guests to process multiple decisions at once, the onboarding was reorganized into smaller, sequential steps. Users only saw questions when they became relevant, reducing cognitive load while supporting scenarios such as single or multiple pets, no-pet bookings, and assistance animals.",
+      },
+      {
+        title: "Building trust through contextual guidance",
+        description:
+          "Contextual guidance helped guests understand why information was required, which policies came from the host, and what would happen next. Clear explanations, integrated booking indicators, and supporting content reduced uncertainty throughout the submission process.",
+      },
+      {
+        title: "Keeping users informed after submission",
+        description:
+          "The experience continued after submission through dynamic in-app notifications, status updates, and contextual actions that reflected each animal's status. Instead of leaving users uncertain, the interface clearly communicated what had happened and what to do next.",
+      },
     ],
     outcomes: [
       {

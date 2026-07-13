@@ -253,7 +253,7 @@ export default async function CaseStudyPage({
         <section className={`${px} pt-12 md:pt-16 border-t border-slate-800`}>
           <SectionLabel>DESIGN DECISIONS</SectionLabel>
           <h2 className="text-[26px] md:text-[36px] font-bold tracking-[-0.01em] text-white mb-5 md:mb-6">
-            The decisions that shaped this project
+            Design decisions that improved the experience
           </h2>
           <p className="text-[15px] md:text-[17px] leading-[26px] md:leading-[28px] text-slate-300 max-w-[760px] mb-8 md:mb-12">
             {project.decisionsIntro}
