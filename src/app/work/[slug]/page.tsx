@@ -151,7 +151,7 @@ export default async function CaseStudyPage({
 
         {/* Problem & Context */}
         <section className={section}>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-start md:items-center">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
             <div>
               <SectionLabel>PROBLEM &amp; CONTEXT</SectionLabel>
               <h2 className="text-[26px] md:text-[36px] font-bold leading-[1.2] md:leading-[44px] tracking-[-0.01em] text-white mb-5 md:mb-6">
@@ -168,7 +168,7 @@ export default async function CaseStudyPage({
                 ))}
               </div>
             </div>
-            <div>
+            <div className="md:flex md:items-center">
               <ImagePlaceholder height="h-[240px] md:h-[320px] lg:h-[380px]" gradient={project.accent} />
             </div>
           </div>
@@ -227,7 +227,7 @@ export default async function CaseStudyPage({
 
         {/* Solution */}
         <section className={section}>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-start md:items-center">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
             <div>
               <SectionLabel>SOLUTION</SectionLabel>
               <h2 className="text-[26px] md:text-[36px] font-bold leading-[1.2] md:leading-[44px] tracking-[-0.01em] text-white mb-5 md:mb-6">
@@ -244,7 +244,7 @@ export default async function CaseStudyPage({
                 ))}
               </div>
             </div>
-            <div>
+            <div className="md:flex md:items-center">
               <ImagePlaceholder height="h-[240px] md:h-[320px] lg:h-[380px]" gradient={project.accent} />
             </div>
           </div>
@@ -317,7 +317,7 @@ export default async function CaseStudyPage({
 
         {/* Final Thoughts */}
         <section className={section}>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-start md:items-center">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
             <div>
               <SectionLabel>FINAL THOUGHTS</SectionLabel>
               <h2 className="text-[26px] md:text-[36px] font-bold leading-[1.2] md:leading-[44px] tracking-[-0.01em] text-white mb-5 md:mb-6">
@@ -334,7 +334,7 @@ export default async function CaseStudyPage({
                 ))}
               </div>
             </div>
-            <div>
+            <div className="md:flex md:items-center">
               <ImagePlaceholder height="h-[240px] md:h-[320px] lg:h-[380px]" gradient={project.accent} />
             </div>
           </div>
