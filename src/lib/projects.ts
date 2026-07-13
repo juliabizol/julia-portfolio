@@ -44,14 +44,13 @@ const LOREM_SHORT =
 export const projects: Project[] = [
   {
     slug: "pet-compliance-platform",
-    title: "Pet Compliance Platform",
-    tags: ["UX Research", "Product"],
+    title: "Better Pet Passport",
+    tags: ["Product Design", "Consumer Product"],
     summary:
-      "A 6-week sprint that reduced cart abandonment by 34% through contextual research and iterative prototyping.",
+      "Improving a complex pet compliance experience through continuous product evolution, helping pet owners complete submissions with greater clarity and confidence.",
     metrics: [
-      { value: "34%", label: "Cart abandonment reduction" },
-      { value: "6 weeks", label: "Project timeline" },
-      { value: "3", label: "Platforms (web, iOS, Android)" },
+      { value: "98%", label: "Submission rate" },
+      { value: "2 years", label: "Continuous product evolution" },
     ],
     industry: "Pet & Hospitality Technology",
     role: "Lead UX Designer",
