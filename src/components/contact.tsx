@@ -114,8 +114,8 @@ export function Contact({ divider = false }: { divider?: boolean }) {
         </h2>
 
         <p className="max-w-[520px] text-[16px] md:text-[18px] leading-[26px] md:leading-[28px] text-slate-300">
-          Whether you&apos;re building a new product, improving an existing
-          one, or simply want to connect, I&apos;d love to hear from you.
+          Building a new product, improving an existing one, or just want to
+          connect? I&apos;d love to hear from you.
         </p>
 
         {/* Email copy widget */}
