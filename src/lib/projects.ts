@@ -135,7 +135,7 @@ export const projects: Project[] = [
       {
         value: "98%",
         label: "Submission rate",
-        description: "Guests successfully completed and submitted their onboarding requests.",
+        description: "Maintained a 98% submission rate while continuously evolving an onboarding experience across increasingly complex guest scenarios.",
       },
       {
         value: "",
