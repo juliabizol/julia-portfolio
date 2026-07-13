@@ -24,6 +24,7 @@ export type Project = {
     step: string;
     description: string;
   }[];
+  approachImage?: string;
   solution: {
     heading: string;
     body: string;
@@ -109,6 +110,7 @@ export const projects: Project[] = [
           "Measured outcomes after release and continued evolving the experience through product analytics, user feedback, and new business requirements.",
       },
     ],
+    approachImage: "/projects/betterpet-passport/approach-dashboard.png",
     solution: {
       heading: "Designing for flexibility without increasing complexity",
       body:

@@ -234,7 +234,20 @@ export default async function CaseStudyPage({
             ))}
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
-            <ImagePlaceholder height="h-[200px] md:h-[300px]" gradient={project.accent} />
+            {project.approachImage ? (
+              <div className="relative w-full aspect-[4/3] rounded-xl md:rounded-2xl overflow-hidden border border-slate-700">
+                <Image
+                  src={project.approachImage}
+                  alt={`${project.title} approach dashboard`}
+                  fill
+                  className="object-contain"
+                  sizes="(min-width: 768px) 50vw, 100vw"
+                  quality={90}
+                />
+              </div>
+            ) : (
+              <ImagePlaceholder height="h-[200px] md:h-[300px]" gradient={project.accent} />
+            )}
             <ImagePlaceholder height="h-[200px] md:h-[300px]" gradient="from-slate-700 to-slate-800" />
           </div>
         </section>
