@@ -144,7 +144,7 @@ export function Contact({ divider = false }: { divider?: boolean }) {
           <button
             onClick={handleCopy}
             aria-label="Copy email address"
-            className="flex items-center gap-2 rounded-lg bg-purple-300 px-3 py-2 text-[13px] font-bold text-slate-950 transition-opacity hover:opacity-90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950"
+            className="flex items-center gap-2 rounded-lg bg-purple-300 px-3 py-2 text-[13px] font-bold text-slate-950 transition-opacity hover:opacity-90 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950"
           >
             {copied ? (
               <svg
