@@ -136,7 +136,7 @@ export default async function CaseStudyPage({
                 { label: "Role", value: project.role },
                 { label: "Timeline", value: project.timeline },
                 { label: "Team", value: project.team },
-                { label: project.toolsLabel ?? "Tools", value: project.tools.join(", ") },
+                { label: "Core disciplines", value: project.tools.join(", ") },
               ].map((item) => (
                 <div key={item.label} className="flex flex-col gap-1 min-w-[140px]">
                   <span className="text-[11px] md:text-[12px] font-medium tracking-wider text-slate-400 uppercase">
