@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { ExternalLink } from "lucide-react";
 import { StickyNav } from "@/components/nav";
 import { Process } from "@/components/process";
 import { Contact } from "@/components/contact";
@@ -265,7 +266,7 @@ export default function AboutPage() {
             {achievements.map((item) => (
               <div
                 key={item.label}
-                className="flex flex-col gap-3 rounded-xl border border-slate-700 bg-slate-800/50 p-6 md:p-7"
+                className="flex h-full flex-col gap-3 rounded-xl border border-slate-700 bg-slate-800/50 p-6 md:p-7"
               >
                 <h3 className="text-[17px] md:text-[18px] font-semibold text-white">
                   {item.label}
@@ -278,9 +279,10 @@ export default function AboutPage() {
                   href={item.linkHref}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1 text-[14px] font-medium text-purple-300 hover:text-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950"
+                  className="mt-auto inline-flex items-center gap-1.5 text-[14px] font-medium text-purple-300 hover:text-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950"
                 >
-                  {item.linkLabel} ↗
+                  {item.linkLabel}
+                  <ExternalLink size={14} strokeWidth={2} />
                 </a>
               </div>
             ))}
