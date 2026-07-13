@@ -107,6 +107,8 @@ export default function AboutPage() {
                 fill
                 className="object-cover"
                 style={{ objectPosition: "center 20%" }}
+                sizes="(min-width: 1024px) 400px, 100vw"
+                quality={90}
                 priority
               />
               <div

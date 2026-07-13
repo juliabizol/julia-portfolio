@@ -28,6 +28,7 @@ export function ProjectCard({
           fill
           className="object-cover"
           sizes="(min-width: 768px) 33vw, 100vw"
+          quality={90}
         />
       </div>
       <div className="flex flex-1 flex-col gap-3 p-5 md:p-6 min-w-0">

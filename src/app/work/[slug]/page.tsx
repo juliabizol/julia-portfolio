@@ -106,6 +106,7 @@ export default async function CaseStudyPage({
               fill
               className="object-cover"
               sizes="100vw"
+              quality={90}
               priority
             />
           </div>
@@ -177,6 +178,7 @@ export default async function CaseStudyPage({
                     fill
                     className="object-contain"
                     sizes="(min-width: 768px) 50vw, 100vw"
+                    quality={90}
                   />
                 </div>
               ) : (
