@@ -64,7 +64,7 @@ export const projects: Project[] = [
     problem: {
       heading: "Making complex property requirements easier to complete",
       body:
-        "BetterPet Passport wasn't a standalone product. Every guest experience was driven by property-specific policies configured by hosts in PetScreening's management platform.\n\nDepending on the property, guests could be asked to provide different information, documentation, or complete entirely different flows—including pet, no-pet, and service animal scenarios. The challenge was creating an experience that remained clear and intuitive despite constantly changing requirements.\n\nThroughout the product's evolution, my focus was reducing friction, improving completion, and helping guests confidently submit the information hosts needed before their stay.",
+        "BetterPet Passport wasn't a standalone product. Every guest experience was shaped by property-specific policies configured by hosts in PetScreening's management platform.\n\nDepending on the property, guests could be asked to provide different information, documentation, or complete entirely different flows—including pet, no-pet, and service animal scenarios. The challenge was creating an experience that remained clear and intuitive despite constantly changing requirements.\n\nThroughout the product's evolution, my focus was reducing friction, improving completion rates, and helping guests confidently submit the information hosts needed before their stay.",
     },
     research: {
       methods: [
