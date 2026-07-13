@@ -193,7 +193,7 @@ export default async function CaseStudyPage({
               <ul className="flex flex-col gap-3 md:gap-4">
                 {project.research.findings.map((f, i) => (
                   <li key={i} className="flex gap-3 text-[14px] md:text-[15px] leading-[22px] md:leading-[24px] text-slate-300">
-                    <span className="mt-1.5 h-2 w-2 shrink-0 rounded-full bg-purple-500" />
+                    <span className="mt-1.5 h-2 w-2 shrink-0 rounded-full bg-purple-300" />
                     {f}
                   </li>
                 ))}
