@@ -160,13 +160,13 @@ export function Nav({ activeSection }: { activeSection?: string }) {
             <Chevron open={mobileWorkOpen} />
           </button>
           {mobileWorkOpen && (
-            <div className="bg-slate-950/60">
+            <div>
               {workProjects.map((p) => (
                 <Link
                   key={p.href}
                   href={p.href}
                   onClick={() => setMenuOpen(false)}
-                  className="block px-8 py-2.5 text-[14px] text-slate-400 hover:text-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950"
+                  className="block px-8 py-2.5 text-[14px] text-slate-300 hover:text-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900"
                 >
                   {p.label}
                 </Link>
