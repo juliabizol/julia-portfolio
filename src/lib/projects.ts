@@ -9,6 +9,7 @@ export type Project = {
   timeline: string;
   team: string;
   tools: string[];
+  toolsLabel?: string;
   context: string;
   problem: {
     heading: string;
@@ -47,17 +48,19 @@ export const projects: Project[] = [
     title: "BetterPet Passport",
     tags: ["Product Design", "Consumer Product"],
     summary:
-      "Improving a complex pet compliance experience through continuous product evolution, helping pet owners complete submissions with greater clarity and confidence.",
+      "Continuously improving a complex pet compliance experience that helps guests meet property requirements before short-term rental stays, contributing to a 98% submission rate.",
     metrics: [
       { value: "98%", label: "Submission rate" },
       { value: "2 years", label: "Continuous product evolution" },
     ],
     industry: "Pet & Hospitality Technology",
-    role: "Lead UX Designer",
-    timeline: "Jan – Feb 2024",
-    team: "1 UX Designer, 2 Engineers, 1 PM",
-    tools: ["Figma", "Maze", "Hotjar", "Notion"],
-    context: LOREM,
+    role: "Product Designer",
+    timeline: "Sep 2024 – Jul 2026",
+    team: "2 Product Designers · 3 Engineers · Product Manager · QA",
+    tools: ["Product Analytics", "Usability Testing", "Interaction Design"],
+    toolsLabel: "Methods",
+    context:
+      "BetterPet Passport is the consumer-facing experience within PetScreening's short-term rental ecosystem. Property managers define the pet policies and requirements for their properties, while guests use BetterPet Passport to complete the information and documentation required before their stay.\n\nOver nearly two years, I partnered closely with Product and Engineering to continuously evolve this experience through research, usability testing, product analytics, and iterative design. This case study highlights some of the initiatives that simplified complex workflows and contributed to increasing submission completion to 98%.",
     problem: {
       heading: "Users were abandoning at the payment step",
       body: LOREM + " " + LOREM_SHORT,
