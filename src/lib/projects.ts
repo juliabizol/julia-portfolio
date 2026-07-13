@@ -44,7 +44,7 @@ const LOREM_SHORT =
 export const projects: Project[] = [
   {
     slug: "pet-compliance-platform",
-    title: "Better Pet Passport",
+    title: "BetterPet Passport",
     tags: ["Product Design", "Consumer Product"],
     summary:
       "Improving a complex pet compliance experience through continuous product evolution, helping pet owners complete submissions with greater clarity and confidence.",
