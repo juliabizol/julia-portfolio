@@ -62,8 +62,9 @@ export const projects: Project[] = [
     context:
       "BetterPet Passport is the consumer-facing experience within PetScreening's short-term rental ecosystem. Property managers define the pet policies and requirements for their properties, while guests use BetterPet Passport to complete the information and documentation required before their stay.\n\nOver nearly two years, I partnered closely with Product and Engineering to continuously evolve this experience through research, usability testing, product analytics, and iterative design. This case study highlights some of the initiatives that simplified complex workflows and contributed to increasing submission completion to 98%.",
     problem: {
-      heading: "Users were abandoning at the payment step",
-      body: LOREM + " " + LOREM_SHORT,
+      heading: "Making complex property requirements easier to complete",
+      body:
+        "BetterPet Passport wasn't a standalone product. Every guest experience was driven by property-specific policies configured by hosts in PetScreening's management platform.\n\nDepending on the property, guests could be asked to provide different information, documentation, or complete entirely different flows—including pet, no-pet, and service animal scenarios. The challenge was creating an experience that remained clear and intuitive despite constantly changing requirements.\n\nThroughout the product's evolution, my focus was reducing friction, improving completion, and helping guests confidently submit the information hosts needed before their stay.",
     },
     research: {
       methods: [

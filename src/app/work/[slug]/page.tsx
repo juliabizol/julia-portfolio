@@ -156,9 +156,16 @@ export default async function CaseStudyPage({
               <h2 className="text-[26px] md:text-[36px] font-bold leading-[1.2] md:leading-[44px] tracking-[-0.01em] text-white mb-5 md:mb-6">
                 {project.problem.heading}
               </h2>
-              <p className="text-[15px] md:text-[17px] leading-[26px] md:leading-[28px] text-slate-300">
-                {project.problem.body}
-              </p>
+              <div className="flex flex-col gap-4">
+                {project.problem.body.split("\n\n").map((paragraph, i) => (
+                  <p
+                    key={i}
+                    className="text-[15px] md:text-[17px] leading-[26px] md:leading-[28px] text-slate-300"
+                  >
+                    {paragraph}
+                  </p>
+                ))}
+              </div>
             </div>
             <div>
               <ImagePlaceholder height="h-[240px] md:h-[320px] lg:h-[380px]" gradient={project.accent} />
