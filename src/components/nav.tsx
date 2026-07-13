@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState, type FocusEvent, type KeyboardEvent } from "react";
 import { usePathname } from "next/navigation";
 import { projects } from "@/lib/projects";
 
@@ -44,6 +44,18 @@ export function Nav({ activeSection }: { activeSection?: string }) {
   const scheduleCloseWork = () => {
     closeTimeout.current = setTimeout(() => setWorkOpen(false), 150);
   };
+  const closeWorkNow = () => {
+    if (closeTimeout.current) clearTimeout(closeTimeout.current);
+    setWorkOpen(false);
+  };
+  const handleWorkBlur = (e: FocusEvent<HTMLDivElement>) => {
+    if (!e.currentTarget.contains(e.relatedTarget as Node | null)) {
+      closeWorkNow();
+    }
+  };
+  const handleWorkKeyDown = (e: KeyboardEvent) => {
+    if (e.key === "Escape") closeWorkNow();
+  };
 
   const isWorkActive =
     pathname.startsWith("/work/") || activeSection === "work";
@@ -67,8 +79,14 @@ export function Nav({ activeSection }: { activeSection?: string }) {
           className="relative"
           onMouseEnter={openWork}
           onMouseLeave={scheduleCloseWork}
+          onBlur={handleWorkBlur}
+          onKeyDown={handleWorkKeyDown}
         >
           <button
+            onClick={() => setWorkOpen((v) => !v)}
+            onFocus={openWork}
+            aria-expanded={workOpen}
+            aria-haspopup="true"
             className={`flex items-center gap-1.5 text-[15px] font-medium transition-colors hover:text-purple-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950 ${
               isWorkActive ? "text-purple-300" : "text-slate-300"
             }`}
@@ -90,7 +108,7 @@ export function Nav({ activeSection }: { activeSection?: string }) {
                   <Link
                     key={p.href}
                     href={p.href}
-                    className="block px-4 py-2.5 text-[14px] text-slate-300 hover:text-white hover:bg-slate-800 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950"
+                    className="block px-4 py-2.5 text-[14px] text-slate-300 hover:text-white hover:bg-slate-800 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900"
                   >
                     {p.label}
                   </Link>
@@ -136,7 +154,7 @@ export function Nav({ activeSection }: { activeSection?: string }) {
           {/* Work expand */}
           <button
             onClick={() => setMobileWorkOpen((v) => !v)}
-            className="flex items-center justify-between px-5 py-3 text-[16px] font-medium text-slate-300 hover:text-white hover:bg-slate-800 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950"
+            className="flex items-center justify-between px-5 py-3 text-[16px] font-medium text-slate-300 hover:text-white hover:bg-slate-800 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900"
           >
             Work
             <Chevron open={mobileWorkOpen} />
@@ -160,7 +178,7 @@ export function Nav({ activeSection }: { activeSection?: string }) {
           <Link
             href="/about"
             onClick={() => setMenuOpen(false)}
-            className="px-5 py-3 text-[16px] font-medium text-slate-300 hover:text-white hover:bg-slate-800 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950"
+            className="px-5 py-3 text-[16px] font-medium text-slate-300 hover:text-white hover:bg-slate-800 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900"
           >
             About
           </Link>
@@ -170,7 +188,7 @@ export function Nav({ activeSection }: { activeSection?: string }) {
             <a
               href="/#contact"
               onClick={() => setMenuOpen(false)}
-              className="inline-block bg-purple-800 hover:bg-purple-700 text-white text-[14px] font-medium px-5 py-[10px] rounded-full focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950"
+              className="inline-block bg-purple-800 hover:bg-purple-700 text-white text-[14px] font-medium px-5 py-[10px] rounded-full focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900"
             >
               Let&apos;s talk
             </a>
