@@ -227,7 +227,7 @@ export default async function CaseStudyPage({
 
         {/* Solution */}
         <section className={section}>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-start">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-start md:items-center">
             <div>
               <SectionLabel>SOLUTION</SectionLabel>
               <h2 className="text-[26px] md:text-[36px] font-bold leading-[1.2] md:leading-[44px] tracking-[-0.01em] text-white mb-5 md:mb-6">
@@ -315,30 +315,28 @@ export default async function CaseStudyPage({
           </div>
         </section>
 
-        {/* Key Learnings */}
+        {/* Final Thoughts */}
         <section className={section}>
-          <SectionLabel>KEY LEARNINGS</SectionLabel>
-          <h2 className="text-[26px] md:text-[36px] font-bold tracking-[-0.01em] text-white mb-5 md:mb-6">
-            What this project taught me
-          </h2>
-          <p className="text-[15px] md:text-[17px] leading-[26px] md:leading-[28px] text-slate-300 max-w-[760px] mb-8 md:mb-12">
-            {project.learningsIntro}
-          </p>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
-            {project.learnings.map((l, i) => (
-              <div
-                key={i}
-                className="flex flex-col gap-3 md:gap-4 rounded-xl border border-slate-700 bg-slate-800/50 p-5 md:p-6"
-              >
-                <span className="w-fit rounded-full bg-purple-900/50 px-3 py-1 text-[12px] font-bold text-purple-300">
-                  {String(i + 1).padStart(2, "0")}
-                </span>
-                <h4 className="text-[15px] md:text-[16px] font-semibold text-white">{l.title}</h4>
-                <p className="text-[13px] md:text-[14px] leading-[21px] md:leading-[22px] text-slate-400">
-                  {l.description}
-                </p>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-start md:items-center">
+            <div>
+              <SectionLabel>FINAL THOUGHTS</SectionLabel>
+              <h2 className="text-[26px] md:text-[36px] font-bold leading-[1.2] md:leading-[44px] tracking-[-0.01em] text-white mb-5 md:mb-6">
+                Designing products as systems
+              </h2>
+              <div className="flex flex-col gap-4">
+                {project.learningsIntro.split("\n\n").map((paragraph, i) => (
+                  <p
+                    key={i}
+                    className="text-[15px] md:text-[17px] leading-[26px] md:leading-[28px] text-slate-300"
+                  >
+                    {paragraph}
+                  </p>
+                ))}
               </div>
-            ))}
+            </div>
+            <div>
+              <ImagePlaceholder height="h-[240px] md:h-[320px] lg:h-[380px]" gradient={project.accent} />
+            </div>
           </div>
         </section>
 

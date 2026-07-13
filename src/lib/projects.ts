@@ -150,7 +150,8 @@ export const projects: Project[] = [
         description: "Evolved the guest experience through continuous improvements informed by product analytics, user feedback, and changing business requirements.",
       },
     ],
-    learningsIntro: LOREM_SHORT,
+    learningsIntro:
+      "BetterPet Passport demonstrates how complex products can evolve without becoming harder to use. Every design decision needed to accommodate new guest scenarios, changing business requirements, and evolving industry regulations while preserving a clear and intuitive experience for guests. Flexible interaction patterns and evidence-based decisions made it possible to evolve the product without compromising usability.",
     learnings: [
       { title: "Learning One", description: LOREM_SHORT },
       { title: "Learning Two", description: LOREM_SHORT },
