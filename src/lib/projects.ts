@@ -82,20 +82,24 @@ export const projects: Project[] = [
     },
     approach: [
       {
-        step: "Phase One",
-        description: LOREM_SHORT,
+        step: "Understand complexity",
+        description:
+          "Used product analytics, surveys, heuristic evaluations, and usability testing to understand how different property rules shaped the submission experience and where users encountered the most friction.",
       },
       {
-        step: "Phase Two",
-        description: LOREM_SHORT,
+        step: "Identify friction",
+        description:
+          "Combined user insights with business requirements to prioritize the highest-impact opportunities, balancing user needs, host requirements, and technical constraints.",
       },
       {
-        step: "Phase Three",
-        description: LOREM_SHORT,
+        step: "Simplify the experience",
+        description:
+          "Designed and iterated on onboarding flows, reusable patterns, and interactions that reduced uncertainty and made complex property requirements easier to complete.",
       },
       {
-        step: "Phase Four",
-        description: LOREM_SHORT,
+        step: "Continuously improve",
+        description:
+          "Measured outcomes after release and continued evolving the experience through product analytics, user feedback, and new business requirements.",
       },
     ],
     solution: {

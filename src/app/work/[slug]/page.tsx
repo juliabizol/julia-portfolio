@@ -205,7 +205,7 @@ export default async function CaseStudyPage({
         <section className={section}>
           <SectionLabel>APPROACH</SectionLabel>
           <h2 className="text-[26px] md:text-[36px] font-bold tracking-[-0.01em] text-white mb-8 md:mb-12">
-            How we got there
+            Turning insights into product decisions
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 mb-8 md:mb-12">
             {project.approach.map((step, i) => (
