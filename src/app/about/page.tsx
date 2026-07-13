@@ -60,11 +60,17 @@ const achievements = [
     label: "Winner, AI Ideathon (Hackathon)",
     meta: "IXDA Florianópolis · 2026",
     desc: "Won first place in the AI Ideathon, an AI-focused hackathon, by developing a solution to a real-world problem through collaborative product thinking and rapid prototyping.",
+    linkLabel: "View announcement",
+    linkHref:
+      "https://www.instagram.com/p/DZXdOBMFQaz/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==",
   },
   {
     label: "Unsung Hero Award",
     meta: "McFadyen Digital · Two-time recipient",
     desc: "Recognized twice for exceptional client focus, ownership, collaboration, and commitment to delivering high-quality work.",
+    linkLabel: "View certificate",
+    linkHref:
+      "https://www.linkedin.com/posts/juliabizol_im-thrilled-to-share-that-ive-been-recognized-share-7168451255999029248-Pd8D/?utm_source=share&utm_medium=member_desktop&rcm=ACoAABEH1KcBKiH2pZxuz6R28l0ZrDgFnNGo_4E",
   },
 ];
 
@@ -268,6 +274,14 @@ export default function AboutPage() {
                 <p className="text-[14px] leading-[22px] text-slate-300">
                   {item.desc}
                 </p>
+                <a
+                  href={item.linkHref}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1 text-[14px] font-medium text-purple-300 hover:text-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950"
+                >
+                  {item.linkLabel} ↗
+                </a>
               </div>
             ))}
           </div>
