@@ -139,7 +139,7 @@ export function Nav({ activeSection }: { activeSection?: string }) {
 
       {/* Mobile hamburger */}
       <button
-        className="md:hidden flex flex-col gap-[5px] p-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950"
+        className="md:hidden flex flex-col gap-[5px] p-2 active:opacity-70 transition-opacity duration-200 ease-out focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950"
         onClick={() => setMenuOpen((v) => !v)}
         aria-label="Toggle menu"
       >
@@ -154,7 +154,7 @@ export function Nav({ activeSection }: { activeSection?: string }) {
           {/* Work expand */}
           <button
             onClick={() => setMobileWorkOpen((v) => !v)}
-            className="flex items-center justify-between px-5 py-3 text-[16px] font-medium text-slate-300 hover:text-white hover:bg-slate-800 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900"
+            className="flex items-center justify-between px-5 py-3 text-[16px] font-medium text-slate-300 hover:text-white hover:bg-slate-800 active:opacity-70 transition-colors duration-200 ease-out focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900"
           >
             Work
             <Chevron open={mobileWorkOpen} />
@@ -166,7 +166,7 @@ export function Nav({ activeSection }: { activeSection?: string }) {
                   key={p.href}
                   href={p.href}
                   onClick={() => setMenuOpen(false)}
-                  className="block px-8 py-2.5 text-[14px] text-slate-300 hover:text-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900"
+                  className="block px-8 py-2.5 text-[14px] text-slate-300 hover:text-white active:opacity-70 transition-colors duration-200 ease-out focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900"
                 >
                   {p.label}
                 </Link>
@@ -178,7 +178,7 @@ export function Nav({ activeSection }: { activeSection?: string }) {
           <Link
             href="/about"
             onClick={() => setMenuOpen(false)}
-            className="px-5 py-3 text-[16px] font-medium text-slate-300 hover:text-white hover:bg-slate-800 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900"
+            className="px-5 py-3 text-[16px] font-medium text-slate-300 hover:text-white hover:bg-slate-800 active:opacity-70 transition-colors duration-200 ease-out focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900"
           >
             About
           </Link>
@@ -188,7 +188,7 @@ export function Nav({ activeSection }: { activeSection?: string }) {
             <a
               href="/#contact"
               onClick={() => setMenuOpen(false)}
-              className="inline-block bg-purple-800 hover:bg-purple-700 text-white text-[14px] font-medium px-5 py-[10px] rounded-full focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900"
+              className="inline-block bg-purple-800 hover:bg-purple-700 active:scale-[0.98] text-white text-[14px] font-medium px-5 py-[10px] rounded-full transition-all duration-200 ease-out focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900"
             >
               Let&apos;s talk
             </a>
