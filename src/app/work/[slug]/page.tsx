@@ -188,7 +188,7 @@ export default async function CaseStudyPage({
               </div>
             </div>
             <div>
-              <h3 className="text-[18px] md:text-[20px] font-semibold text-white mb-4 md:mb-5">Key Findings</h3>
+              <h3 className="text-[18px] md:text-[20px] font-semibold text-white mb-4 md:mb-5">Insights</h3>
               <ul className="flex flex-col gap-3 md:gap-4">
                 {project.research.findings.map((f, i) => (
                   <li key={i} className="flex gap-3 text-[14px] md:text-[15px] leading-[22px] md:leading-[24px] text-slate-300">

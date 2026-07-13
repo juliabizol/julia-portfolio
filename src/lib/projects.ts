@@ -68,17 +68,16 @@ export const projects: Project[] = [
     },
     research: {
       methods: [
-        "User interviews (n=12)",
-        "Session recordings",
-        "Funnel analysis",
-        "Competitive audit",
-        "Usability testing",
+        "Product Analytics",
+        "User Research",
+        "Usability Testing",
+        "Heuristic Evaluation",
       ],
       findings: [
-        "68% of users felt anxious about entering payment details on mobile",
-        "The 7-step flow had 3 unnecessary confirmation screens",
-        "Error messages were vague and unhelpful, causing re-entry loops",
-        "Guest checkout was buried 2 levels deep in the UI",
+        "Property-specific rules created highly variable onboarding flows.",
+        "Guests needed clearer guidance to understand what information was required.",
+        "Reducing uncertainty was just as important as reducing the number of steps.",
+        "Reusable pet profiles could significantly reduce friction for future stays.",
       ],
     },
     approach: [
