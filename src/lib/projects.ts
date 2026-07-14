@@ -25,6 +25,7 @@ export type Project = {
     description: string;
   }[];
   approachImage?: string;
+  approachImage2?: string;
   solution: {
     heading: string;
     body: string;
@@ -111,6 +112,7 @@ export const projects: Project[] = [
       },
     ],
     approachImage: "/projects/betterpet-passport/approach-dashboard.png",
+    approachImage2: "/projects/betterpet-passport/approach-diagram.png",
     solution: {
       heading: "Designing for flexibility without increasing complexity",
       body:
