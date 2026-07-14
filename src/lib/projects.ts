@@ -29,6 +29,7 @@ export type Project = {
   solution: {
     heading: string;
     body: string;
+    image?: string;
   };
   decisionsIntro: string;
   decisions: { title: string; description: string }[];
@@ -117,6 +118,7 @@ export const projects: Project[] = [
       heading: "Designing for flexibility without increasing complexity",
       body:
         "Rather than designing a single onboarding flow, I focused on creating a flexible experience that could adapt to each property's policies while remaining predictable and easy to complete.\n\nInformation was progressively revealed based on each guest's scenario, reducing unnecessary questions and helping users understand exactly what was required before submitting their request.\n\nThe experience supported multiple journeys, including guests traveling with pets, without pets, or with assistance animals, while keeping the overall flow simple, consistent, and easy to navigate.",
+      image: "/projects/betterpet-passport/solution.png",
     },
     decisionsIntro:
       "Each decision addressed a different source of friction across the guest journey, making the experience easier to understand, complete, and navigate with confidence.",

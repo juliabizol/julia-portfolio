@@ -285,7 +285,20 @@ export default async function CaseStudyPage({
               </div>
             </div>
             <div className="md:flex md:items-center">
-              <ImagePlaceholder height="h-[240px] md:h-[320px] lg:h-[380px]" gradient={project.accent} />
+              {project.solution.image ? (
+                <div className="relative w-full aspect-[4/3] rounded-xl md:rounded-2xl overflow-hidden border border-slate-700">
+                  <Image
+                    src={project.solution.image}
+                    alt={`${project.title} solution diagram`}
+                    fill
+                    className="object-contain"
+                    sizes="(min-width: 768px) 50vw, 100vw"
+                    quality={90}
+                  />
+                </div>
+              ) : (
+                <ImagePlaceholder height="h-[240px] md:h-[320px] lg:h-[380px]" gradient={project.accent} />
+              )}
             </div>
           </div>
         </section>
