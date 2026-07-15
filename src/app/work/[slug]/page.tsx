@@ -231,7 +231,7 @@ export default async function CaseStudyPage({
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 mb-8 md:mb-12">
             {project.approach.map((step, i) => (
               <div key={step.step} className="flex flex-col gap-3 md:gap-4 rounded-xl border border-slate-700 bg-slate-800/50 p-5 md:p-6">
-                <span className="w-fit rounded-full bg-purple-900/50 px-3 py-1 text-[12px] font-bold text-purple-300">
+                <span className="w-fit rounded-full bg-purple-900/50 px-3 py-1 text-[14px] font-bold text-purple-300">
                   {String(i + 1).padStart(2, "0")}
                 </span>
                 <h4 className="text-[15px] md:text-[16px] font-semibold text-white">{step.step}</h4>
@@ -327,7 +327,7 @@ export default async function CaseStudyPage({
                 }`}
               >
                 <div className="flex flex-1 flex-col gap-4 md:gap-5">
-                  <span className="w-fit rounded-full bg-purple-900/50 px-3 py-1 text-[12px] font-bold text-purple-300">
+                  <span className="w-fit rounded-full bg-purple-900/50 px-3 py-1 text-[14px] font-bold text-purple-300">
                     {String(i + 1).padStart(2, "0")}
                   </span>
                   <h3 className="text-[20px] md:text-[24px] font-semibold text-white">
