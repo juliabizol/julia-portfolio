@@ -107,12 +107,12 @@ export const projects: Project[] = [
       {
         step: "Prioritize",
         description:
-          "Balanced user insights, host requirements, reviewer workflows, and technical constraints to prioritize improvements that would create the greatest impact for both guests and the business.",
+          "Balanced user needs, business goals, and technical constraints to prioritize the highest-impact improvements.",
       },
       {
         step: "Design & iterate",
         description:
-          "Designed, refined, and validated onboarding interactions that reduced uncertainty, improved system feedback, and made complex requirements easier to complete.",
+          "Designed and refined solutions that reduced uncertainty, improved usability, and simplified complex experiences.",
       },
       {
         step: "Measure & evolve",
