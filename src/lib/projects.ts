@@ -59,7 +59,7 @@ export const projects: Project[] = [
     title: "BetterPet Passport",
     tags: ["Product Design", "Consumer Product"],
     summary:
-      "Continuously evolving a complex onboarding experience that helps guests meet property requirements before short-term rental stays through research, iterative design, and continuous product improvement.",
+      "Continuously evolving a complex guest experience that helps travelers meet property requirements before short-term rental stays.",
     metrics: [
       { value: "98%", label: "Submission rate" },
       { value: "2 years", label: "Continuous product evolution" },
