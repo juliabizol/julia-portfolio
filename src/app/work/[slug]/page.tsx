@@ -366,7 +366,11 @@ export default async function CaseStudyPage({
                     {o.icon === "check" ? (
                       <Check className="h-10 w-10 md:h-12 md:w-12" strokeWidth={2} />
                     ) : o.icon === "star" ? (
-                      <Star className="h-10 w-10 md:h-12 md:w-12" strokeWidth={2} fill="currentColor" />
+                      <span className="flex items-center gap-1">
+                        {Array.from({ length: 5 }).map((_, si) => (
+                          <Star key={si} className="h-10 w-10 md:h-12 md:w-12" strokeWidth={2} fill="currentColor" />
+                        ))}
+                      </span>
                     ) : (
                       <TrendingUp className="h-10 w-10 md:h-12 md:w-12" strokeWidth={2} />
                     )}
