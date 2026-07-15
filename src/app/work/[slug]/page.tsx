@@ -1,7 +1,7 @@
 import { notFound } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
-import { Check, TrendingUp } from "lucide-react";
+import { Check, TrendingUp, Star } from "lucide-react";
 import { getProject, projects } from "@/lib/projects";
 import { StickyNav } from "@/components/nav";
 import { ProjectCard } from "@/components/work";
@@ -333,9 +333,16 @@ export default async function CaseStudyPage({
                   <h3 className="text-[20px] md:text-[24px] font-semibold text-white">
                     {d.title}
                   </h3>
-                  <p className="text-[14px] md:text-[16px] leading-[22px] md:leading-[26px] text-slate-300">
-                    {d.description}
-                  </p>
+                  <div className="flex flex-col gap-4">
+                    {d.description.split("\n\n").map((paragraph, pi) => (
+                      <p
+                        key={pi}
+                        className="text-[14px] md:text-[16px] leading-[22px] md:leading-[26px] text-slate-300"
+                      >
+                        {paragraph}
+                      </p>
+                    ))}
+                  </div>
                 </div>
                 <div className="w-full flex-1">
                   <ImagePlaceholder height="h-[240px] md:h-[340px]" gradient="from-slate-700 to-slate-800" />
@@ -358,6 +365,8 @@ export default async function CaseStudyPage({
                   <span className="text-purple-300">
                     {o.icon === "check" ? (
                       <Check className="h-10 w-10 md:h-12 md:w-12" strokeWidth={2} />
+                    ) : o.icon === "star" ? (
+                      <Star className="h-10 w-10 md:h-12 md:w-12" strokeWidth={2} fill="currentColor" />
                     ) : (
                       <TrendingUp className="h-10 w-10 md:h-12 md:w-12" strokeWidth={2} />
                     )}

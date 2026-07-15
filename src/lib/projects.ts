@@ -39,7 +39,7 @@ export type Project = {
     value: string;
     label: string;
     description: string;
-    icon?: "check" | "trending-up";
+    icon?: "check" | "trending-up" | "star";
   }[];
   learningsIntro: string;
   learnings: { title: string; description: string }[];
@@ -59,7 +59,7 @@ export const projects: Project[] = [
     title: "BetterPet Passport",
     tags: ["Product Design", "Consumer Product"],
     summary:
-      "Continuously improving a complex pet compliance experience that helps guests meet property requirements before short-term rental stays, contributing to a 98% submission rate.",
+      "Continuously evolving a complex onboarding experience that helps guests meet property requirements before short-term rental stays through research, iterative design, and continuous product improvement.",
     metrics: [
       { value: "98%", label: "Submission rate" },
       { value: "2 years", label: "Continuous product evolution" },
@@ -71,11 +71,11 @@ export const projects: Project[] = [
     tools: ["Product Analytics", "Usability Testing", "Interaction Design"],
     toolsLabel: "Methods",
     context:
-      "BetterPet Passport is the consumer-facing experience within PetScreening's short-term rental ecosystem. Property managers define the pet policies and requirements for their properties, while guests use BetterPet Passport to complete the information and documentation required before their stay.\n\nOver nearly two years, I partnered closely with Product and Engineering to continuously evolve this experience through research, usability testing, product analytics, and iterative design. This case study highlights some of the initiatives that simplified complex workflows and contributed to increasing submission completion to 98%.",
+      "BetterPet Passport is the consumer-facing experience within PetScreening’s short-term rental ecosystem. Property managers configure pet policies and requirements, while guests use BetterPet Passport to complete the information and documentation required before their stay.\n\nOver nearly two years, I collaborated with Product and Engineering to continuously evolve this experience through heuristic evaluation, product analytics, usability testing, and iterative design. Rather than redesigning the onboarding from scratch, this work focused on continuously improving a complex product by simplifying interactions, reducing uncertainty, and adapting the experience as product requirements evolved.",
     problem: {
-      heading: "Making complex property requirements easier to complete",
+      heading: "Balancing complex product requirements with an intuitive guest experience",
       body:
-        "BetterPet Passport wasn't a standalone product. Every guest experience was shaped by property-specific policies configured by hosts in PetScreening's management platform.\n\nDepending on the property, guests could be asked to provide different information, documentation, or complete entirely different flows—including pet, no-pet, and service animal scenarios. The challenge was creating an experience that remained clear and intuitive despite constantly changing requirements.\n\nThroughout the product's evolution, my focus was reducing friction, improving completion rates, and helping guests confidently submit the information hosts needed before their stay.",
+        "BetterPet Passport wasn’t a standalone product. Every guest experience was shaped by property-specific policies configured by hosts in PetScreening’s management platform.\n\nDepending on the property, guests could be asked to provide different information, documentation, or complete entirely different flows, including guests traveling with pets, without pets, or with assistance animals. The challenge was creating an experience that remained clear and intuitive as the product evolved to support new policies, guest scenarios, and business requirements.\n\nThroughout the product’s evolution, my focus was reducing friction, improving completion rates, and helping guests confidently submit the information required before their stay.",
       image: "/projects/betterpet-passport/problem-context-diagram.png",
     },
     research: {
@@ -100,74 +100,79 @@ export const projects: Project[] = [
     },
     approach: [
       {
-        step: "Understand complexity",
+        step: "Understand",
         description:
-          "Used product analytics, surveys, heuristic evaluations, and usability testing to understand how different property rules shaped the submission experience and where users encountered the most friction.",
+          "Combined heuristic evaluation, product analytics, surveys, and usability testing to identify where guests experienced friction, understand why it happened, and uncover opportunities to improve the onboarding experience.",
       },
       {
-        step: "Identify friction",
+        step: "Prioritize",
         description:
-          "Combined user insights with business requirements to prioritize the highest-impact opportunities, balancing user needs, host requirements, and technical constraints.",
+          "Balanced user insights, host requirements, reviewer workflows, and technical constraints to prioritize improvements that would create the greatest impact for both guests and the business.",
       },
       {
-        step: "Simplify the experience",
+        step: "Design & iterate",
         description:
-          "Designed and iterated on onboarding flows, reusable patterns, and interactions that reduced uncertainty and made complex property requirements easier to complete.",
+          "Designed, refined, and validated onboarding interactions that reduced uncertainty, improved system feedback, and made complex requirements easier to complete.",
       },
       {
-        step: "Continuously improve",
+        step: "Measure & evolve",
         description:
-          "Measured outcomes after release and continued evolving the experience through product analytics, user feedback, and new business requirements.",
+          "Measured outcomes after release and continued improving the experience as new research, product insights, and business requirements emerged.",
       },
     ],
     approachImage: "/projects/betterpet-passport/approach-dashboard.png",
     approachImage2: "/projects/betterpet-passport/approach-diagram.png",
     solution: {
-      heading: "Designing for flexibility without increasing complexity",
+      heading: "Establishing a design strategy for a complex product",
       body:
-        "Rather than designing a single onboarding flow, I focused on creating a flexible experience that could adapt to each property's policies while remaining predictable and easy to complete.\n\nInformation was progressively revealed based on each guest's scenario, reducing unnecessary questions and helping users understand exactly what was required before submitting their request.\n\nThe experience supported multiple journeys, including guests traveling with pets, without pets, or with assistance animals, while keeping the overall flow simple, consistent, and easy to navigate.",
+        "As research, product analytics, heuristic evaluations, and usability testing revealed recurring sources of friction, recurring design patterns emerged across the product: reducing cognitive load, providing contextual guidance, and building user confidence.\n\nProgressive disclosure reduced cognitive load by presenting information only when it became relevant. Contextual guidance helped guests understand complex policies, legal requirements, and why specific information was being requested. Trust-building patterns, including booking context and platform indicators, increased confidence when submitting personal information and supporting documentation.\n\nTogether, these principles created a consistent foundation for evolving the product as new guest scenarios, business requirements, and regulations emerged. The following design decisions show how these principles guided improvements across the guest experience, while also highlighting additional opportunities uncovered as the product continued to evolve.",
       image: "/projects/betterpet-passport/solution.png",
     },
     decisionsIntro:
-      "Each decision addressed a different source of friction across the guest journey, making the experience easier to understand, complete, and navigate with confidence.",
+      "The following decisions demonstrate how these principles were translated into the product. Each one addressed a different source of friction identified through research, product insights, and continuous iteration.",
     decisions: [
       {
         title: "Reducing cognitive load through progressive disclosure",
         description:
-          "Instead of asking guests to process multiple decisions at once, the onboarding was reorganized into smaller, sequential steps. Users only saw questions when they became relevant, reducing cognitive load while supporting scenarios such as single or multiple pets, no-pet bookings, and assistance animals.",
+          "Research revealed that guests often felt overwhelmed when multiple questions and decisions appeared at once. Rather than presenting every input upfront, the experience was reorganized into smaller, contextual steps that only appeared when relevant.\n\nOne example was the pet selection flow. Instead of immediately displaying a numeric selector, guests were first asked a simple yes-or-no question about whether they were traveling with pets. Only after selecting Yes would the pet count appear, eliminating ambiguity observed during usability testing and creating a more intuitive flow for both pet and no-pet guests.",
       },
       {
-        title: "Building trust through contextual guidance",
+        title: "Reducing uncertainty through contextual guidance",
         description:
-          "Contextual guidance helped guests understand why information was required, which policies came from the host, and what would happen next. Clear explanations, integrated booking indicators, and supporting content reduced uncertainty throughout the submission process.",
+          "Research showed that guests often questioned why specific information and documents were required, particularly when legal requirements or host policies weren’t immediately clear. Rather than expecting users to infer this information, contextual guidance was introduced throughout the experience to explain what was being requested, why it mattered, and what would happen next.\n\nClear explanations, legal context, and supporting content helped guests make informed decisions throughout the journey, reducing uncertainty without adding unnecessary steps or interrupting the flow.",
       },
       {
-        title: "Keeping users informed after submission",
+        title: "Building trust through transparent communication",
         description:
-          "The experience continued after submission through dynamic in-app notifications, status updates, and contextual actions that reflected each animal's status. Instead of leaving users uncertain, the interface clearly communicated what had happened and what to do next.",
+          "Usability testing showed that guests felt more confident when they understood they were completing a legitimate verification process connected to their reservation. Rather than relying solely on instructional content, the experience incorporated trust-building cues such as reservation details, partner platform indicators, and transparent messaging throughout the journey.\n\nThese signals reassured guests that the requested information was relevant to their stay, reduced hesitation when sharing personal information and supporting documentation, and strengthened confidence throughout the verification process.",
+      },
+      {
+        title: "Improving system feedback through in-app notifications",
+        description:
+          "As the product evolved, usability findings and product observations revealed that guests often lacked visibility into what was happening after submitting their information. Important reviewer messages, visa statuses, and required actions were difficult to find, creating uncertainty and delaying the verification process.\n\nRather than treating this as a simple notification update, I expanded the solution by redesigning the post-submission experience. Status indicators, contextual alerts, reviewer messages, and next-step guidance were integrated into the interface, making the verification process more transparent and helping guests understand what had happened, what required their attention, and what to do next.",
       },
     ],
     outcomes: [
       {
         value: "98%",
         label: "Submission rate",
-        description: "Maintained a 98% submission rate while continuously evolving an onboarding experience across increasingly complex guest scenarios.",
+        description: "Maintained a 98% submission rate while continuously evolving the product to support increasingly complex guest scenarios and business requirements.",
       },
       {
         value: "",
-        icon: "check",
+        icon: "star",
         label: "Positive user feedback",
-        description: "Survey responses consistently showed that guests found the onboarding process easy to complete.",
+        description: "Survey responses consistently showed high satisfaction, with most guests rating the experience 5 out of 5 and describing the onboarding process as easy to complete.",
       },
       {
         value: "",
         icon: "trending-up",
-        label: "Continuous product evolution",
-        description: "Evolved the guest experience through continuous improvements informed by product analytics, user feedback, and changing business requirements.",
+        label: "Research-informed improvements",
+        description: "Research and usability testing showed that clearer guidance, trust signals, and improved system feedback helped guests better understand the verification process and complete it with greater confidence.",
       },
     ],
     learningsIntro:
-      "BetterPet Passport demonstrates how complex products can evolve without becoming harder to use. Every design decision needed to accommodate new guest scenarios, changing business requirements, and evolving industry regulations while preserving a clear and intuitive experience for guests. Flexible interaction patterns and evidence-based decisions made it possible to evolve the product without compromising usability.",
+      "Working on BetterPet Passport reinforced that evolving a product requires more than designing new features. It requires understanding the problems behind user behavior, business requirements, and operational constraints before deciding what to build.\n\nThroughout this project, research, product analytics, usability testing, and cross-functional collaboration informed design decisions that balanced user needs, business requirements, and technical constraints. This approach made it possible to continuously evolve a complex product while preserving a clear, intuitive, and consistent experience for guests.",
     learnings: [
       { title: "Learning One", description: LOREM_SHORT },
       { title: "Learning Two", description: LOREM_SHORT },
