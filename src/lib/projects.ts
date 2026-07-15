@@ -79,8 +79,9 @@ export const projects: Project[] = [
       image: "/projects/betterpet-passport/problem-context-diagram.png",
     },
     research: {
-      title: "Research title",
-      intro: "Research introduction placeholder.",
+      title: "Understanding user behavior",
+      intro:
+        "As the product matured, we complemented heuristic evaluations with product analytics, surveys, and usability testing to better understand where guests experienced friction and why.",
       methods: [
         "Product Analytics",
         "Usability Testing",
@@ -88,10 +89,10 @@ export const projects: Project[] = [
         "Heuristic Evaluation",
       ],
       findings: [
-        "Placeholder finding one.",
-        "Placeholder finding two.",
-        "Placeholder finding three.",
-        "Placeholder finding four.",
+        "Guests needed clearer guidance to understand why information was required.",
+        "Reducing uncertainty was just as important as reducing the number of steps.",
+        "Better system feedback helped users understand what had happened and what to do next.",
+        "Trust signals helped guests feel more confident when submitting information.",
       ],
     },
     approach: [
