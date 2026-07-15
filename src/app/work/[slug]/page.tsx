@@ -345,7 +345,7 @@ export default async function CaseStudyPage({
                   </div>
                 </div>
                 <div className="w-full flex-1">
-                  <ImagePlaceholder height="h-[240px] md:h-[340px]" gradient="from-slate-700 to-slate-800" />
+                  <ImagePlaceholder height="aspect-[4/3]" gradient="from-slate-700 to-slate-800" />
                 </div>
               </div>
             ))}
