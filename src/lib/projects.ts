@@ -39,7 +39,7 @@ export type Project = {
     value: string;
     label: string;
     description: string;
-    icon?: "check" | "trending-up" | "star";
+    icon?: "check" | "trending-up" | "star" | "clock-arrow-down";
   }[];
   learningsIntro: string;
   learnings: { title: string; description: string }[];
@@ -166,9 +166,9 @@ export const projects: Project[] = [
       },
       {
         value: "",
-        icon: "trending-up",
-        label: "Research-informed improvements",
-        description: "Research and usability testing showed that clearer guidance, trust signals, and improved system feedback helped guests better understand the verification process and complete it with greater confidence.",
+        icon: "clock-arrow-down",
+        label: "Reduced completion time",
+        description: "Progressive disclosure, contextual guidance, trust cues, and clearer system feedback helped guests complete onboarding more efficiently.",
       },
     ],
     learningsIntro:

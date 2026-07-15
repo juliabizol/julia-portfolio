@@ -1,7 +1,7 @@
 import { notFound } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
-import { Check, TrendingUp, Star } from "lucide-react";
+import { Check, TrendingUp, Star, ClockArrowDown } from "lucide-react";
 import { getProject, projects } from "@/lib/projects";
 import { StickyNav } from "@/components/nav";
 import { ProjectCard } from "@/components/work";
@@ -368,9 +368,11 @@ export default async function CaseStudyPage({
                     ) : o.icon === "star" ? (
                       <span className="flex items-center gap-1">
                         {Array.from({ length: 5 }).map((_, si) => (
-                          <Star key={si} className="h-10 w-10 md:h-12 md:w-12" strokeWidth={2} fill="currentColor" />
+                          <Star key={si} className="h-10 w-10 md:h-12 md:w-12" strokeWidth={2} />
                         ))}
                       </span>
+                    ) : o.icon === "clock-arrow-down" ? (
+                      <ClockArrowDown className="h-10 w-10 md:h-12 md:w-12" strokeWidth={2} />
                     ) : (
                       <TrendingUp className="h-10 w-10 md:h-12 md:w-12" strokeWidth={2} />
                     )}
