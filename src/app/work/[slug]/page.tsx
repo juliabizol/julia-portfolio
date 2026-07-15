@@ -327,7 +327,7 @@ export default async function CaseStudyPage({
                 }`}
               >
                 <div className="flex flex-1 flex-col gap-4 md:gap-5">
-                  <span className="w-fit rounded-full bg-purple-900/50 px-3 py-1 text-[14px] font-bold text-purple-300">
+                  <span className="w-fit rounded-full bg-purple-900/50 px-3 py-1 text-[14px] md:text-[16px] font-bold text-purple-300">
                     {String(i + 1).padStart(2, "0")}
                   </span>
                   <h3 className="text-[20px] md:text-[24px] font-semibold text-white">
