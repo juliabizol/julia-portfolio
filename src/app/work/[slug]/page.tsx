@@ -169,7 +169,7 @@ export default async function CaseStudyPage({
                 ))}
               </div>
             </div>
-            <div className="md:flex md:items-center">
+            <div>
               {project.problem.image ? (
                 <div className="relative w-full aspect-[4/3] rounded-xl md:rounded-2xl overflow-hidden border border-slate-700">
                   <Image
@@ -290,7 +290,7 @@ export default async function CaseStudyPage({
                 ))}
               </div>
             </div>
-            <div className="md:flex md:items-center">
+            <div>
               {project.solution.image ? (
                 <div className="relative w-full aspect-[4/3] rounded-xl md:rounded-2xl overflow-hidden border border-slate-700">
                   <Image
