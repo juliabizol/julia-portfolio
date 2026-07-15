@@ -102,7 +102,7 @@ export const projects: Project[] = [
       {
         step: "Understand",
         description:
-          "Combined heuristic evaluation, product analytics, surveys, and usability testing to identify where guests experienced friction, understand why it happened, and uncover opportunities to improve the onboarding experience.",
+          "Synthesized quantitative and qualitative insights to identify friction, understand its causes, and uncover opportunities for improvement.",
       },
       {
         step: "Prioritize",
