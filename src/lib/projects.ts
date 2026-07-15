@@ -34,7 +34,7 @@ export type Project = {
     image?: string;
   };
   decisionsIntro: string;
-  decisions: { title: string; description: string }[];
+  decisions: { title: string; description: string; image?: string }[];
   outcomes: {
     value: string;
     label: string;
@@ -135,21 +135,25 @@ export const projects: Project[] = [
         title: "Reducing cognitive load through progressive disclosure",
         description:
           "Research revealed that guests often felt overwhelmed when multiple questions and decisions appeared at once. Rather than presenting every input upfront, the experience was reorganized into smaller, contextual steps that only appeared when relevant.\n\nOne example was the pet selection flow. Instead of immediately displaying a numeric selector, guests were first asked a simple yes-or-no question about whether they were traveling with pets. Only after selecting Yes would the pet count appear, eliminating ambiguity observed during usability testing and creating a more intuitive flow for both pet and no-pet guests.",
+        image: "/projects/betterpet-passport/decision-1.png",
       },
       {
         title: "Reducing uncertainty through contextual guidance",
         description:
           "Research showed that guests often questioned why specific information and documents were required, particularly when legal requirements or host policies weren’t immediately clear. Rather than expecting users to infer this information, contextual guidance was introduced throughout the experience to explain what was being requested, why it mattered, and what would happen next.\n\nClear explanations, legal context, and supporting content helped guests make informed decisions throughout the journey, reducing uncertainty without adding unnecessary steps or interrupting the flow.",
+        image: "/projects/betterpet-passport/decision-2.png",
       },
       {
         title: "Building trust through transparent communication",
         description:
           "Usability testing showed that guests felt more confident when they understood they were completing a legitimate verification process connected to their reservation. Rather than relying solely on instructional content, the experience incorporated trust-building cues such as reservation details, partner platform indicators, and transparent messaging throughout the journey.\n\nThese signals reassured guests that the requested information was relevant to their stay, reduced hesitation when sharing personal information and supporting documentation, and strengthened confidence throughout the verification process.",
+        image: "/projects/betterpet-passport/decision-3.png",
       },
       {
         title: "Improving system feedback through in-app notifications",
         description:
           "As the product evolved, usability findings and product observations revealed that guests often lacked visibility into what was happening after submitting their information. Important reviewer messages, visa statuses, and required actions were difficult to find, creating uncertainty and delaying the verification process.\n\nRather than treating this as a simple notification update, I expanded the solution by redesigning the post-submission experience. Status indicators, contextual alerts, reviewer messages, and next-step guidance were integrated into the interface, making the verification process more transparent and helping guests understand what had happened, what required their attention, and what to do next.",
+        image: "/projects/betterpet-passport/decision-4.png",
       },
     ],
     outcomes: [

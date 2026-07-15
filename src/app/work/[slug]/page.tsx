@@ -345,7 +345,20 @@ export default async function CaseStudyPage({
                   </div>
                 </div>
                 <div className="w-full flex-1">
-                  <ImagePlaceholder height="aspect-[4/3]" gradient="from-slate-700 to-slate-800" />
+                  {d.image ? (
+                    <div className="relative w-full aspect-[4/3] rounded-xl md:rounded-2xl overflow-hidden border border-slate-700">
+                      <Image
+                        src={d.image}
+                        alt={d.title}
+                        fill
+                        className="object-contain"
+                        sizes="(min-width: 768px) 50vw, 100vw"
+                        quality={90}
+                      />
+                    </div>
+                  ) : (
+                    <ImagePlaceholder height="aspect-[4/3]" gradient="from-slate-700 to-slate-800" />
+                  )}
                 </div>
               </div>
             ))}
