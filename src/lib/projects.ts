@@ -71,7 +71,7 @@ export const projects: Project[] = [
     tools: ["Product Analytics", "Usability Testing", "Interaction Design"],
     toolsLabel: "Methods",
     context:
-      "BetterPet Passport is the consumer-facing experience within PetScreening’s short-term rental ecosystem. Property managers configure pet policies and requirements, while guests use BetterPet Passport to complete the information and documentation required before their stay.\n\nOver nearly two years, I collaborated with Product and Engineering to continuously evolve this experience through heuristic evaluation, product analytics, usability testing, and iterative design. Rather than redesigning the onboarding from scratch, this work focused on continuously improving a complex product by simplifying interactions, reducing uncertainty, and adapting the experience as product requirements evolved.",
+      "BetterPet Passport is the consumer-facing experience within PetScreening’s short-term rental ecosystem. Property managers configure pet policies and requirements, while guests use BetterPet Passport to complete the information and documentation required before their stay.\n\nOver nearly two years, I collaborated with Product and Engineering to continuously evolve this experience through research, product analytics, usability testing, and iterative design. Rather than redesigning the onboarding from scratch, this work focused on continuously improving a complex product by simplifying interactions, reducing uncertainty, and adapting the experience as product requirements evolved.",
     problem: {
       heading: "Balancing complex product requirements with an intuitive guest experience",
       body:
