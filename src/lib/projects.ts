@@ -17,6 +17,8 @@ export type Project = {
     image?: string;
   };
   research: {
+    title: string;
+    intro: string;
     methods: string[];
     findings: string[];
   };
@@ -77,6 +79,8 @@ export const projects: Project[] = [
       image: "/projects/betterpet-passport/problem-context-diagram.png",
     },
     research: {
+      title: "Research title",
+      intro: "Research introduction placeholder.",
       methods: [
         "Product Analytics",
         "Usability Testing",
@@ -84,10 +88,10 @@ export const projects: Project[] = [
         "Heuristic Evaluation",
       ],
       findings: [
-        "Property-specific rules created highly variable onboarding flows.",
-        "Guests needed clearer guidance to understand what information was required.",
-        "Reducing uncertainty was just as important as reducing the number of steps.",
-        "Reusable pet profiles could significantly reduce friction for future stays.",
+        "Placeholder finding one.",
+        "Placeholder finding two.",
+        "Placeholder finding three.",
+        "Placeholder finding four.",
       ],
     },
     approach: [
@@ -191,6 +195,8 @@ export const projects: Project[] = [
       body: LOREM + " " + LOREM_SHORT,
     },
     research: {
+      title: "Research title",
+      intro: "Research introduction placeholder.",
       methods: [
         "Component audit (existing 4 repos)",
         "Designer surveys (n=18)",
@@ -199,10 +205,10 @@ export const projects: Project[] = [
         "Industry benchmarking",
       ],
       findings: [
-        "Teams were maintaining 4 separate button components with inconsistent APIs",
-        "Design token naming had no convention — 23 shades of grey in production",
-        "Engineers spent avg. 3 hrs/week re-implementing existing patterns",
-        "Designers had no single source of truth for spacing and typography",
+        "Placeholder finding one.",
+        "Placeholder finding two.",
+        "Placeholder finding three.",
+        "Placeholder finding four.",
       ],
     },
     approach: [
@@ -270,6 +276,8 @@ export const projects: Project[] = [
       body: LOREM + " " + LOREM_SHORT,
     },
     research: {
+      title: "Research title",
+      intro: "Research introduction placeholder.",
       methods: [
         "Retention cohort analysis",
         "First-session recordings (n=200)",
@@ -278,10 +286,10 @@ export const projects: Project[] = [
         "Benchmark study",
       ],
       findings: [
-        "Users were asked for 11 pieces of information before reaching the main feature",
-        "The value proposition was never shown during onboarding",
-        "Permission prompts appeared too early, leading to high denial rates",
-        "Progress indicators were absent — users didn't know how long onboarding would take",
+        "Placeholder finding one.",
+        "Placeholder finding two.",
+        "Placeholder finding three.",
+        "Placeholder finding four.",
       ],
     },
     approach: [

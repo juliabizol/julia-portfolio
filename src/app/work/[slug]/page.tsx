@@ -190,10 +190,16 @@ export default async function CaseStudyPage({
 
         {/* Research */}
         <section className={section}>
-          <SectionLabel>RESEARCH &amp; DISCOVERY</SectionLabel>
+          <SectionLabel>RESEARCH &amp; INSIGHTS</SectionLabel>
+          <h2 className="text-[26px] md:text-[36px] font-bold tracking-[-0.01em] text-white mb-5 md:mb-6">
+            {project.research.title}
+          </h2>
+          <p className="text-[15px] md:text-[17px] leading-[26px] md:leading-[28px] text-slate-300 max-w-[760px] mb-8 md:mb-12">
+            {project.research.intro}
+          </p>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16">
             <div>
-              <h3 className="text-[18px] md:text-[20px] font-semibold text-white mb-4 md:mb-5">Methods</h3>
+              <h3 className="text-[18px] md:text-[20px] font-semibold text-white mb-4 md:mb-5">Research approach</h3>
               <div className="flex flex-wrap gap-2">
                 {project.research.methods.map((m) => (
                   <Tag key={m} variant="neutral" size="md">
@@ -203,7 +209,7 @@ export default async function CaseStudyPage({
               </div>
             </div>
             <div>
-              <h3 className="text-[18px] md:text-[20px] font-semibold text-white mb-4 md:mb-5">Insights</h3>
+              <h3 className="text-[18px] md:text-[20px] font-semibold text-white mb-4 md:mb-5">Key findings</h3>
               <ul className="flex flex-col gap-3 md:gap-4">
                 {project.research.findings.map((f, i) => (
                   <li key={i} className="flex gap-3 text-[14px] md:text-[15px] leading-[22px] md:leading-[24px] text-slate-300">
