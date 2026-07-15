@@ -81,7 +81,7 @@ export const projects: Project[] = [
     research: {
       title: "Understanding user behavior",
       intro:
-        "As the product matured, we complemented heuristic evaluations with product analytics, surveys, and usability testing to better understand where guests experienced friction and why.",
+        "As the product matured, we combined quantitative and qualitative research to better understand where guests experienced friction, why it happened, and how the experience could continuously evolve.",
       methods: [
         "Product Analytics",
         "Usability Testing",
