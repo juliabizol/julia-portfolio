@@ -87,6 +87,9 @@ export const projects: Project[] = [
         "Usability Testing",
         "Surveys",
         "Heuristic Evaluation",
+        "Amplitude",
+        "UserTesting",
+        "Chameleon",
       ],
       findings: [
         "Guests needed clearer guidance to understand why information was required.",

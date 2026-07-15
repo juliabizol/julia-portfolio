@@ -199,7 +199,7 @@ export default async function CaseStudyPage({
           </p>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16">
             <div>
-              <h3 className="text-[18px] md:text-[20px] font-semibold text-white mb-4 md:mb-5">Research approach</h3>
+              <h3 className="text-[18px] md:text-[20px] font-semibold text-white mb-4 md:mb-5">Research methods &amp; tools</h3>
               <div className="flex flex-wrap gap-2">
                 {project.research.methods.map((m) => (
                   <Tag key={m} variant="neutral" size="md">
