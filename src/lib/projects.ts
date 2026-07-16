@@ -184,7 +184,7 @@ export const projects: Project[] = [
       { title: "Learning Four", description: LOREM_SHORT },
     ],
     accent: "from-purple-900/70 to-slate-800",
-    image: "/projects/pet-compliance-platform.jpg",
+    image: "/projects/betterpet-passport/hero.png",
   },
   {
     slug: "design-system-evolution",
