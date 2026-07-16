@@ -99,12 +99,18 @@ export default async function CaseStudyPage({
             ))}
           </div>
 
-          <div className="relative mt-10 md:mt-12 w-full h-[240px] md:h-[400px] lg:h-[540px] overflow-hidden rounded-xl md:rounded-2xl border border-slate-700">
+          <div
+            className={
+              project.heroContain
+                ? "relative mt-10 md:mt-12 w-full aspect-[4/3] overflow-hidden rounded-xl md:rounded-2xl border border-slate-700"
+                : "relative mt-10 md:mt-12 w-full h-[240px] md:h-[400px] lg:h-[540px] overflow-hidden rounded-xl md:rounded-2xl border border-slate-700"
+            }
+          >
             <Image
               src={project.image}
               alt={project.title}
               fill
-              className="object-cover"
+              className={project.heroContain ? "object-contain" : "object-cover"}
               sizes="100vw"
               quality={90}
               priority

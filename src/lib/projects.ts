@@ -45,6 +45,7 @@ export type Project = {
   learnings: { title: string; description: string }[];
   accent: string;
   image: string;
+  heroContain?: boolean;
 };
 
 const LOREM =
@@ -185,6 +186,7 @@ export const projects: Project[] = [
     ],
     accent: "from-purple-900/70 to-slate-800",
     image: "/projects/betterpet-passport/hero.png",
+    heroContain: true,
   },
   {
     slug: "design-system-evolution",
