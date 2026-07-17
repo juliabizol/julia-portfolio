@@ -44,6 +44,7 @@ export type Project = {
     description: string;
     icon?: "check" | "trending-up" | "star" | "clock-arrow-down" | "git-fork";
   }[];
+  learningsTitle?: string;
   learningsIntro: string;
   learningsImage?: string;
   learnings: { title: string; description: string }[];
@@ -324,7 +325,9 @@ export const projects: Project[] = [
           "The new purchasing model supported the expansion of the marketplace by introducing clear scholarship eligibility guidance directly into the interface, enabling broader product offerings without adding complexity for families.",
       },
     ],
-    learningsIntro: LOREM_SHORT,
+    learningsTitle: "Balancing competing priorities",
+    learningsIntro:
+      "One of the biggest takeaways from this project was that product design often means navigating competing priorities rather than optimizing for a single outcome. Simplifying the purchasing experience required understanding how user behavior, scholarship policies, and business goals influenced one another, leading to a solution that balanced the needs of families with long-term product goals.",
     learnings: [
       { title: "Learning One", description: LOREM_SHORT },
       { title: "Learning Two", description: LOREM_SHORT },

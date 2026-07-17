@@ -423,7 +423,7 @@ export default async function CaseStudyPage({
             <div>
               <SectionLabel>FINAL THOUGHTS</SectionLabel>
               <h2 className="text-[26px] md:text-[36px] font-bold leading-[1.2] md:leading-[44px] tracking-[-0.01em] text-white mb-5 md:mb-6">
-                Designing products as systems
+                {project.learningsTitle ?? "Designing products as systems"}
               </h2>
               <div className="flex flex-col gap-4">
                 {project.learningsIntro.split("\n\n").map((paragraph, i) => (
