@@ -246,22 +246,22 @@ export const projects: Project[] = [
     },
     approach: [
       {
-        step: "Synthesized research into opportunities",
+        step: "Synthesized insights",
         description:
           "Transforming qualitative insights and existing evidence into clear product opportunities and priorities.",
       },
       {
-        step: "Balanced user and business needs",
+        step: "Balanced priorities",
         description:
           "Balancing user needs alongside scholarship rules, business goals, and technical constraints to guide product decisions.",
       },
       {
-        step: "Explored and validated concepts",
+        step: "Validated concepts",
         description:
           "Collaborating with stakeholders through workshops and iterative exploration to refine concepts before detailed design.",
       },
       {
-        step: "Designed for scalability",
+        step: "Designed to scale",
         description:
           "Designing flexible solutions that could support multiple scholarship programs, evolving business rules, and future product growth.",
       },
