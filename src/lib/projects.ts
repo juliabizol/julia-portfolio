@@ -225,12 +225,17 @@ export const projects: Project[] = [
         "Families often manage scholarships for multiple students, each with different funding programs, eligibility rules, and available balances.\n\nThe purchasing experience was structured around scholarship rules rather than how families naturally shop. Parents were required to complete a separate purchasing flow for every student, repeating the entire process from browsing products to checkout.\n\nAs a result, educational purchases became repetitive and fragmented, increasing effort and making an otherwise familiar e-commerce experience unnecessarily complex.",
     },
     research: {
-      title: "Research title",
-      intro: "Research introduction placeholder.",
+      title: "Understanding how families navigate educational purchases",
+      intro:
+        "User interviews provided valuable insights into how families navigated the scholarship purchasing process, revealing recurring pain points and unmet needs.\n\nBuilding on these insights, I synthesized findings from heuristic evaluation, accessibility reviews, workshops, journey mapping, and user flows to uncover the underlying causes of friction and identify opportunities for improvement.",
       methods: [
-        "Placeholder method one",
-        "Placeholder method two",
-        "Placeholder method three",
+        "User Interviews",
+        "Heuristic Evaluation",
+        "Accessibility Evaluation",
+        "Workshops",
+        "Journey Mapping",
+        "User Flows",
+        "Ideation",
       ],
       findings: [
         "Placeholder finding one.",

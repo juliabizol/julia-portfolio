@@ -200,9 +200,16 @@ export default async function CaseStudyPage({
           <h2 className="text-[26px] md:text-[36px] font-bold tracking-[-0.01em] text-white mb-5 md:mb-6">
             {project.research.title}
           </h2>
-          <p className="text-[15px] md:text-[17px] leading-[26px] md:leading-[28px] text-slate-300 max-w-[760px] mb-8 md:mb-12">
-            {project.research.intro}
-          </p>
+          <div className="flex flex-col gap-4 max-w-[760px] mb-8 md:mb-12">
+            {project.research.intro.split("\n\n").map((paragraph, i) => (
+              <p
+                key={i}
+                className="text-[15px] md:text-[17px] leading-[26px] md:leading-[28px] text-slate-300"
+              >
+                {paragraph}
+              </p>
+            ))}
+          </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16">
             <div>
               <h3 className="text-[18px] md:text-[20px] font-semibold text-white mb-4 md:mb-5">Research methods &amp; tools</h3>
