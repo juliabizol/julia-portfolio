@@ -191,6 +191,72 @@ export const projects: Project[] = [
     heroContain: true,
   },
   {
+    slug: "my-scholarshop",
+    title: "My ScholarShop",
+    tags: ["Product Design", "EdTech"],
+    summary:
+      "Redesigning a scholarship-powered marketplace to simplify educational purchases for families managing multiple students, funding programs, and complex purchasing rules.",
+    metrics: [
+      { value: "4 months", label: "Product redesign" },
+      { value: "One shopping journey", label: "For multiple students" },
+    ],
+    industry: "Industry placeholder",
+    role: "Role placeholder",
+    timeline: "Timeline placeholder",
+    team: "Team placeholder",
+    tools: ["Placeholder tool one", "Placeholder tool two"],
+    context: LOREM,
+    problem: {
+      heading: "Problem heading placeholder",
+      body: LOREM + " " + LOREM_SHORT,
+    },
+    research: {
+      title: "Research title",
+      intro: "Research introduction placeholder.",
+      methods: [
+        "Placeholder method one",
+        "Placeholder method two",
+        "Placeholder method three",
+      ],
+      findings: [
+        "Placeholder finding one.",
+        "Placeholder finding two.",
+        "Placeholder finding three.",
+        "Placeholder finding four.",
+      ],
+    },
+    approach: [
+      { step: "Phase One", description: LOREM_SHORT },
+      { step: "Phase Two", description: LOREM_SHORT },
+      { step: "Phase Three", description: LOREM_SHORT },
+      { step: "Phase Four", description: LOREM_SHORT },
+    ],
+    solution: {
+      heading: "Solution heading placeholder",
+      body: LOREM + " " + LOREM_SHORT,
+    },
+    decisionsIntro: LOREM_SHORT,
+    decisions: [
+      { title: "Decision One", description: LOREM_SHORT },
+      { title: "Decision Two", description: LOREM_SHORT },
+      { title: "Decision Three", description: LOREM_SHORT },
+    ],
+    outcomes: [
+      { value: "—", label: "Outcome One", description: LOREM_SHORT },
+      { value: "—", label: "Outcome Two", description: LOREM_SHORT },
+      { value: "—", label: "Outcome Three", description: LOREM_SHORT },
+    ],
+    learningsIntro: LOREM_SHORT,
+    learnings: [
+      { title: "Learning One", description: LOREM_SHORT },
+      { title: "Learning Two", description: LOREM_SHORT },
+      { title: "Learning Three", description: LOREM_SHORT },
+      { title: "Learning Four", description: LOREM_SHORT },
+    ],
+    accent: "from-indigo-900/70 to-slate-800",
+    image: "/projects/my-scholarshop.jpg",
+  },
+  {
     slug: "design-system-evolution",
     title: "Design System Evolution",
     tags: ["Systems", "Tokens"],
