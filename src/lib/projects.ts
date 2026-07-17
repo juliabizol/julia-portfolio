@@ -10,6 +10,7 @@ export type Project = {
   team: string;
   tools: string[];
   toolsLabel?: string;
+  overviewTitle?: string;
   context: string;
   problem: {
     heading: string;
@@ -200,12 +201,23 @@ export const projects: Project[] = [
       { value: "4 months", label: "Product redesign" },
       { value: "1 Journey", label: "Multiple students" },
     ],
-    industry: "Industry placeholder",
-    role: "Role placeholder",
-    timeline: "Timeline placeholder",
-    team: "Team placeholder",
-    tools: ["Placeholder tool one", "Placeholder tool two"],
-    context: LOREM,
+    industry: "EdTech",
+    role: "Product Designer",
+    timeline: "4 months",
+    team: "Product Manager · Product Designer · Design Director · Software Engineers · Client Stakeholders",
+    tools: [
+      "Product Discovery",
+      "Information Architecture",
+      "Interaction Design",
+      "UX Strategy",
+      "Heuristic Evaluation",
+      "Accessibility Evaluation",
+      "Workshop Facilitation",
+    ],
+    overviewTitle:
+      "Designing a marketplace that balances user needs with complex funding rules.",
+    context:
+      "My ScholarShop is the online marketplace within Step Up For Students, a Florida-based nonprofit organization that administers educational scholarship programs for K–12 students.\n\nFamilies use scholarship funds to purchase approved educational products, curriculum, and learning materials directly through the platform. While the experience resembles a traditional e-commerce marketplace, every purchase must comply with scholarship eligibility rules, available funding, and program-specific requirements.\n\nAs the Product Designer on the project, I led the end-to-end redesign of the marketplace, collaborating closely with product, engineering, client stakeholders, and the design team to simplify a highly complex purchasing experience while balancing user needs, business goals, and technical constraints.",
     problem: {
       heading: "Problem heading placeholder",
       body: LOREM + " " + LOREM_SHORT,

@@ -124,7 +124,7 @@ export default async function CaseStudyPage({
             <div>
               <SectionLabel>OVERVIEW</SectionLabel>
               <h2 className="text-[26px] md:text-[36px] font-bold leading-[1.2] md:leading-[44px] tracking-[-0.01em] text-white mb-5 md:mb-6">
-                Understanding the product
+                {project.overviewTitle ?? "Understanding the product"}
               </h2>
               <div className="flex flex-col gap-4">
                 {project.context.split("\n\n").map((paragraph, i) => (
