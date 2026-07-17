@@ -276,9 +276,27 @@ export const projects: Project[] = [
     decisionsIntro:
       "Every design decision was guided by research insights, user needs, and business constraints to create a more intuitive purchasing experience.",
     decisions: [
-      { title: "Decision One", description: LOREM_SHORT },
-      { title: "Decision Two", description: LOREM_SHORT },
-      { title: "Decision Three", description: LOREM_SHORT },
+      {
+        title: "Consolidating multiple purchases into a single journey",
+        description:
+          "Research revealed that families often managed scholarships for multiple students, yet the purchasing experience required them to complete an entirely separate shopping journey for each student. Every switch meant restarting the process from browsing products through checkout, creating unnecessary repetition and effort.\n\nRather than treating each student as an isolated shopping session, the redesigned experience consolidated multiple purchases into a single journey. Parents could shop for all of their students in one flow while the system continued to manage each scholarship independently behind the scenes.",
+      },
+      {
+        title:
+          "Maintaining student and funding context throughout the shopping journey",
+        description:
+          "Families made purchasing decisions on behalf of specific students, each with different scholarship programs and available funding. In the previous experience, this context was only established before entering the marketplace, disappearing once families began shopping.\n\nThe redesigned experience kept student, program, and funding information persistently visible throughout the shopping journey, giving families the confidence to make purchasing decisions without losing sight of the scholarship context.",
+      },
+      {
+        title: "Balancing scholarship rules with shopping flexibility",
+        description:
+          "Scholarship programs imposed strict eligibility rules, but restricting the catalog to approved products would make exploration difficult and prevent families from discovering items they could still purchase using their own funds.\n\nInstead of limiting what users could browse, the experience surfaced product eligibility through contextual indicators while allowing families to filter eligible products whenever needed. This balanced compliance with scholarship requirements while preserving the flexibility of a familiar shopping experience.",
+      },
+      {
+        title: "Simplifying order management through a unified checkout",
+        description:
+          "Although order fulfillment still depended on separate vendors, parents didn't need to think in terms of vendor-specific purchase orders. Instead, the checkout presented a single, consolidated order that grouped items by vendor only when necessary.\n\nThis simplified both purchasing and order tracking. Rather than opening multiple purchase orders to monitor items from different vendors, families could manage everything from a single, unified view while the system preserved the operational structure required to fulfill each order behind the scenes.",
+      },
     ],
     outcomes: [
       { value: "—", label: "Outcome One", description: LOREM_SHORT },
