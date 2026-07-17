@@ -238,10 +238,10 @@ export const projects: Project[] = [
         "Ideation",
       ],
       findings: [
-        "Placeholder finding one.",
-        "Placeholder finding two.",
-        "Placeholder finding three.",
-        "Placeholder finding four.",
+        "Families shop for the household, not one student at a time.",
+        "Scholarship context directly influences purchasing decisions.",
+        "Families need visibility into available funds throughout the journey.",
+        "Product eligibility and purchasing rules must be clear before checkout.",
       ],
     },
     approach: [
