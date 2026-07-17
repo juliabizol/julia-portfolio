@@ -42,7 +42,7 @@ export type Project = {
     value: string;
     label: string;
     description: string;
-    icon?: "check" | "trending-up" | "star" | "clock-arrow-down";
+    icon?: "check" | "trending-up" | "star" | "clock-arrow-down" | "git-fork";
   }[];
   learningsIntro: string;
   learningsImage?: string;
@@ -300,10 +300,29 @@ export const projects: Project[] = [
           "Although order fulfillment still depended on separate vendors, parents didn't need to think in terms of vendor-specific purchase orders. Instead, the checkout presented a single, consolidated order that grouped items by vendor only when necessary.\n\nThis simplified both purchasing and order tracking. Rather than opening multiple purchase orders to monitor items from different vendors, families could manage everything from a single, unified view while the system preserved the operational structure required to fulfill each order behind the scenes.",
       },
     ],
+    outcomesTitle: "Simplifying Scholarship-Funded Purchases",
     outcomes: [
-      { value: "—", label: "Outcome One", description: LOREM_SHORT },
-      { value: "—", label: "Outcome Two", description: LOREM_SHORT },
-      { value: "—", label: "Outcome Three", description: LOREM_SHORT },
+      {
+        value: "",
+        icon: "star",
+        label: "Validated by user feedback",
+        description:
+          "Post-launch user feedback indicated that the redesigned experience felt easier to navigate. Parents particularly appreciated being able to switch between students seamlessly and having funding information readily available throughout the purchasing journey.",
+      },
+      {
+        value: "",
+        icon: "git-fork",
+        label: "One seamless purchasing journey",
+        description:
+          "Parents could manage purchases for multiple students within a single shopping journey, eliminating repetitive navigation and creating a purchasing experience that better matched how families naturally shop.",
+      },
+      {
+        value: "",
+        icon: "trending-up",
+        label: "Enabled marketplace expansion",
+        description:
+          "The new purchasing model supported a broader product catalog by introducing clear scholarship eligibility guidance directly into the interface, enabling new business capabilities without adding complexity for families.",
+      },
     ],
     learningsIntro: LOREM_SHORT,
     learnings: [

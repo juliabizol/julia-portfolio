@@ -1,7 +1,7 @@
 import { notFound } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
-import { Check, TrendingUp, Star, ClockArrowDown } from "lucide-react";
+import { Check, TrendingUp, Star, ClockArrowDown, GitFork } from "lucide-react";
 import { getProject, projects } from "@/lib/projects";
 import { StickyNav } from "@/components/nav";
 import { ProjectCard } from "@/components/work";
@@ -399,6 +399,8 @@ export default async function CaseStudyPage({
                       </span>
                     ) : o.icon === "clock-arrow-down" ? (
                       <ClockArrowDown className="h-10 w-10 md:h-12 md:w-12" strokeWidth={2} />
+                    ) : o.icon === "git-fork" ? (
+                      <GitFork className="h-10 w-10 md:h-12 md:w-12" strokeWidth={2} />
                     ) : (
                       <TrendingUp className="h-10 w-10 md:h-12 md:w-12" strokeWidth={2} />
                     )}
