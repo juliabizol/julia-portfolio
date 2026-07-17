@@ -227,7 +227,7 @@ export const projects: Project[] = [
     research: {
       title: "Understanding how families navigate educational purchases",
       intro:
-        "User interviews provided valuable insights into how families navigated the scholarship purchasing process, revealing recurring pain points and unmet needs.\n\nBuilding on these insights, I synthesized findings from heuristic evaluation, accessibility reviews, workshops, journey mapping, and user flows to uncover the underlying causes of friction and identify opportunities for improvement.",
+        "User interviews provided valuable insights into how families navigated the scholarship purchasing process, revealing recurring pain points and unmet needs.\n\nBuilding on these insights, I synthesized research findings to identify the underlying causes of friction and uncover opportunities for improvement.",
       methods: [
         "User Interviews",
         "Heuristic Evaluation",
@@ -239,9 +239,9 @@ export const projects: Project[] = [
       ],
       findings: [
         "Families shop for the household, not one student at a time.",
-        "Scholarship context directly influences purchasing decisions.",
+        "Scholarship rules and funding availability shape purchasing decisions.",
         "Families need visibility into available funds throughout the journey.",
-        "Product eligibility and purchasing rules must be clear before checkout.",
+        "Product eligibility should be clear before checkout.",
       ],
     },
     approach: [
