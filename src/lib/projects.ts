@@ -37,6 +37,7 @@ export type Project = {
   decisionsTitle?: string;
   decisionsIntro: string;
   decisions: { title: string; description: string; image?: string }[];
+  outcomesTitle?: string;
   outcomes: {
     value: string;
     label: string;
@@ -160,6 +161,7 @@ export const projects: Project[] = [
         image: "/projects/betterpet-passport/decision-4.png",
       },
     ],
+    outcomesTitle: "Improving the end-to-end journey",
     outcomes: [
       {
         value: "98%",

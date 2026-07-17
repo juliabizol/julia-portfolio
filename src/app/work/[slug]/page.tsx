@@ -382,7 +382,7 @@ export default async function CaseStudyPage({
         <section className={section}>
           <SectionLabel>RESULTS &amp; IMPACT</SectionLabel>
           <h2 className="text-[26px] md:text-[36px] font-bold tracking-[-0.01em] text-white mb-8 md:mb-12">
-            Results &amp; Impact
+            {project.outcomesTitle ?? "Results & Impact"}
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 md:gap-6">
             {project.outcomes.map((o) => (
