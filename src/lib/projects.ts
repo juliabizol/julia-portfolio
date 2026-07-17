@@ -193,7 +193,7 @@ export const projects: Project[] = [
   {
     slug: "my-scholarshop",
     title: "My ScholarShop",
-    tags: ["Product Design", "EdTech"],
+    tags: ["Product Design", "Marketplace"],
     summary:
       "Redesigning a scholarship-powered marketplace to simplify educational purchases for families managing multiple students, funding programs, and complex purchasing rules.",
     metrics: [
