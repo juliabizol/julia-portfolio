@@ -198,7 +198,7 @@ export const projects: Project[] = [
       "Redesigning a scholarship-powered marketplace to simplify educational purchases for families managing multiple students, funding programs, and complex purchasing rules.",
     metrics: [
       { value: "4 months", label: "Product redesign" },
-      { value: "One shopping journey", label: "For multiple students" },
+      { value: "1 Journey", label: "Multiple students" },
     ],
     industry: "Industry placeholder",
     role: "Role placeholder",
