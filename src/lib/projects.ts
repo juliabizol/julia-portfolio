@@ -162,7 +162,7 @@ export const projects: Project[] = [
         image: "/projects/betterpet-passport/decision-4.png",
       },
     ],
-    outcomesTitle: "Improving the end-to-end journey",
+    outcomesTitle: "Making complexity feel simple",
     outcomes: [
       {
         value: "98%",
