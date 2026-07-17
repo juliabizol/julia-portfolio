@@ -188,7 +188,10 @@ export default async function CaseStudyPage({
                   />
                 </div>
               ) : (
-                <ImagePlaceholder height="h-[240px] md:h-[320px] lg:h-[380px]" gradient={project.accent} />
+                <ImagePlaceholder
+                  height={project.standardImagePlaceholders ? "aspect-[4/3]" : "h-[240px] md:h-[320px] lg:h-[380px]"}
+                  gradient={project.accent}
+                />
               )}
             </div>
           </div>
@@ -265,7 +268,10 @@ export default async function CaseStudyPage({
                 />
               </div>
             ) : (
-              <ImagePlaceholder height="h-[200px] md:h-[300px]" gradient={project.accent} />
+              <ImagePlaceholder
+                height={project.standardImagePlaceholders ? "aspect-[4/3]" : "h-[200px] md:h-[300px]"}
+                gradient={project.accent}
+              />
             )}
             {project.approachImage2 ? (
               <div className="relative w-full aspect-[4/3] rounded-xl md:rounded-2xl overflow-hidden border border-slate-700">
@@ -279,7 +285,10 @@ export default async function CaseStudyPage({
                 />
               </div>
             ) : (
-              <ImagePlaceholder height="h-[200px] md:h-[300px]" gradient="from-slate-700 to-slate-800" />
+              <ImagePlaceholder
+                height={project.standardImagePlaceholders ? "aspect-[4/3]" : "h-[200px] md:h-[300px]"}
+                gradient="from-slate-700 to-slate-800"
+              />
             )}
           </div>
         </section>
@@ -316,7 +325,10 @@ export default async function CaseStudyPage({
                   />
                 </div>
               ) : (
-                <ImagePlaceholder height="h-[240px] md:h-[320px] lg:h-[380px]" gradient={project.accent} />
+                <ImagePlaceholder
+                  height={project.standardImagePlaceholders ? "aspect-[4/3]" : "h-[240px] md:h-[320px] lg:h-[380px]"}
+                  gradient={project.accent}
+                />
               )}
             </div>
           </div>
@@ -449,7 +461,10 @@ export default async function CaseStudyPage({
                   />
                 </div>
               ) : (
-                <ImagePlaceholder height="h-[240px] md:h-[320px] lg:h-[380px]" gradient={project.accent} />
+                <ImagePlaceholder
+                  height={project.standardImagePlaceholders ? "aspect-[4/3]" : "h-[240px] md:h-[320px] lg:h-[380px]"}
+                  gradient={project.accent}
+                />
               )}
             </div>
           </div>

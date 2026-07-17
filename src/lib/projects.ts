@@ -51,6 +51,7 @@ export type Project = {
   accent: string;
   image: string;
   heroContain?: boolean;
+  standardImagePlaceholders?: boolean;
 };
 
 const LOREM =
@@ -336,6 +337,7 @@ export const projects: Project[] = [
     ],
     accent: "from-indigo-900/70 to-slate-800",
     image: "/projects/my-scholarshop.jpg",
+    standardImagePlaceholders: true,
   },
   {
     slug: "design-system-evolution",
