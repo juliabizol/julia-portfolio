@@ -314,14 +314,14 @@ export const projects: Project[] = [
         icon: "git-fork",
         label: "One seamless purchasing journey",
         description:
-          "Parents could manage purchases for multiple students within a single shopping journey, eliminating repetitive navigation and creating a purchasing experience that better matched how families naturally shop.",
+          "Parents could manage purchases for multiple students within a single shopping journey, eliminating repetitive navigation and creating a purchasing experience that better reflected how families naturally shop.",
       },
       {
         value: "",
         icon: "trending-up",
         label: "Enabled marketplace expansion",
         description:
-          "The new purchasing model supported a broader product catalog by introducing clear scholarship eligibility guidance directly into the interface, enabling new business capabilities without adding complexity for families.",
+          "The new purchasing model supported the expansion of the marketplace by introducing clear scholarship eligibility guidance directly into the interface, enabling broader product offerings without adding complexity for families.",
       },
     ],
     learningsIntro: LOREM_SHORT,
