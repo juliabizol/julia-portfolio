@@ -34,6 +34,7 @@ export type Project = {
     body: string;
     image?: string;
   };
+  decisionsTitle?: string;
   decisionsIntro: string;
   decisions: { title: string; description: string; image?: string }[];
   outcomes: {
@@ -271,6 +272,7 @@ export const projects: Project[] = [
       body:
         "I redesigned the purchasing experience around how families naturally shop, allowing parents to manage multiple students within a single journey while keeping scholarship context visible throughout the experience. The result was a simpler, more intuitive flow that reduced repetition without compromising business rules or program requirements.",
     },
+    decisionsTitle: "Design decisions behind the redesign",
     decisionsIntro:
       "Every design decision was guided by research insights, user needs, and business constraints to create a more intuitive purchasing experience.",
     decisions: [
