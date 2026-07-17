@@ -245,10 +245,26 @@ export const projects: Project[] = [
       ],
     },
     approach: [
-      { step: "Phase One", description: LOREM_SHORT },
-      { step: "Phase Two", description: LOREM_SHORT },
-      { step: "Phase Three", description: LOREM_SHORT },
-      { step: "Phase Four", description: LOREM_SHORT },
+      {
+        step: "Synthesized research into opportunities",
+        description:
+          "Transforming qualitative insights and existing evidence into clear product opportunities and priorities.",
+      },
+      {
+        step: "Balanced user and business needs",
+        description:
+          "Balancing user needs alongside scholarship rules, business goals, and technical constraints to guide product decisions.",
+      },
+      {
+        step: "Explored and validated concepts",
+        description:
+          "Collaborating with stakeholders through workshops and iterative exploration to refine concepts before detailed design.",
+      },
+      {
+        step: "Designed for scalability",
+        description:
+          "Designing flexible solutions that could support multiple scholarship programs, evolving business rules, and future product growth.",
+      },
     ],
     solution: {
       heading: "Solution heading placeholder",
