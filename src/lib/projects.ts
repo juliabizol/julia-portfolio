@@ -198,8 +198,8 @@ export const projects: Project[] = [
     summary:
       "Redesigning a scholarship-powered marketplace to simplify educational purchases for families managing multiple students, funding programs, and complex purchasing rules.",
     metrics: [
-      { value: "4 months", label: "Product redesign" },
       { value: "1 Journey", label: "Multiple students" },
+      { value: "4 months", label: "Product redesign" },
     ],
     industry: "EdTech",
     role: "Product Designer",
@@ -219,8 +219,10 @@ export const projects: Project[] = [
     context:
       "My ScholarShop is the online marketplace within Step Up For Students, a Florida-based nonprofit organization that administers educational scholarship programs for K–12 students.\n\nFamilies use scholarship funds to purchase approved educational products, curriculum, and learning materials directly through the platform. While the experience resembles a traditional e-commerce marketplace, every purchase must comply with scholarship eligibility rules, available funding, and program-specific requirements.\n\nAs the Product Designer on the project, I led the end-to-end redesign of the marketplace, collaborating closely with product, engineering, client stakeholders, and the design team to simplify a highly complex purchasing experience while balancing user needs, business goals, and technical constraints.",
     problem: {
-      heading: "Problem heading placeholder",
-      body: LOREM + " " + LOREM_SHORT,
+      heading:
+        "Managing purchases across multiple students created unnecessary complexity",
+      body:
+        "Families often manage scholarships for multiple students, each with different funding programs, eligibility rules, and available balances.\n\nThe purchasing experience was structured around scholarship rules rather than how families naturally shop. Parents were required to complete a separate purchasing flow for every student, repeating the entire process from browsing products to checkout.\n\nAs a result, educational purchases became repetitive and fragmented, increasing effort and making an otherwise familiar e-commerce experience unnecessarily complex.",
     },
     research: {
       title: "Research title",
