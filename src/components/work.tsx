@@ -1,7 +1,10 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
 import { projects } from "@/lib/projects";
 import { Tag } from "@/components/tag";
+import { useTapPress } from "@/hooks/useTapPress";
 
 export function ProjectCard({
   slug,
@@ -16,10 +19,15 @@ export function ProjectCard({
   desc: string;
   image: string;
 }) {
+  const { pressed, handlers } = useTapPress<HTMLAnchorElement>();
+
   return (
     <Link
       href={`/work/${slug}`}
-      className="group flex h-full flex-col overflow-hidden rounded-xl border border-slate-700 bg-slate-800/50 transition-all hover:border-purple-600 active:border-purple-600 active:scale-[0.99] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950"
+      {...handlers}
+      className={`group flex h-full flex-col overflow-hidden rounded-xl border bg-slate-800/50 transition-all hover:border-purple-600 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950 ${
+        pressed ? "border-purple-600 scale-[0.99]" : "border-slate-700"
+      }`}
     >
       <div className="relative h-[200px] md:h-[220px] w-full shrink-0">
         <Image
@@ -43,7 +51,11 @@ export function ProjectCard({
           {title}
         </h3>
         <p className="text-[14px] leading-[22px] text-slate-300">{desc}</p>
-        <span className="mt-auto pt-1 text-[13px] font-medium text-purple-300 transition-colors group-hover:text-white">
+        <span
+          className={`mt-auto pt-1 text-[13px] font-medium transition-colors ${
+            pressed ? "text-white" : "text-purple-300 group-hover:text-white"
+          }`}
+        >
           View case study →
         </span>
       </div>
