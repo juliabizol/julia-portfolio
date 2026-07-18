@@ -25,7 +25,7 @@ export function ProjectCard({
     <Link
       href={`/work/${slug}`}
       {...handlers}
-      className={`group flex h-full flex-col overflow-hidden rounded-xl border bg-slate-800/50 [transition:transform_150ms_cubic-bezier(0.4,0,0.2,1),border-color_100ms_cubic-bezier(0.4,0,0.2,1)] hover:border-purple-600 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950 ${
+      className={`group flex h-full flex-col overflow-hidden rounded-xl border bg-slate-800/50 [transition:transform_150ms_cubic-bezier(0.4,0,0.2,1),border-color_100ms_cubic-bezier(0.4,0,0.2,1)] hover:border-purple-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950 ${
         pressed ? "border-purple-700 scale-[0.99]" : "border-slate-700"
       }`}
     >
