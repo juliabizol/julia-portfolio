@@ -199,7 +199,7 @@ export default function AboutPage() {
             <a
               href="/Julia_Bizol_Resume.pdf"
               download
-              className="inline-flex items-center gap-2 rounded-full border border-slate-700 hover:border-slate-500 transition-colors px-7 py-[14px] text-[15px] font-semibold text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950"
+              className="inline-flex items-center gap-2 rounded-full border border-slate-700 hover:border-slate-500 active:border-slate-500 active:scale-[0.98] transition-all duration-200 ease-out px-7 py-[14px] text-[15px] font-semibold text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950"
             >
               <svg
                 width="16"

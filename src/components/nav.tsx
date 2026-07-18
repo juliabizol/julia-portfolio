@@ -132,7 +132,7 @@ export function Nav({ activeSection }: { activeSection?: string }) {
       {/* Desktop CTA */}
       <a
         href="/#contact"
-        className="hidden md:block bg-purple-800 hover:bg-purple-700 transition-colors text-white text-[14px] font-medium px-5 py-[10px] rounded-full focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950"
+        className="hidden md:block bg-purple-800 hover:bg-purple-700 active:bg-purple-700 active:scale-[0.98] transition-all duration-200 ease-out text-white text-[14px] font-medium px-5 py-[10px] rounded-full focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950"
       >
         Let&apos;s talk
       </a>
@@ -188,7 +188,7 @@ export function Nav({ activeSection }: { activeSection?: string }) {
             <a
               href="/#contact"
               onClick={() => setMenuOpen(false)}
-              className="inline-block bg-purple-800 hover:bg-purple-700 active:scale-[0.98] text-white text-[14px] font-medium px-5 py-[10px] rounded-full transition-all duration-200 ease-out focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900"
+              className="inline-block bg-purple-800 hover:bg-purple-700 active:bg-purple-700 active:scale-[0.98] text-white text-[14px] font-medium px-5 py-[10px] rounded-full transition-all duration-200 ease-out focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900"
             >
               Let&apos;s talk
             </a>
