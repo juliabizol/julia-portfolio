@@ -63,7 +63,7 @@ export default async function CaseStudyPage({
         <div className={`${px} pt-8 md:pt-10`}>
           <Link
             href="/#work"
-            className="inline-flex items-center gap-2 text-[14px] font-medium text-slate-400 hover:text-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950"
+            className="inline-flex items-center gap-2 text-[14px] font-medium text-slate-400 hover:text-white active:text-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950"
           >
             ← View all projects
           </Link>
