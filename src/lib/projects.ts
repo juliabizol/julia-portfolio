@@ -231,6 +231,7 @@ export const projects: Project[] = [
         "Managing purchases across multiple students created unnecessary complexity",
       body:
         "Families often manage scholarships for multiple students, each with different funding programs, eligibility rules, and available balances.\n\nThe purchasing experience was structured around scholarship rules rather than how families naturally shop. Parents were required to complete a separate purchasing flow for every student, repeating the entire process from browsing products to checkout.\n\nAs a result, educational purchases became repetitive and fragmented, increasing effort and making an otherwise familiar e-commerce experience unnecessarily complex.",
+      image: "/projects/my-scholarshop/problem-context.png",
     },
     research: {
       title: "Understanding how families navigate educational purchases",
