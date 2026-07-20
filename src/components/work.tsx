@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { projects } from "@/lib/projects";
+import { publishedProjects } from "@/lib/projects";
 import { Tag } from "@/components/tag";
 import { useTapPress } from "@/hooks/useTapPress";
 
@@ -77,8 +77,8 @@ export function Work() {
           A selection of projects that demonstrate my approach to solving complex product problems.
         </p>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-6">
-        {projects.map((p) => (
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-6">
+        {publishedProjects.map((p) => (
           <ProjectCard
             key={p.slug}
             slug={p.slug}

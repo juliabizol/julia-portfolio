@@ -1,5 +1,6 @@
 export type Project = {
   slug: string;
+  status: "published" | "draft";
   title: string;
   tags: string[];
   summary: string;
@@ -63,6 +64,7 @@ const LOREM_SHORT =
 export const projects: Project[] = [
   {
     slug: "betterpet-passport",
+    status: "published",
     title: "BetterPet Passport",
     tags: ["Product Design", "Consumer Product"],
     summary:
@@ -198,6 +200,7 @@ export const projects: Project[] = [
   },
   {
     slug: "my-scholarshop",
+    status: "published",
     title: "My ScholarShop",
     tags: ["Product Design", "Marketplace"],
     summary:
@@ -341,6 +344,7 @@ export const projects: Project[] = [
   },
   {
     slug: "design-system-evolution",
+    status: "draft",
     title: "Design System Evolution",
     tags: ["Systems", "Tokens"],
     summary:
@@ -424,4 +428,14 @@ export const projects: Project[] = [
 
 export function getProject(slug: string) {
   return projects.find((p) => p.slug === slug);
+}
+
+/** The single source every public surface (nav, homepage, cross-links, routes) reads from. */
+export const publishedProjects: Project[] = projects.filter(
+  (p) => p.status === "published"
+);
+
+/** Public-safe lookup — never resolves a draft, so drafts can't leak onto public pages. */
+export function getPublishedProject(slug: string) {
+  return publishedProjects.find((p) => p.slug === slug);
 }

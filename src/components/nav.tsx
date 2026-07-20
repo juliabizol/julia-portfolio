@@ -3,9 +3,9 @@
 import Link from "next/link";
 import { useEffect, useRef, useState, type FocusEvent, type KeyboardEvent } from "react";
 import { usePathname } from "next/navigation";
-import { projects } from "@/lib/projects";
+import { publishedProjects } from "@/lib/projects";
 
-const workProjects = projects.map((p) => ({
+const workProjects = publishedProjects.map((p) => ({
   label: p.title,
   href: `/work/${p.slug}`,
 }));

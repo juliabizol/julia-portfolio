@@ -2,13 +2,13 @@ import { notFound } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
 import { Check, TrendingUp, Star, ClockArrowDown, GitFork } from "lucide-react";
-import { getProject, projects } from "@/lib/projects";
+import { getPublishedProject, publishedProjects } from "@/lib/projects";
 import { StickyNav } from "@/components/nav";
 import { ProjectCard } from "@/components/work";
 import { Tag } from "@/components/tag";
 
 export function generateStaticParams() {
-  return projects.map((p) => ({ slug: p.slug }));
+  return publishedProjects.map((p) => ({ slug: p.slug }));
 }
 
 export async function generateMetadata({
@@ -17,7 +17,7 @@ export async function generateMetadata({
   params: Promise<{ slug: string }>;
 }) {
   const { slug } = await params;
-  const project = getProject(slug);
+  const project = getPublishedProject(slug);
   if (!project) return {};
   return {
     title: `${project.title} — Julia Bizol`,
@@ -45,10 +45,10 @@ export default async function CaseStudyPage({
   params: Promise<{ slug: string }>;
 }) {
   const { slug } = await params;
-  const project = getProject(slug);
+  const project = getPublishedProject(slug);
   if (!project) notFound();
 
-  const otherProjects = projects.filter((p) => p.slug !== slug);
+  const otherProjects = publishedProjects.filter((p) => p.slug !== slug);
 
   const px = "px-5 md:px-10 lg:px-20";
   const section = `${px} py-12 md:py-16 border-t border-slate-800`;
