@@ -281,6 +281,7 @@ export const projects: Project[] = [
       heading: "Unified purchasing experience",
       body:
         "I redesigned the purchasing experience around how families naturally shop, allowing parents to manage multiple students within a single journey while keeping scholarship context visible throughout the experience. The result was a simpler, more intuitive flow that reduced repetition without compromising business rules or program requirements.",
+      image: "/projects/my-scholarshop/solution.png",
     },
     decisionsTitle: "Design decisions behind the redesign",
     decisionsIntro:
