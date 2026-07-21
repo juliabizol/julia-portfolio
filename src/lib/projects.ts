@@ -275,6 +275,8 @@ export const projects: Project[] = [
           "Designing flexible solutions that could support multiple scholarship programs, evolving business rules, and future product growth.",
       },
     ],
+    approachImage: "/projects/my-scholarshop/approach-1.png",
+    approachImage2: "/projects/my-scholarshop/approach-2.png",
     solution: {
       heading: "Unified purchasing experience",
       body:
