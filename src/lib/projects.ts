@@ -223,7 +223,7 @@ export const projects: Project[] = [
       "Workshop Facilitation",
     ],
     overviewTitle:
-      "Designing a marketplace that balances user needs with complex funding rules.",
+      "Designing a marketplace that balances user needs with complex funding rules",
     context:
       "My ScholarShop is the online marketplace within Step Up For Students, a Florida-based nonprofit organization that administers educational scholarship programs for K–12 students.\n\nFamilies use scholarship funds to purchase approved educational products, curriculum, and learning materials directly through the platform. While the experience resembles a traditional e-commerce marketplace, every purchase must comply with scholarship eligibility rules, available funding, and program-specific requirements.\n\nAs the Product Designer on the project, I led the end-to-end redesign of the marketplace, collaborating closely with product, engineering, client stakeholders, and the design team to simplify a highly complex purchasing experience while balancing user needs, business goals, and technical constraints.",
     problem: {
