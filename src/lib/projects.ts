@@ -291,6 +291,7 @@ export const projects: Project[] = [
         title: "Making student switching part of the shopping experience",
         description:
           "Research revealed that families often managed scholarships for multiple students, yet the purchasing experience required them to complete an entirely separate shopping journey for each student. Every switch meant restarting the process from browsing products through checkout, creating unnecessary repetition and effort.\n\nRather than treating student selection as a one-time setup step, the redesigned experience integrated student switching directly into the shopping journey. Families could seamlessly move between students while remaining in the same session, allowing the experience to adapt products and scholarship context without interrupting the purchasing flow.",
+        image: "/projects/my-scholarshop/decision-1.png",
       },
       {
         title:
