@@ -298,6 +298,7 @@ export const projects: Project[] = [
           "Maintaining student and funding context throughout the shopping journey",
         description:
           "Families made purchasing decisions on behalf of specific students, each with different scholarship programs and available funding. In the previous experience, this context was established before entering the marketplace but quickly disappeared once shopping began.\n\nThe redesigned experience kept student identity, scholarship program, and funding information persistently visible throughout the journey. By continuously reinforcing this context, families could make informed purchasing decisions without needing to remember scholarship details or navigate back to previous steps.",
+        image: "/projects/my-scholarshop/decision-2.png",
       },
       {
         title: "Balancing marketplace growth with eligibility transparency",
