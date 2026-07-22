@@ -304,6 +304,7 @@ export const projects: Project[] = [
         title: "Balancing marketplace growth with eligibility transparency",
         description:
           "Expanding the marketplace meant introducing products beyond those covered by scholarship programs. However, doing so risked creating uncertainty about which products could be purchased with scholarship funds.\n\nRather than hiding ineligible products, the redesigned experience made product eligibility explicit through contextual indicators across the shopping journey. This allowed the marketplace to expand its catalog while helping families clearly distinguish scholarship-funded purchases from out-of-pocket spending.",
+        image: "/projects/my-scholarshop/decision-3.png",
       },
     ],
     outcomesTitle: "Simplifying Scholarship-Funded Purchases",
