@@ -63,7 +63,7 @@ export function Nav({ activeSection }: { activeSection?: string }) {
     pathname === "/about" || activeSection === "about";
 
   return (
-    <nav className="relative flex h-[64px] md:h-[72px] items-center justify-between px-5 md:px-10 lg:px-20 w-full shrink-0">
+    <nav className="relative flex h-[64px] md:h-[72px] items-center justify-between px-5 md:px-10 lg:px-20 w-full max-w-[1440px] mx-auto shrink-0">
       {/* Logo */}
       <a
         href="/"

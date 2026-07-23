@@ -35,7 +35,7 @@ export function ProjectCard({
           alt={title}
           fill
           className="object-cover object-top"
-          sizes="(min-width: 768px) 33vw, 100vw"
+          sizes="(min-width: 768px) 50vw, 100vw"
           quality={90}
         />
         <div className="pointer-events-none absolute inset-0 bg-gradient-to-br from-purple-400 to-purple-700 opacity-0 [transition:opacity_150ms_cubic-bezier(0.4,0,0.2,1)] group-hover:opacity-[0.06]" />
@@ -66,7 +66,7 @@ export function ProjectCard({
 
 export function Work() {
   return (
-    <section id="work" className="px-5 md:px-10 lg:px-20 pt-16 md:pt-20 pb-16 md:pb-20">
+    <section id="work" className="px-5 md:px-10 lg:px-20 pt-16 md:pt-20 pb-16 md:pb-20 max-w-[1440px] mx-auto">
       <div className="mb-10 md:mb-12 flex flex-col gap-3 md:gap-4">
         <p className="text-[13px] font-medium tracking-[0.03em] text-purple-300">
           SELECTED WORK

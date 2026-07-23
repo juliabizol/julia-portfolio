@@ -97,7 +97,7 @@ export default function AboutPage() {
       <main>
 
         {/* 1. Introduction */}
-        <section className="px-5 md:px-10 lg:px-20 pt-16 md:pt-24 pb-16 md:pb-20">
+        <section className="px-5 md:px-10 lg:px-20 pt-16 md:pt-24 pb-16 md:pb-20 max-w-[1440px] mx-auto">
           <div className="flex flex-col lg:flex-row items-start lg:items-center gap-10 lg:gap-20">
             {/* Photo */}
             <div className="relative w-full lg:w-[400px] lg:shrink-0 h-[360px] sm:h-[460px] lg:h-[500px] overflow-hidden rounded-2xl border border-slate-700">
@@ -154,7 +154,7 @@ export default function AboutPage() {
         </section>
 
         {/* 2. Experience */}
-        <section className="px-5 md:px-10 lg:px-20 py-16 md:py-20 border-t border-slate-800">
+        <section className="px-5 md:px-10 lg:px-20 py-16 md:py-20 max-w-[1440px] mx-auto border-t border-slate-800">
           <div className="mb-10 md:mb-14 flex flex-col gap-3">
             <p className="text-[13px] font-medium tracking-[0.03em] text-purple-300">
               EXPERIENCE
@@ -236,7 +236,7 @@ export default function AboutPage() {
         </section>
 
         {/* 3. Skills & Expertise */}
-        <section className="px-5 md:px-10 lg:px-20 py-16 md:py-20 border-t border-slate-800">
+        <section className="px-5 md:px-10 lg:px-20 py-16 md:py-20 max-w-[1440px] mx-auto border-t border-slate-800">
           <div className="mb-10 md:mb-12 flex flex-col gap-3">
             <p className="text-[13px] font-medium tracking-[0.03em] text-purple-300">
               EXPERTISE
@@ -255,7 +255,7 @@ export default function AboutPage() {
         </section>
 
         {/* 4. Recognition & Achievements */}
-        <section className="px-5 md:px-10 lg:px-20 py-16 md:py-20 border-t border-slate-800">
+        <section className="px-5 md:px-10 lg:px-20 py-16 md:py-20 max-w-[1440px] mx-auto border-t border-slate-800">
           <div className="mb-10 md:mb-12 flex flex-col gap-3">
             <p className="text-[13px] font-medium tracking-[0.03em] text-purple-300">
               RECOGNITION
@@ -292,7 +292,7 @@ export default function AboutPage() {
         </section>
 
         {/* 5. Testimonials */}
-        <section className="px-5 md:px-10 lg:px-20 py-16 md:py-20 border-t border-slate-800">
+        <section className="px-5 md:px-10 lg:px-20 py-16 md:py-20 max-w-[1440px] mx-auto border-t border-slate-800">
           <div className="mb-10 md:mb-12 flex flex-col gap-3">
             <p className="text-[13px] font-medium tracking-[0.03em] text-purple-300">
               TESTIMONIALS

@@ -50,7 +50,7 @@ export default async function CaseStudyPage({
 
   const otherProjects = publishedProjects.filter((p) => p.slug !== slug);
 
-  const px = "px-5 md:px-10 lg:px-20";
+  const px = "w-full px-5 md:px-10 lg:px-20 max-w-[1440px] mx-auto";
   const section = `${px} py-12 md:py-16 border-t border-slate-800`;
 
   return (
@@ -492,7 +492,7 @@ export default async function CaseStudyPage({
         </section>
 
         {/* Footer */}
-        <footer className="flex flex-col sm:flex-row items-center justify-between gap-1 border-t border-slate-800 px-5 md:px-10 lg:px-20 py-4">
+        <footer className="flex flex-col sm:flex-row items-center justify-between gap-1 border-t border-slate-800 px-5 md:px-10 lg:px-20 py-4 w-full max-w-[1440px] mx-auto">
           <p className="text-[12px] md:text-[13px] text-slate-400">
             © 2026 Julia Bizol · All rights reserved
           </p>

@@ -102,7 +102,7 @@ export function Contact({ divider = false }: { divider?: boolean }) {
       />
 
       {/* Main content */}
-      <div className="flex flex-1 flex-col items-center justify-center gap-7 md:gap-10 px-5 md:px-10 lg:px-20 py-20 md:py-32 text-center">
+      <div className="flex flex-1 flex-col items-center justify-center gap-7 md:gap-10 px-5 md:px-10 lg:px-20 py-20 md:py-32 w-full max-w-[1440px] mx-auto text-center">
         <p className="text-[13px] font-medium tracking-[0.03em] text-purple-300">
           GET IN TOUCH
         </p>
@@ -200,7 +200,7 @@ export function Contact({ divider = false }: { divider?: boolean }) {
       </div>
 
       {/* Footer */}
-      <div className="flex flex-col sm:flex-row items-center justify-between gap-1 border-t border-slate-800 px-5 md:px-10 lg:px-20 py-4">
+      <div className="flex flex-col sm:flex-row items-center justify-between gap-1 border-t border-slate-800 px-5 md:px-10 lg:px-20 py-4 w-full max-w-[1440px] mx-auto">
         <p className="text-[12px] md:text-[13px] text-slate-400">
           © 2026 Julia Bizol · All rights reserved
         </p>

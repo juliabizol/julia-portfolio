@@ -2,7 +2,7 @@ import { Tag } from "@/components/tag";
 
 export function Hero() {
   return (
-    <section className="relative flex flex-col items-center px-5 sm:px-12 lg:px-40 py-14 md:py-20 lg:py-24 overflow-hidden text-center">
+    <section className="relative flex flex-col items-center px-5 sm:px-12 lg:px-40 py-14 md:py-20 lg:py-24 max-w-[1440px] mx-auto overflow-hidden text-center">
       {/* Purple glow orb */}
       <div
         className="pointer-events-none absolute right-[-50px] top-[-100px] h-[400px] w-[400px] md:h-[700px] md:w-[700px] rounded-full opacity-20"
