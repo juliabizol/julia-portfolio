@@ -29,15 +29,16 @@ export function ProjectCard({
         pressed ? "border-purple-500/30 shadow-[0_8px_24px_-8px_rgba(168,85,247,0.15)] scale-[0.99]" : "border-slate-700"
       }`}
     >
-      <div className="relative h-[200px] md:h-[220px] w-full shrink-0">
+      <div className="relative h-[200px] md:h-[220px] w-full shrink-0 overflow-hidden">
         <Image
           src={image}
           alt={title}
           fill
-          className="object-cover"
+          className="object-cover [transition:transform_150ms_cubic-bezier(0.4,0,0.2,1)] group-hover:scale-[1.02]"
           sizes="(min-width: 768px) 33vw, 100vw"
           quality={90}
         />
+        <div className="pointer-events-none absolute inset-0 bg-gradient-to-br from-purple-400 to-purple-700 opacity-0 [transition:opacity_150ms_cubic-bezier(0.4,0,0.2,1)] group-hover:opacity-[0.06]" />
       </div>
       <div className="flex flex-1 flex-col gap-3 p-5 md:p-6 min-w-0">
         <div className="flex flex-nowrap gap-1.5 overflow-hidden">
