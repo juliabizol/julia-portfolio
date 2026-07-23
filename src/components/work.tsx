@@ -29,12 +29,12 @@ export function ProjectCard({
         pressed ? "border-purple-500/30 shadow-[0_8px_24px_-8px_rgba(168,85,247,0.15)] scale-[0.99]" : "border-slate-700"
       }`}
     >
-      <div className="relative h-[200px] md:h-[220px] w-full shrink-0 overflow-hidden">
+      <div className="relative h-[200px] md:h-[220px] w-full shrink-0">
         <Image
           src={image}
           alt={title}
           fill
-          className="object-cover [transition:transform_150ms_cubic-bezier(0.4,0,0.2,1)] group-hover:scale-[1.02]"
+          className="object-cover"
           sizes="(min-width: 768px) 33vw, 100vw"
           quality={90}
         />
