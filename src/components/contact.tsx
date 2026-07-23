@@ -200,13 +200,15 @@ export function Contact({ divider = false }: { divider?: boolean }) {
       </div>
 
       {/* Footer */}
-      <div className="flex flex-col sm:flex-row items-center justify-between gap-1 border-t border-slate-800 px-5 md:px-10 lg:px-20 py-4 w-full max-w-[1440px] mx-auto">
-        <p className="text-[12px] md:text-[13px] text-slate-400">
-          © 2026 Julia Bizol · All rights reserved
-        </p>
-        <p className="text-[12px] md:text-[13px] text-slate-400">
-          Designed and built by Julia Bizol
-        </p>
+      <div className="w-full border-t border-slate-800">
+        <div className="mx-auto max-w-[1440px] flex flex-col sm:flex-row items-center justify-between gap-1 px-5 md:px-10 lg:px-20 py-4">
+          <p className="text-[12px] md:text-[13px] text-slate-400">
+            © 2026 Julia Bizol · All rights reserved
+          </p>
+          <p className="text-[12px] md:text-[13px] text-slate-400">
+            Designed and built by Julia Bizol
+          </p>
+        </div>
       </div>
     </section>
   );

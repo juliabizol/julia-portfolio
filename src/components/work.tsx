@@ -66,29 +66,31 @@ export function ProjectCard({
 
 export function Work() {
   return (
-    <section id="work" className="px-5 md:px-10 lg:px-20 pt-16 md:pt-20 pb-16 md:pb-20 max-w-[1440px] mx-auto">
-      <div className="mb-10 md:mb-12 flex flex-col gap-3 md:gap-4">
-        <p className="text-[13px] font-medium tracking-[0.03em] text-purple-300">
-          SELECTED WORK
-        </p>
-        <h2 className="text-[32px] md:text-[40px] font-bold tracking-[-0.01em] text-white">
-          Case Studies
-        </h2>
-        <p className="text-[16px] md:text-[17px] text-slate-300">
-          A selection of projects that demonstrate my approach to solving complex product problems.
-        </p>
-      </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-6">
-        {publishedProjects.map((p) => (
-          <ProjectCard
-            key={p.slug}
-            slug={p.slug}
-            title={p.title}
-            tags={p.tags}
-            desc={p.summary}
-            image={p.image}
-          />
-        ))}
+    <section id="work" className="w-full">
+      <div className="mx-auto max-w-[1440px] px-5 md:px-10 lg:px-20 pt-16 md:pt-20 pb-16 md:pb-20">
+        <div className="mb-10 md:mb-12 flex flex-col gap-3 md:gap-4">
+          <p className="text-[13px] font-medium tracking-[0.03em] text-purple-300">
+            SELECTED WORK
+          </p>
+          <h2 className="text-[32px] md:text-[40px] font-bold tracking-[-0.01em] text-white">
+            Case Studies
+          </h2>
+          <p className="text-[16px] md:text-[17px] text-slate-300">
+            A selection of projects that demonstrate my approach to solving complex product problems.
+          </p>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-6">
+          {publishedProjects.map((p) => (
+            <ProjectCard
+              key={p.slug}
+              slug={p.slug}
+              title={p.title}
+              tags={p.tags}
+              desc={p.summary}
+              image={p.image}
+            />
+          ))}
+        </div>
       </div>
     </section>
   );
