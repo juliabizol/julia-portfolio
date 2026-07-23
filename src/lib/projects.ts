@@ -341,7 +341,8 @@ export const projects: Project[] = [
       { title: "Learning Four", description: LOREM_SHORT },
     ],
     accent: "from-indigo-900/70 to-slate-800",
-    image: "/projects/my-scholarshop.jpg",
+    image: "/projects/my-scholarshop/hero.png",
+    heroContain: true,
     standardImagePlaceholders: true,
   },
   {
