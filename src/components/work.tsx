@@ -34,7 +34,7 @@ export function ProjectCard({
           src={image}
           alt={title}
           fill
-          className="object-cover"
+          className="object-cover object-top"
           sizes="(min-width: 768px) 33vw, 100vw"
           quality={90}
         />
