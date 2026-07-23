@@ -89,7 +89,7 @@ export default async function CaseStudyPage({
           </p>
 
           {/* Metrics */}
-          <div className="flex flex-wrap gap-8 md:gap-12 pb-10 md:pb-12 border-b border-slate-800">
+          <div className="flex flex-wrap gap-8 md:gap-12 pb-10 md:pb-12 border-b border-slate-800/60">
             {project.metrics.map((m) => (
               <div key={m.label} className="flex flex-col gap-1">
                 <span className="text-[28px] md:text-[36px] font-bold text-purple-300 leading-none">
@@ -120,7 +120,7 @@ export default async function CaseStudyPage({
         </section>
 
         {/* Overview */}
-        <section className="w-full border-t border-slate-800">
+        <section className="w-full border-t border-slate-800/60">
           <div className={sectionInner}>
             <div className="grid grid-cols-1 md:grid-cols-[1fr_240px] gap-10 md:gap-16 lg:gap-20">
               <div>
@@ -160,7 +160,7 @@ export default async function CaseStudyPage({
         </section>
 
         {/* Problem & Context */}
-        <section className="w-full border-t border-slate-800">
+        <section className="w-full border-t border-slate-800/60">
           <div className={sectionInner}>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
               <div>
@@ -203,7 +203,7 @@ export default async function CaseStudyPage({
         </section>
 
         {/* Research */}
-        <section className="w-full border-t border-slate-800">
+        <section className="w-full border-t border-slate-800/60">
           <div className={sectionInner}>
             <SectionLabel>RESEARCH &amp; INSIGHTS</SectionLabel>
             <h2 className="text-[26px] md:text-[36px] font-bold tracking-[-0.01em] text-white mb-5 md:mb-6">
@@ -246,7 +246,7 @@ export default async function CaseStudyPage({
         </section>
 
         {/* Approach */}
-        <section className="w-full border-t border-slate-800">
+        <section className="w-full border-t border-slate-800/60">
           <div className={sectionInner}>
             <SectionLabel>APPROACH</SectionLabel>
             <h2 className="text-[26px] md:text-[36px] font-bold tracking-[-0.01em] text-white mb-8 md:mb-12">
@@ -303,7 +303,7 @@ export default async function CaseStudyPage({
         </section>
 
         {/* Solution */}
-        <section className="w-full border-t border-slate-800">
+        <section className="w-full border-t border-slate-800/60">
           <div className={sectionInner}>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
               <div>
@@ -346,7 +346,7 @@ export default async function CaseStudyPage({
         </section>
 
         {/* Design Decisions */}
-        <section className="w-full border-t border-slate-800">
+        <section className="w-full border-t border-slate-800/60">
           <div className={`${inner} pt-12 md:pt-16`}>
             <SectionLabel>DESIGN DECISIONS</SectionLabel>
             <h2 className="text-[26px] md:text-[36px] font-bold tracking-[-0.01em] text-white mb-5 md:mb-6">
@@ -355,13 +355,13 @@ export default async function CaseStudyPage({
             <p className="text-[15px] md:text-[17px] leading-[26px] md:leading-[28px] text-slate-300 max-w-[760px] mb-8 md:mb-12">
               {project.decisionsIntro}
             </p>
-            <div className="border-t border-slate-800" />
+            <div className="border-t border-slate-800/60" />
             <div className="flex flex-col">
               {project.decisions.map((d, i) => (
                 <div
                   key={i}
                   className={`flex flex-col lg:items-start gap-8 lg:gap-16 py-10 md:py-14 lg:flex-row ${
-                    i === 0 ? "" : "border-t border-slate-800"
+                    i === 0 ? "" : "border-t border-slate-800/60"
                   }`}
                 >
                   <div className="flex flex-1 flex-col gap-4 md:gap-5">
@@ -405,7 +405,7 @@ export default async function CaseStudyPage({
         </section>
 
         {/* Outcomes */}
-        <section className="w-full border-t border-slate-800">
+        <section className="w-full border-t border-slate-800/60">
           <div className={sectionInner}>
             <SectionLabel>RESULTS &amp; IMPACT</SectionLabel>
             <h2 className="text-[26px] md:text-[36px] font-bold tracking-[-0.01em] text-white mb-8 md:mb-12">
@@ -446,7 +446,7 @@ export default async function CaseStudyPage({
         </section>
 
         {/* Final Thoughts */}
-        <section className="w-full border-t border-slate-800">
+        <section className="w-full border-t border-slate-800/60">
           <div className={sectionInner}>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
               <div>
@@ -489,7 +489,7 @@ export default async function CaseStudyPage({
         </section>
 
         {/* More Work */}
-        <section className="w-full border-t border-slate-800">
+        <section className="w-full border-t border-slate-800/60">
           <div className={sectionInner}>
             <SectionLabel>MORE WORK</SectionLabel>
             <h2 className="text-[26px] md:text-[36px] font-bold tracking-[-0.01em] text-white mb-8 md:mb-12">
@@ -511,7 +511,7 @@ export default async function CaseStudyPage({
         </section>
 
         {/* Footer */}
-        <footer className="w-full border-t border-slate-800">
+        <footer className="w-full border-t border-slate-800/60">
           <div className={`${inner} flex flex-col sm:flex-row items-center justify-between gap-1 py-4`}>
             <p className="text-[12px] md:text-[13px] text-slate-400">
               © 2026 Julia Bizol · All rights reserved

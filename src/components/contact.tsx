@@ -90,7 +90,7 @@ export function Contact({ divider = false }: { divider?: boolean }) {
   return (
     <section
       id="contact"
-      className={`relative flex flex-col overflow-hidden ${divider ? "border-t border-slate-800" : ""}`}
+      className={`relative flex flex-col overflow-hidden ${divider ? "border-t border-slate-800/60" : ""}`}
     >
       {/* Purple glow */}
       <div
@@ -200,7 +200,7 @@ export function Contact({ divider = false }: { divider?: boolean }) {
       </div>
 
       {/* Footer */}
-      <div className="w-full border-t border-slate-800">
+      <div className="w-full border-t border-slate-800/60">
         <div className="mx-auto max-w-[1440px] flex flex-col sm:flex-row items-center justify-between gap-1 px-5 md:px-10 lg:px-20 py-4">
           <p className="text-[12px] md:text-[13px] text-slate-400">
             © 2026 Julia Bizol · All rights reserved

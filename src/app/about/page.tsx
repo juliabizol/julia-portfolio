@@ -156,7 +156,7 @@ export default function AboutPage() {
         </section>
 
         {/* 2. Experience */}
-        <section className="w-full border-t border-slate-800">
+        <section className="w-full border-t border-slate-800/60">
           <div className="mx-auto max-w-[1440px] px-5 md:px-10 lg:px-20 py-16 md:py-20">
             <div className="mb-10 md:mb-14 flex flex-col gap-3">
               <p className="text-[13px] font-medium tracking-[0.03em] text-purple-300">
@@ -174,7 +174,7 @@ export default function AboutPage() {
               {experience.map((item, i) => (
                 <div
                   key={i}
-                  className="grid grid-cols-1 md:grid-cols-[200px_1fr] gap-4 md:gap-12 py-8 md:py-10 border-t border-slate-800"
+                  className="grid grid-cols-1 md:grid-cols-[200px_1fr] gap-4 md:gap-12 py-8 md:py-10 border-t border-slate-800/60"
                 >
                   <div>
                     <p className="text-[13px] font-medium text-slate-400 mb-1">
@@ -193,7 +193,7 @@ export default function AboutPage() {
             </div>
 
             {/* Resume CTA continuation */}
-            <div className="border-t border-slate-800" />
+            <div className="border-t border-slate-800/60" />
             <div className="pt-14 md:pt-16 max-w-[600px]">
               <p className="text-[16px] md:text-[17px] leading-[26px] text-slate-300 mb-6">
                 Download my résumé for a more detailed overview of my
@@ -240,7 +240,7 @@ export default function AboutPage() {
         </section>
 
         {/* 3. Skills & Expertise */}
-        <section className="w-full border-t border-slate-800">
+        <section className="w-full border-t border-slate-800/60">
           <div className="mx-auto max-w-[1440px] px-5 md:px-10 lg:px-20 py-16 md:py-20">
             <div className="mb-10 md:mb-12 flex flex-col gap-3">
               <p className="text-[13px] font-medium tracking-[0.03em] text-purple-300">
@@ -261,7 +261,7 @@ export default function AboutPage() {
         </section>
 
         {/* 4. Recognition & Achievements */}
-        <section className="w-full border-t border-slate-800">
+        <section className="w-full border-t border-slate-800/60">
           <div className="mx-auto max-w-[1440px] px-5 md:px-10 lg:px-20 py-16 md:py-20">
             <div className="mb-10 md:mb-12 flex flex-col gap-3">
               <p className="text-[13px] font-medium tracking-[0.03em] text-purple-300">
@@ -300,7 +300,7 @@ export default function AboutPage() {
         </section>
 
         {/* 5. Testimonials */}
-        <section className="w-full border-t border-slate-800">
+        <section className="w-full border-t border-slate-800/60">
           <div className="mx-auto max-w-[1440px] px-5 md:px-10 lg:px-20 py-16 md:py-20">
             <div className="mb-10 md:mb-12 flex flex-col gap-3">
               <p className="text-[13px] font-medium tracking-[0.03em] text-purple-300">
