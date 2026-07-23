@@ -334,6 +334,7 @@ export const projects: Project[] = [
     learningsTitle: "Balancing competing priorities",
     learningsIntro:
       "One of the biggest takeaways from this project was that product design often means navigating competing priorities rather than optimizing for a single outcome. Simplifying the purchasing experience required understanding how user behavior, scholarship policies, and business goals influenced one another, leading to a solution that balanced the needs of families with long-term product goals.",
+    learningsImage: "/projects/my-scholarshop/final-thoughts.png",
     learnings: [
       { title: "Learning One", description: LOREM_SHORT },
       { title: "Learning Two", description: LOREM_SHORT },
