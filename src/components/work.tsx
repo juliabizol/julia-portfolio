@@ -25,8 +25,8 @@ export function ProjectCard({
     <Link
       href={`/work/${slug}`}
       {...handlers}
-      className={`group flex h-full flex-col overflow-hidden rounded-xl border bg-slate-800/50 [transition:transform_150ms_cubic-bezier(0.4,0,0.2,1),border-color_100ms_cubic-bezier(0.4,0,0.2,1)] hover:border-purple-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950 ${
-        pressed ? "border-purple-700 scale-[0.99]" : "border-slate-700"
+      className={`group flex h-full flex-col overflow-hidden rounded-xl border bg-slate-800/50 [transition:transform_150ms_cubic-bezier(0.4,0,0.2,1),border-color_100ms_cubic-bezier(0.4,0,0.2,1),box-shadow_150ms_cubic-bezier(0.4,0,0.2,1)] hover:border-purple-500/30 hover:shadow-[0_8px_24px_-8px_rgba(168,85,247,0.15)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950 ${
+        pressed ? "border-purple-500/30 shadow-[0_8px_24px_-8px_rgba(168,85,247,0.15)] scale-[0.99]" : "border-slate-700"
       }`}
     >
       <div className="relative h-[200px] md:h-[220px] w-full shrink-0">
