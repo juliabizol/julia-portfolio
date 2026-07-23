@@ -343,6 +343,7 @@ export default async function CaseStudyPage({
           <p className="text-[15px] md:text-[17px] leading-[26px] md:leading-[28px] text-slate-300 max-w-[760px] mb-8 md:mb-12">
             {project.decisionsIntro}
           </p>
+          <div className="border-t border-slate-800" />
           <div className="flex flex-col">
             {project.decisions.map((d, i) => (
               <div
