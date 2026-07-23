@@ -2,7 +2,7 @@ import { Tag } from "@/components/tag";
 
 export function Hero() {
   return (
-    <section className="relative w-full overflow-hidden">
+    <section className="relative w-full">
       {/* Purple glow orb */}
       <div
         className="pointer-events-none absolute right-[-50px] top-[-100px] h-[400px] w-[400px] md:h-[700px] md:w-[700px] rounded-full opacity-20"
