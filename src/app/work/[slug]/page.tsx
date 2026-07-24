@@ -122,7 +122,7 @@ export default async function CaseStudyPage({
         {/* Overview */}
         <section className="w-full border-t border-slate-800/60">
           <div className={sectionInner}>
-            <div className="grid grid-cols-1 md:grid-cols-[1fr_240px] gap-10 md:gap-16 lg:gap-20">
+            <div className="grid grid-cols-1 md:grid-cols-[2fr_1fr] gap-10 md:gap-16 lg:gap-20">
               <div>
                 <SectionLabel>OVERVIEW</SectionLabel>
                 <h2 className="text-[26px] md:text-[36px] font-bold leading-[1.2] md:leading-[44px] tracking-[-0.01em] text-white mb-5 md:mb-6">
@@ -132,7 +132,7 @@ export default async function CaseStudyPage({
                   {project.context.split("\n\n").map((paragraph, i) => (
                     <p
                       key={i}
-                      className="text-[15px] md:text-[17px] leading-[26px] md:leading-[28px] text-slate-300 max-w-[68ch]"
+                      className="text-[15px] md:text-[17px] leading-[26px] md:leading-[28px] text-slate-300"
                     >
                       {paragraph}
                     </p>
