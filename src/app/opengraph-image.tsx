@@ -83,7 +83,7 @@ export default async function Image() {
               marginTop: 16,
             }}
           >
-            Designing products that make sense.
+            Turning complexity into clarity
           </div>
         </div>
 

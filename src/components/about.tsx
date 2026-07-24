@@ -45,9 +45,7 @@ export function About() {
             </p>
 
             <h2 className="text-[32px] md:text-[40px] font-bold leading-[1.2] md:leading-[48px] tracking-[-0.01em] text-white">
-              I turn complexity
-              <br />
-              into clarity
+              Turning complex product problems into scalable solutions
             </h2>
 
             <div className="flex flex-col gap-4 text-[16px] leading-[26px] text-slate-300">

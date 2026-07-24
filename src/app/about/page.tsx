@@ -147,9 +147,7 @@ export default function AboutPage() {
                   ABOUT ME
                 </p>
                 <h1 className="text-[36px] sm:text-[48px] lg:text-[60px] font-bold leading-[1.1] tracking-[-0.02em] text-white mb-7 md:mb-9">
-                  I turn complexity
-                  <br />
-                  into clarity
+                  Turning complex product problems into scalable solutions
                 </h1>
                 <p className="text-[16px] md:text-[18px] leading-[26px] md:leading-[28px] text-slate-300 mb-5">
                   Over the past nine years, I&apos;ve worked on products with very

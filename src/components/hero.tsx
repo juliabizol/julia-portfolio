@@ -26,9 +26,9 @@ export function Hero() {
 
         {/* Headline */}
         <h1 className="max-w-[900px] text-[40px] sm:text-[56px] lg:text-[72px] font-bold leading-[1.1] lg:leading-[80px] tracking-[-0.02em] text-white">
-          Designing products
+          Turning complexity
           <br />
-          that make sense
+          into clarity
         </h1>
 
         {/* Subtitle */}
