@@ -51,6 +51,10 @@ export const ogColors = {
   purple300: "#d8b4fe",
   purple800: "#6b21a8",
   purple900: "#581c87",
+  /** purple900 darkened ~2 shades (same hue/saturation, lightness -17pp).
+   * Used only for the favicon: a near-black favicon background reads as
+   * indistinguishable from Safari's own dark tab chrome. */
+  faviconBackground: "#290d3f",
   white: "#ffffff",
   slate300: "#cbd5e1",
   slate700: "#334155",

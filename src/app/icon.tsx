@@ -9,13 +9,17 @@ export default async function Icon() {
 
   return new ImageResponse(
     (
-      // Rounded square, not a full-bleed square: the four corners outside the
-      // radius stay transparent (no backgroundColor on the canvas itself), so
-      // browsers do their own tab-chrome masking instead of clipping a hard
-      // square. Background uses purple900 (an existing brand token) rather
-      // than the site's near-black background — a near-black favicon reads
-      // as too close to Safari's dark chrome color, which makes Safari add
-      // its own white contrast backing plate behind the icon.
+      // Full opaque square, no self-applied border-radius or transparency:
+      // Safari and iOS both apply their own rounded mask to every favicon
+      // automatically. A transparent corner in the source image doesn't get
+      // filled by browser chrome — it lets the tab bar's own light background
+      // show straight through, which combined with Safari's own rounding
+      // produced a mismatched "double-rounded" light halo around the icon.
+      // Letting the browser do 100% of the masking (as it does for any plain
+      // square favicon) avoids that. Background uses faviconBackground
+      // (purple900 darkened ~2 shades) rather than the site's near-black
+      // background, since near-black reads as indistinguishable from
+      // Safari's own dark tab chrome.
       <div
         style={{
           width: "100%",
@@ -23,8 +27,7 @@ export default async function Icon() {
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
-          backgroundColor: ogColors.purple900,
-          borderRadius: 8,
+          backgroundColor: ogColors.faviconBackground,
           fontFamily: "Inter",
           fontSize: 18,
           fontWeight: 700,
