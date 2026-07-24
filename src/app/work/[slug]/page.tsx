@@ -252,7 +252,7 @@ export default async function CaseStudyPage({
             <h2 className="text-[26px] md:text-[36px] font-bold tracking-[-0.01em] text-white mb-8 md:mb-12">
               Turning insights into product decisions
             </h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 mb-8 md:mb-12">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-6 mb-8 md:mb-12">
               {project.approach.map((step, i) => (
                 <div key={step.step} className="flex flex-col gap-3 md:gap-4 rounded-xl border border-slate-700 bg-slate-800/50 p-5 md:p-6">
                   <span className="w-fit rounded-full bg-purple-900/50 px-3 py-1 text-[14px] font-bold text-purple-300">
@@ -263,7 +263,7 @@ export default async function CaseStudyPage({
                 </div>
               ))}
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-6">
               {project.approachImage ? (
                 <div className="relative w-full aspect-[4/3] rounded-xl md:rounded-2xl overflow-hidden border border-slate-700">
                   <Image
@@ -411,7 +411,7 @@ export default async function CaseStudyPage({
             <h2 className="text-[26px] md:text-[36px] font-bold tracking-[-0.01em] text-white mb-8 md:mb-12">
               {project.outcomesTitle ?? "Results & Impact"}
             </h2>
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 md:gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 md:gap-6">
               {project.outcomes.map((o) => (
                 <div key={o.label} className="flex flex-col gap-2 md:gap-3 rounded-xl border border-slate-700 bg-slate-800/50 p-6 md:p-8">
                   {o.icon ? (

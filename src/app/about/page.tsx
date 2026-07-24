@@ -279,7 +279,7 @@ export default function AboutPage() {
                 Awards &amp; Achievements
               </h2>
             </div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 md:gap-6">
               {achievements.map((item) => (
                 <div
                   key={item.label}
@@ -318,7 +318,7 @@ export default function AboutPage() {
                 What People Say
               </h2>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-6">
               {testimonials.map((t, i) => (
                 <div
                   key={i}

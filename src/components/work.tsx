@@ -79,7 +79,7 @@ export function Work() {
             A selection of projects that demonstrate my approach to solving complex product problems.
           </p>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-6">
           {publishedProjects.map((p) => (
             <ProjectCard
               key={p.slug}

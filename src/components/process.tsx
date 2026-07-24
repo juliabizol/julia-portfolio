@@ -43,7 +43,7 @@ export function Process({ divider = false }: { divider?: boolean }) {
         </div>
 
         {/* Steps: 1 col mobile → 2 col tablet → 4 col desktop */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-6">
           {steps.map((step) => (
             <div
               key={step.num}
