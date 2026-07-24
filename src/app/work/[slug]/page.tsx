@@ -6,6 +6,7 @@ import { getPublishedProject, publishedProjects } from "@/lib/projects";
 import { StickyNav } from "@/components/nav";
 import { ProjectCard } from "@/components/work";
 import { Tag } from "@/components/tag";
+import { SITE_NAME } from "@/lib/site";
 
 export function generateStaticParams() {
   return publishedProjects.map((p) => ({ slug: p.slug }));
@@ -34,6 +35,7 @@ export async function generateMetadata({
       title,
       description,
       url,
+      siteName: SITE_NAME,
       type: "article",
     },
     twitter: {

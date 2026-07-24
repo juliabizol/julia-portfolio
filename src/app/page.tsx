@@ -4,7 +4,7 @@ import { Hero } from "@/components/hero";
 import { Work } from "@/components/work";
 import { About } from "@/components/about";
 import { Contact } from "@/components/contact";
-import { SITE_TITLE, SITE_DESCRIPTION } from "@/lib/site";
+import { SITE_TITLE, SITE_DESCRIPTION, SITE_NAME } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: SITE_TITLE,
@@ -16,6 +16,7 @@ export const metadata: Metadata = {
     title: SITE_TITLE,
     description: SITE_DESCRIPTION,
     url: "/",
+    siteName: SITE_NAME,
     type: "website",
   },
   twitter: {

@@ -5,6 +5,7 @@ import { StickyNav } from "@/components/nav";
 import { Process } from "@/components/process";
 import { Contact } from "@/components/contact";
 import { Tag } from "@/components/tag";
+import { SITE_NAME } from "@/lib/site";
 
 const title = "About — Julia Bizol";
 const description =
@@ -20,6 +21,7 @@ export const metadata: Metadata = {
     title,
     description,
     url: "/about",
+    siteName: SITE_NAME,
     type: "website",
   },
   twitter: {

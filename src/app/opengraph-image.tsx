@@ -1,7 +1,8 @@
 import { ImageResponse } from "next/og";
 import { loadOgFonts, ogColors } from "@/lib/og";
+import { SITE_TITLE } from "@/lib/site";
 
-export const alt = "Julia Bizol — Senior UX Designer";
+export const alt = SITE_TITLE;
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -33,21 +34,22 @@ export default async function Image() {
             borderRadius: "50%",
             display: "flex",
             background: `radial-gradient(circle, ${ogColors.purple800} 0%, rgba(2,6,23,0) 70%)`,
-            opacity: 0.35,
+            opacity: 0.22,
           }}
         />
         <div
           style={{
             display: "flex",
-            fontSize: 24,
+            fontSize: 19,
             fontWeight: 400,
-            letterSpacing: 3,
+            letterSpacing: 2,
             textTransform: "uppercase",
             color: ogColors.purple300,
+            opacity: 0.75,
             marginBottom: 28,
           }}
         >
-          Senior UX Designer &amp; Product Designer
+          Product Designer • Senior UX Designer
         </div>
         <div
           style={{
@@ -67,7 +69,7 @@ export default async function Image() {
             fontSize: 32,
             fontWeight: 400,
             color: ogColors.slate300,
-            marginTop: 28,
+            marginTop: 16,
           }}
         >
           Designing products that make sense.
