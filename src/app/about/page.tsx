@@ -159,7 +159,7 @@ export default function AboutPage() {
         {/* 2. Experience */}
         <section className="w-full border-t border-slate-800/60">
           <div className="mx-auto max-w-[1440px] px-5 md:px-10 lg:px-20 py-16 md:py-20">
-            <div className="mb-10 md:mb-14 flex flex-col gap-3">
+            <div className="mb-10 md:mb-12 flex flex-col gap-3">
               <p className="text-[13px] font-medium tracking-[0.03em] text-purple-300">
                 EXPERIENCE
               </p>
