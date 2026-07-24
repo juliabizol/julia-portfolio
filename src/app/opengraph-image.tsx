@@ -1,5 +1,5 @@
 import { ImageResponse } from "next/og";
-import { loadOgFonts, ogColors } from "@/lib/og";
+import { loadOgFonts, loadPublicImageAsDataUri, ogColors } from "@/lib/og";
 import { SITE_TITLE } from "@/lib/site";
 
 export const alt = SITE_TITLE;
@@ -7,7 +7,10 @@ export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
 export default async function Image() {
-  const fonts = await loadOgFonts();
+  const [fonts, portraitSrc] = await Promise.all([
+    loadOgFonts(),
+    loadPublicImageAsDataUri("/julia.jpeg"),
+  ]);
 
   return new ImageResponse(
     (
@@ -48,7 +51,7 @@ export default async function Image() {
           <div
             style={{
               display: "flex",
-              fontSize: 19,
+              fontSize: 22,
               fontWeight: 400,
               letterSpacing: 2,
               textTransform: "uppercase",
@@ -91,22 +94,20 @@ export default async function Image() {
             height: 450,
             borderRadius: 24,
             border: `2px solid ${ogColors.slate700}`,
-            backgroundColor: "#0B1220",
-            alignItems: "center",
-            justifyContent: "center",
+            overflow: "hidden",
           }}
         >
-          <div
+          <img
+            src={portraitSrc}
+            alt=""
+            width={360}
+            height={450}
             style={{
-              display: "flex",
-              fontSize: 130,
-              fontWeight: 700,
-              letterSpacing: -4,
-              color: ogColors.purple300,
+              objectFit: "cover",
+              objectPosition: "center 20%",
+              borderRadius: 24,
             }}
-          >
-            JB
-          </div>
+          />
         </div>
       </div>
     ),

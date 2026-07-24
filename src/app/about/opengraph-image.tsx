@@ -1,6 +1,8 @@
 import { ImageResponse } from "next/og";
 import { loadOgFonts, loadPublicImageAsDataUri, ogColors } from "@/lib/og";
-import { SITE_DESCRIPTION } from "@/lib/site";
+
+const OG_SUMMARY =
+  "Senior UX Designer with 9+ years helping teams turn complex product problems into scalable solutions.";
 
 export const alt = "About Julia Bizol — Senior UX Designer";
 export const size = { width: 1200, height: 630 };
@@ -67,7 +69,7 @@ export default async function Image() {
               marginTop: 24,
             }}
           >
-            {SITE_DESCRIPTION}
+            {OG_SUMMARY}
           </div>
         </div>
 
