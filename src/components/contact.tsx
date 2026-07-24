@@ -104,7 +104,7 @@ export function Contact({ divider = false }: { divider?: boolean }) {
       {/* Main content */}
       <div
         className={`flex flex-1 flex-col items-center justify-center gap-7 md:gap-10 px-5 md:px-10 lg:px-20 w-full max-w-[1440px] mx-auto text-center ${
-          divider ? "py-20 md:py-32" : "pb-[84px] md:pb-[116px] lg:pb-[132px]"
+          divider ? "py-20 md:py-32" : "pb-20 md:pb-28 lg:pb-32"
         }`}
       >
         <p className="text-[13px] font-medium tracking-[0.03em] text-purple-300">
