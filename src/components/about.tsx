@@ -15,7 +15,7 @@ const skills = [
 export function About() {
   return (
     <section id="about" className="w-full">
-      <div className="mx-auto max-w-[1440px] px-5 md:px-10 lg:px-20 py-16 md:py-24">
+      <div className="mx-auto max-w-[1440px] px-5 md:px-10 lg:px-20 pb-16 md:pb-24">
         <div className="flex flex-col lg:flex-row items-start lg:items-center gap-10 lg:gap-20">
           {/* Photo */}
           <div className="relative w-full lg:w-[400px] lg:shrink-0 h-[360px] sm:h-[460px] lg:h-[500px] overflow-hidden rounded-2xl border border-slate-700">

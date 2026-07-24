@@ -67,7 +67,7 @@ export function ProjectCard({
 export function Work() {
   return (
     <section id="work" className="w-full">
-      <div className="mx-auto max-w-[1440px] px-5 md:px-10 lg:px-20 pt-8 md:pt-20 pb-16 md:pb-20">
+      <div className="mx-auto max-w-[1440px] px-5 md:px-10 lg:px-20 pb-16 md:pb-24">
         <div className="mb-10 md:mb-12 flex flex-col gap-3 md:gap-4">
           <p className="text-[13px] font-medium tracking-[0.03em] text-purple-300">
             SELECTED WORK
