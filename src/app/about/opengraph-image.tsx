@@ -1,5 +1,6 @@
 import { ImageResponse } from "next/og";
 import { loadOgFonts, loadPublicImageAsDataUri, ogColors } from "@/lib/og";
+import { SITE_DESCRIPTION } from "@/lib/site";
 
 export const alt = "About Julia Bizol — Senior UX Designer";
 export const size = { width: 1200, height: 630 };
@@ -66,7 +67,7 @@ export default async function Image() {
               marginTop: 24,
             }}
           >
-            Senior UX Designer based in São Paulo.
+            {SITE_DESCRIPTION}
           </div>
         </div>
 

@@ -5,11 +5,10 @@ import { StickyNav } from "@/components/nav";
 import { Process } from "@/components/process";
 import { Contact } from "@/components/contact";
 import { Tag } from "@/components/tag";
-import { SITE_NAME } from "@/lib/site";
+import { SITE_NAME, SITE_DESCRIPTION } from "@/lib/site";
 
 const title = "About — Julia Bizol";
-const description =
-  "Senior UX Designer based in São Paulo. 9+ years designing digital products at the intersection of research, systems thinking, and visual craft.";
+const description = SITE_DESCRIPTION;
 
 export const metadata: Metadata = {
   title,
