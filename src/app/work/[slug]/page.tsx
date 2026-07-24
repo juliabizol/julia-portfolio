@@ -360,9 +360,9 @@ export default async function CaseStudyPage({
               {project.decisions.map((d, i) => (
                 <div
                   key={i}
-                  className={`flex flex-col lg:items-start gap-8 lg:gap-16 py-10 md:py-14 lg:flex-row ${
-                    i === 0 ? "" : "border-t border-slate-800/60"
-                  }`}
+                  className={`flex flex-col lg:items-start gap-8 lg:gap-16 pt-10 md:pt-14 lg:flex-row ${
+                    i === project.decisions.length - 1 ? "" : "pb-10 md:pb-14"
+                  } ${i === 0 ? "" : "border-t border-slate-800/60"}`}
                 >
                   <div className="flex flex-1 flex-col gap-4 md:gap-5">
                     <span className="w-fit rounded-full bg-purple-900/50 px-3 py-1 text-[14px] md:text-[16px] font-bold text-purple-300">
