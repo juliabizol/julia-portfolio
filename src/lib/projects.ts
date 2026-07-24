@@ -10,7 +10,6 @@ export type Project = {
   timeline: string;
   team: string;
   tools: string[];
-  toolsLabel?: string;
   overviewTitle?: string;
   context: string;
   problem: {
@@ -48,7 +47,6 @@ export type Project = {
   learningsTitle?: string;
   learningsIntro: string;
   learningsImage?: string;
-  learnings: { title: string; description: string }[];
   accent: string;
   image: string;
   heroContain?: boolean;
@@ -78,7 +76,6 @@ export const projects: Project[] = [
     timeline: "Sep 2024 – Jul 2026",
     team: "2 Product Designers · 3 Engineers · Product Manager · QA",
     tools: ["Product Analytics", "Usability Testing", "Interaction Design"],
-    toolsLabel: "Methods",
     context:
       "BetterPet Passport is the consumer-facing experience within PetScreening’s short-term rental ecosystem. Property managers configure pet policies and requirements, while guests use BetterPet Passport to complete the information and documentation required before their stay.\n\nOver nearly two years, I collaborated with Product and Engineering to continuously evolve this experience through research, product analytics, usability testing, and iterative design. Rather than redesigning the onboarding from scratch, this work focused on continuously improving a complex product by simplifying interactions, reducing uncertainty, and adapting the experience as product requirements evolved.",
     problem: {
@@ -188,12 +185,6 @@ export const projects: Project[] = [
     learningsIntro:
       "Working on BetterPet Passport reinforced that evolving a product requires more than designing new features. It requires understanding the problems behind user behavior, business requirements, and operational constraints before deciding what to build.\n\nThroughout this project, research, product analytics, usability testing, and cross-functional collaboration informed design decisions that balanced user needs, business requirements, and technical constraints. This approach made it possible to continuously evolve a complex product while preserving a clear, intuitive, and consistent experience for guests.",
     learningsImage: "/projects/betterpet-passport/final-thoughts.png",
-    learnings: [
-      { title: "Learning One", description: LOREM_SHORT },
-      { title: "Learning Two", description: LOREM_SHORT },
-      { title: "Learning Three", description: LOREM_SHORT },
-      { title: "Learning Four", description: LOREM_SHORT },
-    ],
     accent: "from-purple-900/70 to-slate-800",
     image: "/projects/betterpet-passport/hero.png",
     heroContain: true,
@@ -335,12 +326,6 @@ export const projects: Project[] = [
     learningsIntro:
       "One of the biggest takeaways from this project was that product design often means navigating competing priorities rather than optimizing for a single outcome. Simplifying the purchasing experience required understanding how user behavior, scholarship policies, and business goals influenced one another, leading to a solution that balanced the needs of families with long-term product goals.",
     learningsImage: "/projects/my-scholarshop/final-thoughts.png",
-    learnings: [
-      { title: "Learning One", description: LOREM_SHORT },
-      { title: "Learning Two", description: LOREM_SHORT },
-      { title: "Learning Three", description: LOREM_SHORT },
-      { title: "Learning Four", description: LOREM_SHORT },
-    ],
     accent: "from-indigo-900/70 to-slate-800",
     image: "/projects/my-scholarshop/hero.png",
     heroContain: true,
@@ -419,12 +404,6 @@ export const projects: Project[] = [
       },
     ],
     learningsIntro: LOREM_SHORT,
-    learnings: [
-      { title: "Learning One", description: LOREM_SHORT },
-      { title: "Learning Two", description: LOREM_SHORT },
-      { title: "Learning Three", description: LOREM_SHORT },
-      { title: "Learning Four", description: LOREM_SHORT },
-    ],
     accent: "from-violet-900/70 to-slate-800",
     image: "/projects/design-system-evolution.jpg",
   },

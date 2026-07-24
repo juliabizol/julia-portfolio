@@ -8,7 +8,7 @@ import { Tag } from "@/components/tag";
 export const metadata = {
   title: "About — Julia Bizol",
   description:
-    "Senior UX Designer based in São Paulo. 8+ years designing digital products at the intersection of research, systems thinking, and visual craft.",
+    "Senior UX Designer based in São Paulo. 9+ years designing digital products at the intersection of research, systems thinking, and visual craft.",
 };
 
 const skills = [

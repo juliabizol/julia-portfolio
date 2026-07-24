@@ -258,7 +258,7 @@ export default async function CaseStudyPage({
                   <span className="w-fit rounded-full bg-purple-900/50 px-3 py-1 text-[14px] font-bold text-purple-300">
                     {String(i + 1).padStart(2, "0")}
                   </span>
-                  <h4 className="text-[15px] md:text-[16px] font-semibold text-white">{step.step}</h4>
+                  <h3 className="text-[15px] md:text-[16px] font-semibold text-white">{step.step}</h3>
                   <p className="text-[13px] md:text-[14px] leading-[21px] md:leading-[22px] text-slate-400">{step.description}</p>
                 </div>
               ))}
@@ -495,7 +495,7 @@ export default async function CaseStudyPage({
             <h2 className="text-[26px] md:text-[36px] font-bold tracking-[-0.01em] text-white mb-8 md:mb-12">
               Explore more case studies
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-6">
               {otherProjects.map((p) => (
                 <ProjectCard
                   key={p.slug}

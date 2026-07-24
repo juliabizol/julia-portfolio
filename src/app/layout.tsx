@@ -11,7 +11,7 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: "Julia Bizol — Senior UX Designer",
   description:
-    "Senior UX Designer with 8+ years crafting digital experiences for B2B and consumer products. Based in São Paulo.",
+    "Senior UX Designer with 9+ years crafting digital experiences for B2B and consumer products. Based in São Paulo.",
 };
 
 export default function RootLayout({

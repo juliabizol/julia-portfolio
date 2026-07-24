@@ -50,7 +50,7 @@ export function About() {
               into clarity
             </h2>
 
-            <div className="flex flex-col gap-4 text-[15px] md:text-[16px] leading-[26px] text-slate-300">
+            <div className="flex flex-col gap-4 text-[16px] leading-[26px] text-slate-300">
               <p>
                 I&apos;m a Product Designer and Senior UX Designer with 9 years
                 of experience helping teams navigate complex product challenges
