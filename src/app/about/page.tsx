@@ -243,25 +243,27 @@ export default function AboutPage() {
         {/* 3. Skills & Expertise */}
         <section className="w-full border-t border-slate-800/60">
           <div className="mx-auto max-w-[1440px] px-5 md:px-10 lg:px-20 py-16 md:py-20">
-            <div className="mb-10 md:mb-12 flex flex-col gap-3">
-              <p className="text-[13px] font-medium tracking-[0.03em] text-purple-300">
-                EXPERTISE
-              </p>
-              <h2 className="text-[32px] md:text-[40px] font-bold tracking-[-0.01em] text-white">
-                Core Capabilities
-              </h2>
-              <p className="text-[16px] md:text-[17px] text-slate-300 max-w-xl">
-                A multidisciplinary approach to designing products that
-                balance user needs, business goals, and technical
-                constraints.
-              </p>
-            </div>
-            <div className="flex flex-wrap gap-3">
-              {skills.map((skill) => (
-                <Tag key={skill} variant="neutral" size="md">
-                  {skill}
-                </Tag>
-              ))}
+            <div className="w-full md:w-2/3 lg:w-1/2">
+              <div className="mb-10 md:mb-12 flex flex-col gap-3">
+                <p className="text-[13px] font-medium tracking-[0.03em] text-purple-300">
+                  EXPERTISE
+                </p>
+                <h2 className="text-[32px] md:text-[40px] font-bold tracking-[-0.01em] text-white">
+                  Core Capabilities
+                </h2>
+                <p className="text-[16px] md:text-[17px] text-slate-300 max-w-xl">
+                  A multidisciplinary approach to designing products that
+                  balance user needs, business goals, and technical
+                  constraints.
+                </p>
+              </div>
+              <div className="flex flex-wrap gap-3">
+                {skills.map((skill) => (
+                  <Tag key={skill} variant="neutral" size="md">
+                    {skill}
+                  </Tag>
+                ))}
+              </div>
             </div>
           </div>
         </section>
