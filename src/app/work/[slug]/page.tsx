@@ -52,7 +52,7 @@ export default async function CaseStudyPage({
 
   const px = "w-full max-w-[1440px] mx-auto px-5 md:px-10 lg:px-20";
   const inner = "max-w-[1440px] mx-auto px-5 md:px-10 lg:px-20";
-  const sectionInner = `${inner} py-20`;
+  const sectionInner = `${inner} py-16 md:py-20`;
 
   return (
     <div className="flex flex-col min-h-screen bg-slate-950">
@@ -347,7 +347,7 @@ export default async function CaseStudyPage({
 
         {/* Design Decisions */}
         <section className="w-full border-t border-slate-800/60">
-          <div className={`${inner} py-20`}>
+          <div className={`${inner} py-16 md:py-20`}>
             <SectionLabel>DESIGN DECISIONS</SectionLabel>
             <h2 className="text-[26px] md:text-[36px] font-bold tracking-[-0.01em] text-white mb-5 md:mb-6">
               {project.decisionsTitle ?? "Design decisions that improved the experience"}
