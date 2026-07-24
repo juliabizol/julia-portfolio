@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import { ExternalLink } from "lucide-react";
 import { StickyNav } from "@/components/nav";
@@ -5,10 +6,27 @@ import { Process } from "@/components/process";
 import { Contact } from "@/components/contact";
 import { Tag } from "@/components/tag";
 
-export const metadata = {
-  title: "About — Julia Bizol",
-  description:
-    "Senior UX Designer based in São Paulo. 9+ years designing digital products at the intersection of research, systems thinking, and visual craft.",
+const title = "About — Julia Bizol";
+const description =
+  "Senior UX Designer based in São Paulo. 9+ years designing digital products at the intersection of research, systems thinking, and visual craft.";
+
+export const metadata: Metadata = {
+  title,
+  description,
+  alternates: {
+    canonical: "/about",
+  },
+  openGraph: {
+    title,
+    description,
+    url: "/about",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title,
+    description,
+  },
 };
 
 const skills = [

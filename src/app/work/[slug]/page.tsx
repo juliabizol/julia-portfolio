@@ -19,9 +19,28 @@ export async function generateMetadata({
   const { slug } = await params;
   const project = getPublishedProject(slug);
   if (!project) return {};
+
+  const title = `${project.title} — Julia Bizol`;
+  const description = project.summary;
+  const url = `/work/${slug}`;
+
   return {
-    title: `${project.title} — Julia Bizol`,
-    description: project.summary,
+    title,
+    description,
+    alternates: {
+      canonical: url,
+    },
+    openGraph: {
+      title,
+      description,
+      url,
+      type: "article",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
+    },
   };
 }
 

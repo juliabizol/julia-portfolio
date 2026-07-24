@@ -1,8 +1,29 @@
+import type { Metadata } from "next";
 import { StickyNav } from "@/components/nav";
 import { Hero } from "@/components/hero";
 import { Work } from "@/components/work";
 import { About } from "@/components/about";
 import { Contact } from "@/components/contact";
+import { SITE_TITLE, SITE_DESCRIPTION } from "@/lib/site";
+
+export const metadata: Metadata = {
+  title: SITE_TITLE,
+  description: SITE_DESCRIPTION,
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    title: SITE_TITLE,
+    description: SITE_DESCRIPTION,
+    url: "/",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: SITE_TITLE,
+    description: SITE_DESCRIPTION,
+  },
+};
 
 export default function Home() {
   return (
