@@ -13,6 +13,7 @@ export const metadata = {
 
 const skills = [
   "Product Thinking",
+  "Systems Thinking",
   "Product Discovery",
   "User Research",
   "Product Analytics",
@@ -249,6 +250,11 @@ export default function AboutPage() {
               <h2 className="text-[32px] md:text-[40px] font-bold tracking-[-0.01em] text-white">
                 Core Capabilities
               </h2>
+              <p className="text-[16px] md:text-[17px] text-slate-300 max-w-xl">
+                A multidisciplinary approach to designing products that
+                balance user needs, business goals, and technical
+                constraints.
+              </p>
             </div>
             <div className="flex flex-wrap gap-3">
               {skills.map((skill) => (
