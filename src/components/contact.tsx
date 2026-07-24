@@ -123,7 +123,7 @@ export function Contact({ divider = false }: { divider?: boolean }) {
         </p>
 
         {/* Email copy widget */}
-        <div className="inline-flex max-w-full flex-wrap items-center justify-center gap-3 rounded-xl border border-purple-300/20 bg-[#0B1220] p-3">
+        <div className="inline-flex max-w-full items-center gap-3 rounded-xl border border-purple-300/20 bg-[#0B1220] p-3">
           <div className="flex items-center justify-center rounded-lg bg-[#172135] p-2.5">
             <svg
               width="16"
@@ -182,7 +182,7 @@ export function Contact({ divider = false }: { divider?: boolean }) {
                 />
               </svg>
             )}
-            {copied ? "Copied!" : "Copy"}
+            <span className="hidden min-[375px]:inline">{copied ? "Copied!" : "Copy"}</span>
           </button>
         </div>
 
