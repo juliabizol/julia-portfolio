@@ -7,7 +7,7 @@ import { Contact } from "@/components/contact";
 import { Tag } from "@/components/tag";
 import { SITE_NAME, SITE_DESCRIPTION } from "@/lib/site";
 
-const title = "About — Julia Bizol";
+const title = "Julia Bizol | About";
 const description = SITE_DESCRIPTION;
 
 export const metadata: Metadata = {
