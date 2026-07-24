@@ -132,7 +132,7 @@ export default async function CaseStudyPage({
                   {project.context.split("\n\n").map((paragraph, i) => (
                     <p
                       key={i}
-                      className="text-[15px] md:text-[17px] leading-[26px] md:leading-[28px] text-slate-300"
+                      className="text-[15px] md:text-[17px] leading-[26px] md:leading-[28px] text-slate-300 max-w-[68ch]"
                     >
                       {paragraph}
                     </p>
