@@ -17,10 +17,10 @@ export default async function Image() {
           height: "100%",
           display: "flex",
           position: "relative",
-          flexDirection: "column",
           alignItems: "center",
-          justifyContent: "center",
+          justifyContent: "space-between",
           backgroundColor: ogColors.background,
+          padding: 80,
           fontFamily: "Inter",
         }}
       >
@@ -37,42 +37,76 @@ export default async function Image() {
             opacity: 0.22,
           }}
         />
+
         <div
           style={{
             display: "flex",
-            fontSize: 19,
-            fontWeight: 400,
-            letterSpacing: 2,
-            textTransform: "uppercase",
-            color: ogColors.purple300,
-            opacity: 0.75,
-            marginBottom: 28,
+            flexDirection: "column",
+            maxWidth: 560,
           }}
         >
-          Product Designer • Senior UX Designer
+          <div
+            style={{
+              display: "flex",
+              fontSize: 19,
+              fontWeight: 400,
+              letterSpacing: 2,
+              textTransform: "uppercase",
+              color: ogColors.purple300,
+              opacity: 0.75,
+              marginBottom: 28,
+            }}
+          >
+            Product Designer • Senior UX Designer
+          </div>
+          <div
+            style={{
+              display: "flex",
+              fontSize: 92,
+              fontWeight: 700,
+              letterSpacing: -2,
+              lineHeight: 1.05,
+              color: ogColors.white,
+            }}
+          >
+            Julia Bizol
+          </div>
+          <div
+            style={{
+              display: "flex",
+              fontSize: 32,
+              fontWeight: 400,
+              color: ogColors.slate300,
+              marginTop: 16,
+            }}
+          >
+            Designing products that make sense.
+          </div>
         </div>
+
         <div
           style={{
             display: "flex",
-            fontSize: 92,
-            fontWeight: 700,
-            letterSpacing: -2,
-            lineHeight: 1.05,
-            color: ogColors.white,
+            width: 360,
+            height: 450,
+            borderRadius: 24,
+            border: `2px solid ${ogColors.slate700}`,
+            backgroundColor: "#0B1220",
+            alignItems: "center",
+            justifyContent: "center",
           }}
         >
-          Julia Bizol
-        </div>
-        <div
-          style={{
-            display: "flex",
-            fontSize: 32,
-            fontWeight: 400,
-            color: ogColors.slate300,
-            marginTop: 16,
-          }}
-        >
-          Designing products that make sense.
+          <div
+            style={{
+              display: "flex",
+              fontSize: 130,
+              fontWeight: 700,
+              letterSpacing: -4,
+              color: ogColors.purple300,
+            }}
+          >
+            JB
+          </div>
         </div>
       </div>
     ),

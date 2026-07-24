@@ -39,6 +39,10 @@ export default async function Image({
     loadPublicImageAsDataUri(project.image),
   ]);
 
+  // Longer titles get a smaller size so they still fit on a single line;
+  // short titles (like "My ScholarShop") are unaffected.
+  const titleFontSize = project.title.length > 15 ? 46 : 60;
+
   return new ImageResponse(
     (
       <div
@@ -76,10 +80,11 @@ export default async function Image({
           <div
             style={{
               display: "flex",
-              fontSize: 60,
+              fontSize: titleFontSize,
               fontWeight: 700,
               letterSpacing: -1.5,
               lineHeight: 1.15,
+              whiteSpace: "nowrap",
               color: ogColors.white,
             }}
           >
@@ -90,11 +95,10 @@ export default async function Image({
         <div
           style={{
             display: "flex",
-            width: 500,
-            height: 470,
+            width: 480,
+            height: 360,
             borderRadius: 24,
             border: `2px solid ${ogColors.slate700}`,
-            overflow: "hidden",
             alignItems: "center",
             justifyContent: "center",
           }}
@@ -102,10 +106,11 @@ export default async function Image({
           <img
             src={imageSrc}
             alt=""
-            width={500}
-            height={470}
+            width={480}
+            height={360}
             style={{
               objectFit: project.heroContain ? "contain" : "cover",
+              borderRadius: 24,
             }}
           />
         </div>

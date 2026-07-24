@@ -89,6 +89,7 @@ export default async function Image() {
             style={{
               objectFit: "cover",
               objectPosition: "center 20%",
+              borderRadius: 24,
             }}
           />
         </div>
