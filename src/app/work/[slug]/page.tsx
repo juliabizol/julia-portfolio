@@ -7,6 +7,8 @@ import { StickyNav } from "@/components/nav";
 import { ProjectCard } from "@/components/work";
 import { Tag } from "@/components/tag";
 import { SITE_NAME } from "@/lib/site";
+import { JsonLd } from "@/components/json-ld";
+import { getBreadcrumbJsonLd, getCreativeWorkJsonLd } from "@/lib/structured-data";
 
 export function generateStaticParams() {
   return publishedProjects.map((p) => ({ slug: p.slug }));
@@ -77,6 +79,13 @@ export default async function CaseStudyPage({
 
   return (
     <div className="flex flex-col min-h-screen bg-slate-950">
+      <JsonLd
+        data={getBreadcrumbJsonLd([
+          { name: "Home", path: "" },
+          { name: project.title, path: `/work/${slug}` },
+        ])}
+      />
+      <JsonLd data={getCreativeWorkJsonLd(project)} />
       <StickyNav />
 
       <main className="flex flex-col">

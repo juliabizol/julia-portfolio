@@ -6,6 +6,8 @@ import { Process } from "@/components/process";
 import { Contact } from "@/components/contact";
 import { Tag } from "@/components/tag";
 import { SITE_NAME, SITE_DESCRIPTION } from "@/lib/site";
+import { JsonLd } from "@/components/json-ld";
+import { getBreadcrumbJsonLd } from "@/lib/structured-data";
 
 const title = "Julia Bizol | About";
 const description = SITE_DESCRIPTION;
@@ -113,6 +115,12 @@ const testimonials = [
 export default function AboutPage() {
   return (
     <div className="flex flex-col min-h-screen bg-slate-950">
+      <JsonLd
+        data={getBreadcrumbJsonLd([
+          { name: "Home", path: "" },
+          { name: "About", path: "/about" },
+        ])}
+      />
       <StickyNav />
       <main>
 

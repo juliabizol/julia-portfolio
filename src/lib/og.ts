@@ -1,6 +1,7 @@
 import { readFile } from "node:fs/promises";
 import { join } from "node:path";
 import sharp from "sharp";
+import { SITE_THEME_COLOR } from "@/lib/site";
 
 const ASSETS_DIR = join(process.cwd(), "assets");
 
@@ -46,7 +47,7 @@ export async function loadPublicImageAsDataUri(publicPath: string) {
 
 /** Colors matching the site's existing Tailwind palette, for reuse in ImageResponse (which can't read Tailwind classes). */
 export const ogColors = {
-  background: "#020617", // slate-950
+  background: SITE_THEME_COLOR, // slate-950
   purple300: "#d8b4fe",
   purple800: "#6b21a8",
   purple900: "#581c87",
