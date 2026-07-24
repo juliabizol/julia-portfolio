@@ -75,7 +75,7 @@ export function Work() {
           <h2 className="text-[32px] md:text-[40px] font-bold tracking-[-0.01em] text-white">
             Case Studies
           </h2>
-          <p className="text-[16px] md:text-[17px] text-slate-300">
+          <p className="text-[16px] leading-[26px] text-slate-300">
             A selection of projects that demonstrate my approach to solving complex product problems.
           </p>
         </div>

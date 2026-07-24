@@ -84,7 +84,7 @@ export default async function CaseStudyPage({
             {project.title}
           </h1>
 
-          <p className="text-[16px] md:text-[20px] leading-[26px] md:leading-[32px] text-slate-300 max-w-[680px] mb-10 md:mb-12">
+          <p className="text-[16px] md:text-[18px] leading-[26px] md:leading-[28px] text-slate-300 max-w-[680px] mb-10 md:mb-12">
             {project.summary}
           </p>
 
@@ -132,7 +132,7 @@ export default async function CaseStudyPage({
                   {project.context.split("\n\n").map((paragraph, i) => (
                     <p
                       key={i}
-                      className="text-[15px] md:text-[17px] leading-[26px] md:leading-[28px] text-slate-300"
+                      className="text-[16px] leading-[26px] text-slate-300"
                     >
                       {paragraph}
                     </p>
@@ -172,7 +172,7 @@ export default async function CaseStudyPage({
                   {project.problem.body.split("\n\n").map((paragraph, i) => (
                     <p
                       key={i}
-                      className="text-[15px] md:text-[17px] leading-[26px] md:leading-[28px] text-slate-300"
+                      className="text-[16px] leading-[26px] text-slate-300"
                     >
                       {paragraph}
                     </p>
@@ -213,7 +213,7 @@ export default async function CaseStudyPage({
               {project.research.intro.split("\n\n").map((paragraph, i) => (
                 <p
                   key={i}
-                  className="text-[15px] md:text-[17px] leading-[26px] md:leading-[28px] text-slate-300"
+                  className="text-[16px] leading-[26px] text-slate-300"
                 >
                   {paragraph}
                 </p>
@@ -315,7 +315,7 @@ export default async function CaseStudyPage({
                   {project.solution.body.split("\n\n").map((paragraph, i) => (
                     <p
                       key={i}
-                      className="text-[15px] md:text-[17px] leading-[26px] md:leading-[28px] text-slate-300"
+                      className="text-[16px] leading-[26px] text-slate-300"
                     >
                       {paragraph}
                     </p>
@@ -352,7 +352,7 @@ export default async function CaseStudyPage({
             <h2 className="text-[26px] md:text-[36px] font-bold tracking-[-0.01em] text-white mb-5 md:mb-6">
               {project.decisionsTitle ?? "Design decisions that improved the experience"}
             </h2>
-            <p className="text-[15px] md:text-[17px] leading-[26px] md:leading-[28px] text-slate-300 max-w-[760px] mb-8 md:mb-12">
+            <p className="text-[16px] leading-[26px] text-slate-300 max-w-[760px] mb-8 md:mb-12">
               {project.decisionsIntro}
             </p>
             <div className="border-t border-slate-800/60" />
@@ -458,7 +458,7 @@ export default async function CaseStudyPage({
                   {project.learningsIntro.split("\n\n").map((paragraph, i) => (
                     <p
                       key={i}
-                      className="text-[15px] md:text-[17px] leading-[26px] md:leading-[28px] text-slate-300"
+                      className="text-[16px] leading-[26px] text-slate-300"
                     >
                       {paragraph}
                     </p>

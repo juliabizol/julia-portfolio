@@ -132,7 +132,7 @@ export default function AboutPage() {
                   <br />
                   into clarity
                 </h1>
-                <p className="text-[16px] md:text-[18px] leading-[28px] md:leading-[30px] text-slate-300 mb-5">
+                <p className="text-[16px] md:text-[18px] leading-[26px] md:leading-[28px] text-slate-300 mb-5">
                   Over the past nine years, I&apos;ve worked on products with very
                   different users, constraints, and business models. What has
                   stayed the same is what motivates me: understanding complex
@@ -140,12 +140,12 @@ export default function AboutPage() {
                   products that are useful, scalable, and grounded in thoughtful
                   decisions.
                 </p>
-                <p className="text-[16px] md:text-[18px] leading-[28px] md:leading-[30px] text-slate-300 mb-5">
+                <p className="text-[16px] md:text-[18px] leading-[26px] md:leading-[28px] text-slate-300 mb-5">
                   I enjoy working in close partnership with Product and
                   Engineering, bringing research, product thinking, and evidence
                   together to help teams make better product decisions.
                 </p>
-                <p className="text-[16px] md:text-[18px] leading-[28px] md:leading-[30px] text-slate-300">
+                <p className="text-[16px] md:text-[18px] leading-[26px] md:leading-[28px] text-slate-300">
                   Whether I&apos;m improving an existing product, designing a new
                   experience, or building the foundations of a Design System,
                   I&apos;m driven by curiosity, collaboration, and the belief that
@@ -166,7 +166,7 @@ export default function AboutPage() {
               <h2 className="text-[32px] md:text-[40px] font-bold tracking-[-0.01em] text-white">
                 Career Journey
               </h2>
-              <p className="text-[16px] md:text-[17px] text-slate-300 max-w-xl">
+              <p className="text-[16px] leading-[26px] text-slate-300 max-w-xl">
                 The experiences that shaped how I think, collaborate, and design
                 products today.
               </p>
@@ -186,7 +186,7 @@ export default function AboutPage() {
                     </p>
                     <p className="text-[13px] text-slate-400 mt-0.5">{item.org}</p>
                   </div>
-                  <p className="text-[15px] md:text-[16px] leading-[26px] text-slate-300 max-w-[68ch]">
+                  <p className="text-[16px] leading-[26px] text-slate-300 max-w-[68ch]">
                     {item.desc}
                   </p>
                 </div>
@@ -196,7 +196,7 @@ export default function AboutPage() {
             {/* Resume CTA continuation */}
             <div className="border-t border-slate-800/60" />
             <div className="pt-14 md:pt-16 max-w-[600px]">
-              <p className="text-[16px] md:text-[17px] leading-[26px] text-slate-300 mb-6">
+              <p className="text-[16px] leading-[26px] text-slate-300 mb-6">
                 Download my résumé for a more detailed overview of my
                 experience, projects, and accomplishments.
               </p>
@@ -251,7 +251,7 @@ export default function AboutPage() {
                 <h2 className="text-[32px] md:text-[40px] font-bold tracking-[-0.01em] text-white">
                   Core Capabilities
                 </h2>
-                <p className="text-[16px] md:text-[17px] text-slate-300 max-w-xl">
+                <p className="text-[16px] leading-[26px] text-slate-300 max-w-xl">
                   A multidisciplinary approach to designing products that
                   balance user needs, business goals, and technical
                   constraints.
@@ -324,7 +324,7 @@ export default function AboutPage() {
                   key={i}
                   className="flex flex-col gap-5 rounded-xl border border-slate-700 bg-slate-800/50 p-6 md:p-8"
                 >
-                  <p className="text-[15px] md:text-[16px] leading-[26px] text-slate-300 italic">
+                  <p className="text-[16px] leading-[26px] text-slate-300 italic">
                     &ldquo;{t.quote}&rdquo;
                   </p>
                   <div className="flex flex-col gap-0.5 pt-3 border-t border-slate-700">

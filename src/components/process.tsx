@@ -35,7 +35,7 @@ export function Process({ divider = false }: { divider?: boolean }) {
           <h2 className="text-[32px] md:text-[40px] font-bold tracking-[-0.01em] text-white">
             How I Approach Product Design
           </h2>
-          <p className="text-[16px] md:text-[17px] text-slate-300 max-w-xl">
+          <p className="text-[16px] leading-[26px] text-slate-300 max-w-xl">
             Every product is different, but my approach remains consistent:
             understand the problem, collaborate closely, validate decisions
             with evidence, and iterate continuously.
