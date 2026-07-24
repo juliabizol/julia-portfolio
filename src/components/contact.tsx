@@ -134,7 +134,7 @@ export function Contact({ divider = false }: { divider?: boolean }) {
             >
               <path
                 d="M18.334 5.83373L10.8409 10.6058C10.5866 10.7534 10.2978 10.8312 10.0038 10.8312C9.70971 10.8312 9.42089 10.7534 9.16662 10.6058L1.66602 5.83373M3.33282 3.33398H16.6672C17.5878 3.33398 18.334 4.0801 18.334 5.00048V14.9995C18.334 15.9199 17.5878 16.666 16.6672 16.666H3.33282C2.41227 16.666 1.66602 15.9199 1.66602 14.9995V5.00048C1.66602 4.0801 2.41227 3.33398 3.33282 3.33398Z"
-                className="stroke-slate-300"
+                className="stroke-slate-400"
                 strokeWidth="2"
                 strokeLinecap="round"
               />
@@ -148,7 +148,7 @@ export function Contact({ divider = false }: { divider?: boolean }) {
           <button
             onClick={handleCopy}
             aria-label="Copy email address"
-            className="flex items-center gap-2 rounded-lg bg-purple-300 px-3 py-2 text-[13px] font-bold text-slate-950 hover:bg-purple-200 active:opacity-90 active:scale-[0.98] transition-all duration-200 ease-out cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950"
+            className="flex items-center gap-2 rounded-lg bg-purple-300 px-2 py-2 text-[13px] font-bold text-slate-950 hover:bg-purple-200 active:opacity-90 active:scale-[0.98] transition-all duration-200 ease-out cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950"
           >
             {copied ? (
               <svg
