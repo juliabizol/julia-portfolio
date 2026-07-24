@@ -6,7 +6,7 @@ const EMAIL = "juliabizol@gmail.com";
 
 function LinkedInIcon() {
   return (
-    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
       <rect
         x="3"
         y="3"
@@ -43,7 +43,7 @@ function LinkedInIcon() {
 
 function DownloadIcon() {
   return (
-    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
       <path
         d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"
         stroke="currentColor"
@@ -131,6 +131,7 @@ export function Contact({ divider = false }: { divider?: boolean }) {
               viewBox="0 0 20 20"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
+              aria-hidden="true"
             >
               <path
                 d="M18.334 5.83373L10.8409 10.6058C10.5866 10.7534 10.2978 10.8312 10.0038 10.8312C9.70971 10.8312 9.42089 10.7534 9.16662 10.6058L1.66602 5.83373M3.33282 3.33398H16.6672C17.5878 3.33398 18.334 4.0801 18.334 5.00048V14.9995C18.334 15.9199 17.5878 16.666 16.6672 16.666H3.33282C2.41227 16.666 1.66602 15.9199 1.66602 14.9995V5.00048C1.66602 4.0801 2.41227 3.33398 3.33282 3.33398Z"
@@ -157,6 +158,7 @@ export function Contact({ divider = false }: { divider?: boolean }) {
                 viewBox="0 0 16 16"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
+                aria-hidden="true"
               >
                 <path
                   d="M13.334 4L6.00065 11.3333L2.66732 8"
@@ -173,6 +175,7 @@ export function Contact({ divider = false }: { divider?: boolean }) {
                 viewBox="0 0 16 16"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
+                aria-hidden="true"
               >
                 <path
                   d="M2.66626 10.6669C1.93287 10.6669 1.33282 10.0669 1.33282 9.33347V2.66626C1.33282 1.93287 1.93287 1.33282 2.66626 1.33282H9.33347C10.0669 1.33282 10.6669 1.93287 10.6669 2.66626M6.66658 5.33314H13.3338C14.0702 5.33314 14.6672 5.93015 14.6672 6.66658V13.3338C14.6672 14.0702 14.0702 14.6672 13.3338 14.6672H6.66658C5.93015 14.6672 5.33314 14.0702 5.33314 13.3338V6.66658C5.33314 5.93015 5.93015 5.33314 6.66658 5.33314Z"
@@ -184,6 +187,9 @@ export function Contact({ divider = false }: { divider?: boolean }) {
             )}
             <span className="hidden min-[375px]:inline">{copied ? "Copied!" : "Copy"}</span>
           </button>
+          <span role="status" className="sr-only">
+            {copied ? "Email address copied" : ""}
+          </span>
         </div>
 
         <div className="flex flex-wrap justify-center gap-6 md:gap-8">

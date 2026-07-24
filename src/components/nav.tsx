@@ -17,6 +17,7 @@ function Chevron({ open }: { open: boolean }) {
       height="11"
       viewBox="0 0 11 11"
       fill="none"
+      aria-hidden="true"
       className={`mt-px transition-transform duration-200 ${open ? "rotate-180" : ""}`}
     >
       <path
@@ -36,10 +37,19 @@ export function Nav({ activeSection }: { activeSection?: string }) {
   const [mobileWorkOpen, setMobileWorkOpen] = useState(false);
   const pathname = usePathname();
   const closeTimeout = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const workButtonRef = useRef<HTMLButtonElement>(null);
+  const suppressFocusOpen = useRef(false);
 
   const openWork = () => {
     if (closeTimeout.current) clearTimeout(closeTimeout.current);
     setWorkOpen(true);
+  };
+  const handleWorkFocus = () => {
+    if (suppressFocusOpen.current) {
+      suppressFocusOpen.current = false;
+      return;
+    }
+    openWork();
   };
   const scheduleCloseWork = () => {
     closeTimeout.current = setTimeout(() => setWorkOpen(false), 150);
@@ -54,7 +64,11 @@ export function Nav({ activeSection }: { activeSection?: string }) {
     }
   };
   const handleWorkKeyDown = (e: KeyboardEvent) => {
-    if (e.key === "Escape") closeWorkNow();
+    if (e.key === "Escape") {
+      closeWorkNow();
+      suppressFocusOpen.current = true;
+      workButtonRef.current?.focus();
+    }
   };
 
   const isWorkActive =
@@ -83,8 +97,9 @@ export function Nav({ activeSection }: { activeSection?: string }) {
           onKeyDown={handleWorkKeyDown}
         >
           <button
+            ref={workButtonRef}
             onClick={() => setWorkOpen((v) => !v)}
-            onFocus={openWork}
+            onFocus={handleWorkFocus}
             aria-expanded={workOpen}
             aria-haspopup="true"
             className={`flex items-center gap-1.5 py-0.5 -my-0.5 text-[15px] font-medium transition-colors hover:text-purple-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950 ${
@@ -142,6 +157,8 @@ export function Nav({ activeSection }: { activeSection?: string }) {
         className="md:hidden flex flex-col gap-[5px] p-2 active:opacity-70 transition-opacity duration-200 ease-out focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950"
         onClick={() => setMenuOpen((v) => !v)}
         aria-label="Toggle menu"
+        aria-expanded={menuOpen}
+        aria-controls="mobile-menu"
       >
         <span className={`block h-[2px] w-6 bg-white transition-all ${menuOpen ? "translate-y-[7px] rotate-45" : ""}`} />
         <span className={`block h-[2px] w-6 bg-white transition-all ${menuOpen ? "opacity-0" : ""}`} />
@@ -150,17 +167,19 @@ export function Nav({ activeSection }: { activeSection?: string }) {
 
       {/* Mobile menu */}
       {menuOpen && (
-        <div className="absolute top-full left-0 right-0 z-50 bg-slate-900 border-b border-slate-800 flex flex-col py-4 md:hidden">
+        <div id="mobile-menu" className="absolute top-full left-0 right-0 z-50 bg-slate-900 border-b border-slate-800 flex flex-col py-4 md:hidden">
           {/* Work expand */}
           <button
             onClick={() => setMobileWorkOpen((v) => !v)}
+            aria-expanded={mobileWorkOpen}
+            aria-controls="mobile-work-submenu"
             className="flex items-center justify-between px-5 py-3 text-[16px] font-medium text-slate-300 hover:text-white hover:bg-slate-800 active:opacity-70 transition-colors duration-200 ease-out focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900"
           >
             Work
             <Chevron open={mobileWorkOpen} />
           </button>
           {mobileWorkOpen && (
-            <div>
+            <div id="mobile-work-submenu">
               {workProjects.map((p) => (
                 <Link
                   key={p.href}
