@@ -186,7 +186,7 @@ export default function AboutPage() {
                     </p>
                     <p className="text-[13px] text-slate-400 mt-0.5">{item.org}</p>
                   </div>
-                  <p className="text-[15px] md:text-[16px] leading-[26px] text-slate-300">
+                  <p className="text-[15px] md:text-[16px] leading-[26px] text-slate-300 max-w-[68ch]">
                     {item.desc}
                   </p>
                 </div>
