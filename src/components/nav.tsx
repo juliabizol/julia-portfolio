@@ -87,7 +87,7 @@ export function Nav({ activeSection }: { activeSection?: string }) {
             onFocus={openWork}
             aria-expanded={workOpen}
             aria-haspopup="true"
-            className={`flex items-center gap-1.5 text-[15px] font-medium transition-colors hover:text-purple-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950 ${
+            className={`flex items-center gap-1.5 py-0.5 -my-0.5 text-[15px] font-medium transition-colors hover:text-purple-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950 ${
               isWorkActive ? "text-purple-300" : "text-slate-300"
             }`}
           >
@@ -121,7 +121,7 @@ export function Nav({ activeSection }: { activeSection?: string }) {
         {/* About */}
         <Link
           href="/about"
-          className={`text-[15px] font-medium transition-colors hover:text-purple-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950 ${
+          className={`py-0.5 -my-0.5 text-[15px] font-medium transition-colors hover:text-purple-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950 ${
             isAboutActive ? "text-purple-300" : "text-slate-300"
           }`}
         >

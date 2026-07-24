@@ -194,7 +194,7 @@ export function Contact({ divider = false }: { divider?: boolean }) {
               {...(s.download
                 ? { download: true }
                 : { target: "_blank", rel: "noopener noreferrer" })}
-              className="inline-flex items-center gap-2 text-[14px] font-medium text-slate-400 hover:text-white active:text-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950"
+              className="inline-flex items-center gap-2 py-0.5 -my-0.5 text-[14px] font-medium text-slate-400 hover:text-white active:text-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950"
             >
               <s.icon />
               {s.label}

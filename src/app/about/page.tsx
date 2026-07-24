@@ -296,7 +296,7 @@ export default function AboutPage() {
                     href={item.linkHref}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="mt-auto inline-flex items-center gap-1.5 text-[14px] font-medium text-purple-300 hover:text-white active:text-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950"
+                    className="mt-auto inline-flex items-center gap-1.5 pb-1 -mb-1 text-[14px] font-medium text-purple-300 hover:text-white active:text-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950"
                   >
                     {item.linkLabel}
                     <ExternalLink size={14} strokeWidth={2} />
