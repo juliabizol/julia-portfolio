@@ -12,7 +12,7 @@ export function Hero() {
         }}
       />
 
-      <div className="flex flex-col items-center px-5 sm:px-12 lg:px-40 py-14 md:py-20 lg:py-24 max-w-[1440px] mx-auto text-center">
+      <div className="flex flex-col items-center px-5 sm:px-12 lg:px-40 pt-14 md:pt-20 lg:pt-24 pb-8 md:pb-20 lg:pb-16 max-w-[1440px] mx-auto text-center">
         {/* Available badge */}
         <Tag
           variant="accent"
