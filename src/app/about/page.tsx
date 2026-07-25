@@ -136,9 +136,10 @@ export default function AboutPage() {
                   fill
                   className="object-cover"
                   style={{ objectPosition: "center 20%" }}
-                  sizes="(min-width: 1024px) 400px, 100vw"
+                  sizes="(min-width: 1024px) 400px, (min-width: 768px) calc(100vw - 80px), calc(100vw - 40px)"
                   quality={90}
-                  priority
+                  loading="eager"
+                  fetchPriority="high"
                 />
                 <div
                   className="absolute bottom-0 right-0 h-[200px] w-[200px] rounded-full opacity-40 pointer-events-none"

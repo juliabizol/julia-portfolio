@@ -144,7 +144,8 @@ export default async function CaseStudyPage({
               className={project.heroContain ? "object-contain" : "object-cover"}
               sizes="100vw"
               quality={90}
-              priority
+              loading="eager"
+              fetchPriority="high"
             />
           </div>
         </section>
