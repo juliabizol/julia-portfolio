@@ -5,6 +5,7 @@ import { SITE_URL, SITE_TITLE, SITE_DESCRIPTION, SITE_THEME_COLOR, GA_MEASUREMEN
 import { JsonLd } from "@/components/json-ld";
 import { getSiteJsonLd } from "@/lib/structured-data";
 import { AnalyticsPageView } from "@/components/analytics-page-view";
+import { ClarityAnalytics } from "@/components/clarity-analytics";
 import "./globals.css";
 
 const inter = Inter({
@@ -45,6 +46,7 @@ export default function RootLayout({
       <body className="min-h-full flex flex-col font-sans antialiased bg-slate-950 text-white">
         <JsonLd data={getSiteJsonLd()} />
         <AnalyticsPageView />
+        <ClarityAnalytics />
         {children}
       </body>
       <GoogleAnalytics gaId={GA_MEASUREMENT_ID} />
