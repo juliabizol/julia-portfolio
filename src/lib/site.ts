@@ -6,3 +6,4 @@ export const SITE_DESCRIPTION =
 /** Matches slate-950, the site's only background color (single dark theme, no light mode). */
 export const SITE_THEME_COLOR = "#020617";
 export const SITE_LINKEDIN_URL = "https://linkedin.com/in/juliabizol";
+export const GA_MEASUREMENT_ID = "G-WWWXZ5C8CX";

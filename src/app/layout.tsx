@@ -1,8 +1,10 @@
 import type { Metadata, Viewport } from "next";
 import { Inter } from "next/font/google";
-import { SITE_URL, SITE_TITLE, SITE_DESCRIPTION, SITE_THEME_COLOR } from "@/lib/site";
+import { GoogleAnalytics } from "@next/third-parties/google";
+import { SITE_URL, SITE_TITLE, SITE_DESCRIPTION, SITE_THEME_COLOR, GA_MEASUREMENT_ID } from "@/lib/site";
 import { JsonLd } from "@/components/json-ld";
 import { getSiteJsonLd } from "@/lib/structured-data";
+import { AnalyticsPageView } from "@/components/analytics-page-view";
 import "./globals.css";
 
 const inter = Inter({
@@ -42,8 +44,10 @@ export default function RootLayout({
     <html lang="en" className={`${inter.variable} h-full`}>
       <body className="min-h-full flex flex-col font-sans antialiased bg-slate-950 text-white">
         <JsonLd data={getSiteJsonLd()} />
+        <AnalyticsPageView />
         {children}
       </body>
+      <GoogleAnalytics gaId={GA_MEASUREMENT_ID} />
     </html>
   );
 }
