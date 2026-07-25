@@ -1,4 +1,4 @@
-export const SITE_URL = "https://julia-portfolio-zeta.vercel.app";
+export const SITE_URL = "https://www.juliabizol.com";
 export const SITE_NAME = "Julia Bizol";
 export const SITE_TITLE = "Julia Bizol | Product Designer | Senior UX Designer";
 export const SITE_DESCRIPTION =
