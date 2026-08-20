@@ -36,40 +36,37 @@ export function Nav({ activeSection }: { activeSection?: string }) {
   const [workOpen, setWorkOpen] = useState(false);
   const [mobileWorkOpen, setMobileWorkOpen] = useState(false);
   const pathname = usePathname();
-  const closeTimeout = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const workWrapperRef = useRef<HTMLDivElement>(null);
   const workButtonRef = useRef<HTMLButtonElement>(null);
-  const suppressFocusOpen = useRef(false);
 
-  const openWork = () => {
-    if (closeTimeout.current) clearTimeout(closeTimeout.current);
-    setWorkOpen(true);
-  };
-  const handleWorkFocus = () => {
-    if (suppressFocusOpen.current) {
-      suppressFocusOpen.current = false;
-      return;
-    }
-    openWork();
-  };
-  const scheduleCloseWork = () => {
-    closeTimeout.current = setTimeout(() => setWorkOpen(false), 150);
-  };
-  const closeWorkNow = () => {
-    if (closeTimeout.current) clearTimeout(closeTimeout.current);
-    setWorkOpen(false);
-  };
+  const closeWork = () => setWorkOpen(false);
+
   const handleWorkBlur = (e: FocusEvent<HTMLDivElement>) => {
     if (!e.currentTarget.contains(e.relatedTarget as Node | null)) {
-      closeWorkNow();
+      closeWork();
     }
   };
   const handleWorkKeyDown = (e: KeyboardEvent) => {
     if (e.key === "Escape") {
-      closeWorkNow();
-      suppressFocusOpen.current = true;
+      closeWork();
       workButtonRef.current?.focus();
     }
   };
+
+  // Click-outside close: checked against the trigger+panel wrapper rather
+  // than focus, so a mouse click anywhere else on the page closes the menu
+  // even when it lands on a non-focusable element. Only listens while the
+  // menu is open.
+  useEffect(() => {
+    if (!workOpen) return;
+    const handlePointerDown = (event: MouseEvent) => {
+      if (!workWrapperRef.current?.contains(event.target as Node)) {
+        setWorkOpen(false);
+      }
+    };
+    document.addEventListener("mousedown", handlePointerDown);
+    return () => document.removeEventListener("mousedown", handlePointerDown);
+  }, [workOpen]);
 
   const isWorkActive =
     pathname.startsWith("/work/") || activeSection === "work";
@@ -90,18 +87,17 @@ export function Nav({ activeSection }: { activeSection?: string }) {
       <div className="hidden md:flex items-center gap-8 lg:gap-10">
         {/* Work dropdown */}
         <div
+          ref={workWrapperRef}
           className="relative"
-          onMouseEnter={openWork}
-          onMouseLeave={scheduleCloseWork}
           onBlur={handleWorkBlur}
           onKeyDown={handleWorkKeyDown}
         >
           <button
             ref={workButtonRef}
             onClick={() => setWorkOpen((v) => !v)}
-            onFocus={handleWorkFocus}
             aria-expanded={workOpen}
             aria-haspopup="true"
+            aria-controls="work-menu"
             className={`flex items-center gap-1.5 py-0.5 -my-0.5 text-[15px] font-medium transition-colors hover:text-purple-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950 ${
               isWorkActive ? "text-purple-300" : "text-slate-300"
             }`}
@@ -111,18 +107,17 @@ export function Nav({ activeSection }: { activeSection?: string }) {
           </button>
 
           {workOpen && (
-            // pt-2 turns the visual gap into transparent padding inside the
-            // descendant tree, so mouseleave never fires while crossing it.
+            // pt-2 is visual spacing between the button and the panel below it.
             <div
+              id="work-menu"
               className="absolute top-full left-1/2 -translate-x-1/2 pt-2 w-[224px] z-50"
-              onMouseEnter={openWork}
-              onMouseLeave={scheduleCloseWork}
             >
               <div className="rounded-xl border border-slate-700 bg-slate-900 shadow-xl py-1.5">
                 {workProjects.map((p) => (
                   <Link
                     key={p.href}
                     href={p.href}
+                    onClick={closeWork}
                     className="block px-4 py-2.5 text-[14px] text-slate-300 hover:text-white hover:bg-slate-800 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900"
                   >
                     {p.label}
