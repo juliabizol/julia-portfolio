@@ -110,6 +110,12 @@ const testimonials = [
     name: "Victor Melo",
     title: "Project Manager · Former Manager",
   },
+  {
+    quote:
+      "When working on the Design System, Julia consistently brought thoughtful and well-considered solutions. She was able to identify opportunities for improvement, connect them with broader product needs, and propose solutions that helped make the system more consistent, scalable, and useful for the teams working with it.",
+    name: "Maryin Ortiz",
+    title: "Senior UX/UI Designer · Design Systems Lead",
+  },
 ];
 
 export default function AboutPage() {
@@ -345,11 +351,11 @@ export default function AboutPage() {
                 What People Say
               </h2>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-6">
               {testimonials.map((t, i) => (
                 <div
                   key={i}
-                  className="flex flex-col gap-5 rounded-xl border border-slate-700 bg-slate-800/50 p-6 md:p-8"
+                  className="flex flex-col justify-between gap-5 rounded-xl border border-slate-700 bg-slate-800/50 p-6 md:p-8"
                 >
                   <p className="text-[16px] leading-[26px] text-slate-300 italic">
                     &ldquo;{t.quote}&rdquo;
