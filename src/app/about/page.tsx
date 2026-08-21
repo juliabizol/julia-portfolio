@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import { ExternalLink, Lightbulb, Award } from "lucide-react";
+import { ExternalLink, CircleStar, Trophy } from "lucide-react";
 import { StickyNav } from "@/components/nav";
 import { Process } from "@/components/process";
 import { Contact } from "@/components/contact";
@@ -88,11 +88,11 @@ const experience = [
   },
 ];
 
-const achievementIcons = { lightbulb: Lightbulb, award: Award };
+const achievementIcons = { circleStar: CircleStar, trophy: Trophy };
 
 const achievements = [
   {
-    icon: "lightbulb" as const,
+    icon: "circleStar" as const,
     label: "Winner, AI Ideathon (Hackathon)",
     meta: "IXDA Florianópolis · 2026",
     desc: "Won first place in the AI Ideathon, an AI-focused hackathon, by developing a solution to a real-world problem through collaborative product thinking and rapid prototyping.",
@@ -101,7 +101,7 @@ const achievements = [
       "https://www.instagram.com/p/DZXdOBMFQaz/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==",
   },
   {
-    icon: "award" as const,
+    icon: "trophy" as const,
     label: "Unsung Hero Award",
     meta: "McFadyen Digital · Two-time recipient",
     desc: "Recognized twice for exceptional client focus, ownership, collaboration, and commitment to delivering high-quality work.",
@@ -341,9 +341,9 @@ export default function AboutPage() {
                 return (
                   <div
                     key={item.label}
-                    className="group flex h-full flex-col gap-3 rounded-xl border border-slate-700 bg-slate-800/50 p-6 md:p-7"
+                    className="flex h-full flex-col gap-3 rounded-xl border border-slate-700 bg-slate-800/50 p-6 md:p-7"
                   >
-                    {/* Glass icon + ambient glow */}
+                    {/* Glass icon + ambient glow (static: no hover/interaction states) */}
                     <div className="relative mb-2 flex h-14 w-14 items-center justify-center md:h-16 md:w-16">
                       <div
                         aria-hidden="true"
@@ -351,10 +351,10 @@ export default function AboutPage() {
                           background:
                             "radial-gradient(circle, var(--color-purple-600) 0%, transparent 70%)",
                         }}
-                        className="pointer-events-none absolute left-1/2 top-1/2 -z-10 h-[220px] w-[220px] -translate-x-1/2 -translate-y-1/2 rounded-full opacity-25 blur-[46px] transition-opacity duration-300 ease-out motion-reduce:transition-none group-hover:opacity-35 md:h-[280px] md:w-[280px]"
+                        className="pointer-events-none absolute left-1/2 top-1/2 -z-10 h-[220px] w-[220px] -translate-x-1/2 -translate-y-1/2 rounded-full opacity-25 blur-[46px] md:h-[280px] md:w-[280px]"
                       />
-                      <div className="flex h-14 w-14 items-center justify-center rounded-2xl border border-purple-300/30 bg-purple-400/10 shadow-[inset_0_1px_0_0_rgba(255,255,255,0.2),0_8px_20px_-8px_rgba(168,85,247,0.35)] backdrop-blur-sm transition-[box-shadow,border-color] duration-300 ease-out motion-reduce:transition-none group-hover:border-purple-300/50 group-hover:shadow-[inset_0_1px_0_0_rgba(255,255,255,0.3),0_10px_26px_-6px_rgba(168,85,247,0.5)] md:h-16 md:w-16">
-                        <Icon className="h-6 w-6 text-purple-200 md:h-7 md:w-7" strokeWidth={1.75} />
+                      <div className="flex h-14 w-14 items-center justify-center rounded-2xl border border-purple-300/30 bg-purple-400/10 shadow-[inset_0_1px_0_0_rgba(255,255,255,0.2),0_8px_20px_-8px_rgba(168,85,247,0.35)] backdrop-blur-sm md:h-16 md:w-16">
+                        <Icon className="h-6 w-6 text-purple-400 md:h-7 md:w-7" strokeWidth={1.75} />
                       </div>
                     </div>
                     <h3 className="text-[17px] md:text-[18px] font-semibold text-white">
