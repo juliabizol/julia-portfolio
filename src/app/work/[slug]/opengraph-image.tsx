@@ -71,7 +71,7 @@ export default async function Image({
               fontWeight: 400,
               letterSpacing: 3,
               textTransform: "uppercase",
-              color: ogColors.purple300,
+              color: ogColors.violet300,
               marginBottom: 24,
             }}
           >

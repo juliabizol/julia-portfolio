@@ -164,7 +164,7 @@ export default function AboutPage() {
                 <div
                   className="absolute bottom-0 right-0 h-[200px] w-[200px] rounded-full opacity-40 pointer-events-none"
                   style={{
-                    background: "radial-gradient(circle, var(--color-purple-800), transparent 70%)",
+                    background: "radial-gradient(circle, var(--color-violet-800), transparent 70%)",
                     filter: "blur(60px)",
                   }}
                 />
@@ -172,7 +172,7 @@ export default function AboutPage() {
 
               {/* Text */}
               <div className="max-w-[760px]">
-                <p className="text-[13px] font-medium tracking-[0.03em] text-purple-300 mb-5 md:mb-6">
+                <p className="text-[13px] font-medium tracking-[0.03em] text-violet-300 mb-5 md:mb-6">
                   ABOUT ME
                 </p>
                 <h1 className="text-[36px] sm:text-[48px] lg:text-[60px] font-bold leading-[1.1] tracking-[-0.02em] text-white mb-7 md:mb-9">
@@ -206,7 +206,7 @@ export default function AboutPage() {
         <section className="w-full border-t border-slate-800/60">
           <div className="mx-auto max-w-[1440px] px-5 md:px-10 lg:px-20 py-16 md:py-20">
             <div className="mb-10 md:mb-12 flex flex-col gap-3">
-              <p className="text-[13px] font-medium tracking-[0.03em] text-purple-300">
+              <p className="text-[13px] font-medium tracking-[0.03em] text-violet-300">
                 EXPERIENCE
               </p>
               <h2 className="text-[32px] md:text-[40px] font-bold tracking-[-0.01em] text-white">
@@ -258,7 +258,7 @@ export default function AboutPage() {
               <a
                 href="/Julia_Bizol_Resume.pdf"
                 download
-                className="inline-flex items-center gap-2 rounded-full border border-slate-700 hover:border-slate-500 active:border-slate-500 active:scale-[0.98] transition-all duration-200 ease-out px-7 py-[14px] text-[15px] font-semibold text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950"
+                className="inline-flex items-center gap-2 rounded-full border border-slate-700 hover:border-slate-500 active:border-slate-500 active:scale-[0.98] transition-all duration-200 ease-out px-7 py-[14px] text-[15px] font-semibold text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950"
               >
                 <svg
                   width="16"
@@ -301,7 +301,7 @@ export default function AboutPage() {
           <div className="mx-auto max-w-[1440px] px-5 md:px-10 lg:px-20 py-16 md:py-20">
             <div className="w-full md:w-2/3 lg:w-1/2">
               <div className="mb-10 md:mb-12 flex flex-col gap-3">
-                <p className="text-[13px] font-medium tracking-[0.03em] text-purple-300">
+                <p className="text-[13px] font-medium tracking-[0.03em] text-violet-300">
                   EXPERTISE
                 </p>
                 <h2 className="text-[32px] md:text-[40px] font-bold tracking-[-0.01em] text-white">
@@ -328,7 +328,7 @@ export default function AboutPage() {
         <section className="w-full border-t border-slate-800/60">
           <div className="mx-auto max-w-[1440px] px-5 md:px-10 lg:px-20 py-16 md:py-20">
             <div className="mb-10 md:mb-12 flex flex-col gap-3">
-              <p className="text-[13px] font-medium tracking-[0.03em] text-purple-300">
+              <p className="text-[13px] font-medium tracking-[0.03em] text-violet-300">
                 RECOGNITION
               </p>
               <h2 className="text-[32px] md:text-[40px] font-bold tracking-[-0.01em] text-white">
@@ -349,12 +349,12 @@ export default function AboutPage() {
                         aria-hidden="true"
                         style={{
                           background:
-                            "radial-gradient(circle, var(--color-purple-600) 0%, transparent 70%)",
+                            "radial-gradient(circle, var(--color-violet-600) 0%, transparent 70%)",
                         }}
                         className="pointer-events-none absolute left-1/2 top-1/2 -z-10 h-[220px] w-[220px] -translate-x-1/2 -translate-y-1/2 rounded-full opacity-25 blur-[46px] md:h-[280px] md:w-[280px]"
                       />
-                      <div className="flex h-14 w-14 items-center justify-center rounded-2xl border border-purple-300/30 bg-purple-400/10 shadow-[inset_0_1px_0_0_rgba(255,255,255,0.2),0_8px_20px_-8px_rgba(168,85,247,0.35)] backdrop-blur-sm md:h-16 md:w-16">
-                        <Icon className="h-6 w-6 text-purple-400 md:h-7 md:w-7" strokeWidth={1.75} />
+                      <div className="flex h-14 w-14 items-center justify-center rounded-2xl border-[0.5px] border-violet-300/30 bg-violet-400/10 shadow-[inset_0_1px_0_0_rgba(255,255,255,0.2),0_8px_20px_-8px_rgba(139,92,246,0.35)] backdrop-blur-sm md:h-16 md:w-16">
+                        <Icon className="h-6 w-6 text-violet-400 md:h-7 md:w-7" strokeWidth={1.75} />
                       </div>
                     </div>
                     <h3 className="text-[17px] md:text-[18px] font-semibold text-white">
@@ -368,7 +368,7 @@ export default function AboutPage() {
                       href={item.linkHref}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="mt-auto inline-flex items-center gap-1.5 pb-1 -mb-1 text-[14px] font-medium text-purple-300 hover:text-white active:text-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950"
+                      className="mt-auto inline-flex items-center gap-1.5 pb-1 -mb-1 text-[14px] font-medium text-violet-300 hover:text-white active:text-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950"
                     >
                       {item.linkLabel}
                       <ExternalLink size={14} strokeWidth={2} />
@@ -384,7 +384,7 @@ export default function AboutPage() {
         <section className="w-full border-t border-slate-800/60">
           <div className="mx-auto max-w-[1440px] px-5 md:px-10 lg:px-20 py-16 md:py-20">
             <div className="mb-10 md:mb-12 flex flex-col gap-3">
-              <p className="text-[13px] font-medium tracking-[0.03em] text-purple-300">
+              <p className="text-[13px] font-medium tracking-[0.03em] text-violet-300">
                 TESTIMONIALS
               </p>
               <h2 className="text-[32px] md:text-[40px] font-bold tracking-[-0.01em] text-white">

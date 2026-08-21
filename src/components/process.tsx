@@ -29,7 +29,7 @@ export function Process({ divider = false }: { divider?: boolean }) {
     >
       <div className="mx-auto max-w-[1440px] px-5 md:px-10 lg:px-20 py-16 md:py-20">
         <div className="mb-10 md:mb-12 flex flex-col gap-3">
-          <p className="text-[13px] font-medium tracking-[0.03em] text-purple-300">
+          <p className="text-[13px] font-medium tracking-[0.03em] text-violet-300">
             HOW I WORK
           </p>
           <h2 className="text-[32px] md:text-[40px] font-bold tracking-[-0.01em] text-white">
@@ -49,7 +49,7 @@ export function Process({ divider = false }: { divider?: boolean }) {
               key={step.num}
               className="flex flex-col gap-4 rounded-xl border border-slate-700 bg-slate-800/50 p-5 md:p-7"
             >
-              <span className="w-fit rounded-full bg-purple-900/50 px-3 py-1.5 text-[12px] font-bold tracking-[0.02em] text-purple-300">
+              <span className="w-fit rounded-full bg-violet-900/50 px-3 py-1.5 text-[12px] font-bold tracking-[0.02em] text-violet-300">
                 {step.num}
               </span>
               <h3 className="text-[18px] md:text-[20px] font-semibold text-white">

@@ -78,7 +78,7 @@ export function Nav({ activeSection }: { activeSection?: string }) {
       {/* Logo */}
       <a
         href="/"
-        className="text-[17px] md:text-[18px] font-bold text-white tracking-tight hover:text-purple-300 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950"
+        className="text-[17px] md:text-[18px] font-bold text-white tracking-tight hover:text-violet-300 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950"
       >
         Julia Bizol
       </a>
@@ -98,8 +98,8 @@ export function Nav({ activeSection }: { activeSection?: string }) {
             aria-expanded={workOpen}
             aria-haspopup="true"
             aria-controls="work-menu"
-            className={`flex items-center gap-1.5 py-0.5 -my-0.5 text-[15px] font-medium cursor-pointer transition-colors hover:text-purple-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950 ${
-              isWorkActive ? "text-purple-300" : "text-slate-300"
+            className={`flex items-center gap-1.5 py-0.5 -my-0.5 text-[15px] font-medium cursor-pointer transition-colors hover:text-violet-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950 ${
+              isWorkActive ? "text-violet-300" : "text-slate-300"
             }`}
           >
             Work
@@ -118,7 +118,7 @@ export function Nav({ activeSection }: { activeSection?: string }) {
                     key={p.href}
                     href={p.href}
                     onClick={closeWork}
-                    className="block px-4 py-2.5 text-[14px] text-slate-300 hover:text-white hover:bg-slate-800 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900"
+                    className="block px-4 py-2.5 text-[14px] text-slate-300 hover:text-white hover:bg-slate-800 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900"
                   >
                     {p.label}
                   </Link>
@@ -131,8 +131,8 @@ export function Nav({ activeSection }: { activeSection?: string }) {
         {/* About */}
         <Link
           href="/about"
-          className={`py-0.5 -my-0.5 text-[15px] font-medium transition-colors hover:text-purple-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950 ${
-            isAboutActive ? "text-purple-300" : "text-slate-300"
+          className={`py-0.5 -my-0.5 text-[15px] font-medium transition-colors hover:text-violet-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950 ${
+            isAboutActive ? "text-violet-300" : "text-slate-300"
           }`}
         >
           About
@@ -142,14 +142,14 @@ export function Nav({ activeSection }: { activeSection?: string }) {
       {/* Desktop CTA */}
       <a
         href="/#contact"
-        className="hidden md:block bg-purple-800 hover:bg-purple-700 active:bg-purple-700 active:scale-[0.98] transition-all duration-200 ease-out text-white text-[14px] font-medium px-5 py-[10px] rounded-full focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950"
+        className="hidden md:block bg-violet-800 hover:bg-violet-700 active:bg-violet-700 active:scale-[0.98] transition-all duration-200 ease-out text-white text-[14px] font-medium px-5 py-[10px] rounded-full focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950"
       >
         Let&apos;s talk
       </a>
 
       {/* Mobile hamburger */}
       <button
-        className="md:hidden flex flex-col gap-[5px] p-2 active:opacity-70 transition-opacity duration-200 ease-out focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950"
+        className="md:hidden flex flex-col gap-[5px] p-2 active:opacity-70 transition-opacity duration-200 ease-out focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950"
         onClick={() => setMenuOpen((v) => !v)}
         aria-label="Toggle menu"
         aria-expanded={menuOpen}
@@ -168,7 +168,7 @@ export function Nav({ activeSection }: { activeSection?: string }) {
             onClick={() => setMobileWorkOpen((v) => !v)}
             aria-expanded={mobileWorkOpen}
             aria-controls="mobile-work-submenu"
-            className="flex items-center justify-between px-5 py-3 text-[16px] font-medium text-slate-300 hover:text-white hover:bg-slate-800 active:opacity-70 transition-colors duration-200 ease-out focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900"
+            className="flex items-center justify-between px-5 py-3 text-[16px] font-medium text-slate-300 hover:text-white hover:bg-slate-800 active:opacity-70 transition-colors duration-200 ease-out focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900"
           >
             Work
             <Chevron open={mobileWorkOpen} />
@@ -180,7 +180,7 @@ export function Nav({ activeSection }: { activeSection?: string }) {
                   key={p.href}
                   href={p.href}
                   onClick={() => setMenuOpen(false)}
-                  className="block px-8 py-2.5 text-[14px] text-slate-300 hover:text-white active:opacity-70 transition-colors duration-200 ease-out focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900"
+                  className="block px-8 py-2.5 text-[14px] text-slate-300 hover:text-white active:opacity-70 transition-colors duration-200 ease-out focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900"
                 >
                   {p.label}
                 </Link>
@@ -192,7 +192,7 @@ export function Nav({ activeSection }: { activeSection?: string }) {
           <Link
             href="/about"
             onClick={() => setMenuOpen(false)}
-            className="px-5 py-3 text-[16px] font-medium text-slate-300 hover:text-white hover:bg-slate-800 active:opacity-70 transition-colors duration-200 ease-out focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900"
+            className="px-5 py-3 text-[16px] font-medium text-slate-300 hover:text-white hover:bg-slate-800 active:opacity-70 transition-colors duration-200 ease-out focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900"
           >
             About
           </Link>
@@ -202,7 +202,7 @@ export function Nav({ activeSection }: { activeSection?: string }) {
             <a
               href="/#contact"
               onClick={() => setMenuOpen(false)}
-              className="inline-block bg-purple-800 hover:bg-purple-700 active:bg-purple-700 active:scale-[0.98] text-white text-[14px] font-medium px-5 py-[10px] rounded-full transition-all duration-200 ease-out focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900"
+              className="inline-block bg-violet-800 hover:bg-violet-700 active:bg-violet-700 active:scale-[0.98] text-white text-[14px] font-medium px-5 py-[10px] rounded-full transition-all duration-200 ease-out focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900"
             >
               Let&apos;s talk
             </a>

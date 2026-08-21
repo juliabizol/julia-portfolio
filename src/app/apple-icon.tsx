@@ -23,7 +23,7 @@ export default async function AppleIcon() {
           fontSize: 84,
           fontWeight: 700,
           letterSpacing: -3,
-          color: ogColors.purple300,
+          color: ogColors.violet300,
         }}
       >
         JB

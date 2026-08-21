@@ -5,7 +5,7 @@ export type TagSize = "sm" | "md";
 
 const variantClasses: Record<TagVariant, string> = {
   neutral: "border border-slate-700 bg-slate-800/50 text-slate-300",
-  accent: "bg-purple-900/50 text-purple-300",
+  accent: "bg-violet-900/50 text-violet-300",
 };
 
 const sizeClasses: Record<TagSize, string> = {

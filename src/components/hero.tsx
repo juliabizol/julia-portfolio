@@ -3,11 +3,11 @@ import { Tag } from "@/components/tag";
 export function Hero() {
   return (
     <section className="relative w-full">
-      {/* Purple glow orb */}
+      {/* Violet glow orb */}
       <div
         className="pointer-events-none absolute right-[-50px] top-[-100px] h-[400px] w-[400px] md:h-[700px] md:w-[700px] rounded-full opacity-20"
         style={{
-          background: "radial-gradient(circle, var(--color-purple-800) 0%, transparent 70%)",
+          background: "radial-gradient(circle, var(--color-violet-800) 0%, transparent 70%)",
           filter: "blur(80px)",
         }}
       />
@@ -42,13 +42,13 @@ export function Hero() {
         <div className="mt-8 md:mt-10 flex flex-col sm:flex-row items-center gap-3 md:gap-4 w-full sm:w-auto">
           <a
             href="#work"
-            className="w-full sm:w-auto text-center rounded-full bg-purple-800 hover:bg-purple-700 active:bg-purple-700 active:scale-[0.98] transition-all duration-200 ease-out px-7 py-[14px] text-[15px] font-semibold text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950"
+            className="w-full sm:w-auto text-center rounded-full bg-violet-800 hover:bg-violet-700 active:bg-violet-700 active:scale-[0.98] transition-all duration-200 ease-out px-7 py-[14px] text-[15px] font-semibold text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950"
           >
             View my work
           </a>
           <a
             href="#contact"
-            className="w-full sm:w-auto text-center rounded-full border border-slate-700 hover:border-slate-500 active:border-slate-500 active:scale-[0.98] transition-all duration-200 ease-out px-7 py-[14px] text-[15px] font-semibold text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950"
+            className="w-full sm:w-auto text-center rounded-full border border-slate-700 hover:border-slate-500 active:border-slate-500 active:scale-[0.98] transition-all duration-200 ease-out px-7 py-[14px] text-[15px] font-semibold text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950"
           >
             Get in touch
           </a>

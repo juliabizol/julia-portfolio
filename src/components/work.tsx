@@ -25,8 +25,8 @@ export function ProjectCard({
     <Link
       href={`/work/${slug}`}
       {...handlers}
-      className={`group flex h-full flex-col overflow-hidden rounded-xl border bg-slate-800/50 [transition:transform_150ms_cubic-bezier(0.4,0,0.2,1),border-color_100ms_cubic-bezier(0.4,0,0.2,1),box-shadow_150ms_cubic-bezier(0.4,0,0.2,1)] hover:border-purple-500/30 hover:shadow-[0_8px_24px_-8px_rgba(168,85,247,0.15)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950 ${
-        pressed ? "border-purple-500/30 shadow-[0_8px_24px_-8px_rgba(168,85,247,0.15)] scale-[0.99]" : "border-slate-700"
+      className={`group flex h-full flex-col overflow-hidden rounded-xl border bg-slate-800/50 [transition:transform_150ms_cubic-bezier(0.4,0,0.2,1),border-color_100ms_cubic-bezier(0.4,0,0.2,1),box-shadow_150ms_cubic-bezier(0.4,0,0.2,1)] hover:border-violet-500/30 hover:shadow-[0_8px_24px_-8px_rgba(139,92,246,0.15)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950 ${
+        pressed ? "border-violet-500/30 shadow-[0_8px_24px_-8px_rgba(139,92,246,0.15)] scale-[0.99]" : "border-slate-700"
       }`}
     >
       <div className="relative h-[200px] md:h-[220px] w-full shrink-0">
@@ -38,7 +38,7 @@ export function ProjectCard({
           sizes="(min-width: 768px) 50vw, 100vw"
           quality={90}
         />
-        <div className="pointer-events-none absolute inset-0 bg-gradient-to-br from-purple-400 to-purple-700 opacity-0 [transition:opacity_150ms_cubic-bezier(0.4,0,0.2,1)] group-hover:opacity-[0.06]" />
+        <div className="pointer-events-none absolute inset-0 bg-gradient-to-br from-violet-400 to-violet-700 opacity-0 [transition:opacity_150ms_cubic-bezier(0.4,0,0.2,1)] group-hover:opacity-[0.06]" />
       </div>
       <div className="flex flex-1 flex-col gap-3 p-5 md:p-6 min-w-0">
         <div className="flex flex-nowrap gap-1.5 overflow-hidden">
@@ -54,7 +54,7 @@ export function ProjectCard({
         <p className="text-[14px] leading-[22px] text-slate-300">{desc}</p>
         <span
           className={`mt-auto pt-1 text-[13px] font-medium transition-colors ${
-            pressed ? "text-white" : "text-purple-300 group-hover:text-white"
+            pressed ? "text-white" : "text-violet-300 group-hover:text-white"
           }`}
         >
           View case study →
@@ -69,7 +69,7 @@ export function Work() {
     <section id="work" className="w-full">
       <div className="mx-auto max-w-[1440px] px-5 md:px-10 lg:px-20 pb-20 md:pb-28 lg:pb-32">
         <div className="mb-10 md:mb-12 flex flex-col gap-3">
-          <p className="text-[13px] font-medium tracking-[0.03em] text-purple-300">
+          <p className="text-[13px] font-medium tracking-[0.03em] text-violet-300">
             SELECTED WORK
           </p>
           <h2 className="text-[32px] md:text-[40px] font-bold tracking-[-0.01em] text-white">

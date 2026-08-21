@@ -50,7 +50,7 @@ export async function generateMetadata({
 
 function SectionLabel({ children }: { children: React.ReactNode }) {
   return (
-    <p className="text-[13px] font-medium tracking-[0.03em] text-purple-300 mb-4">
+    <p className="text-[13px] font-medium tracking-[0.03em] text-violet-300 mb-4">
       {children}
     </p>
   );
@@ -94,7 +94,7 @@ export default async function CaseStudyPage({
         <div className={`${px} pt-8 md:pt-10`}>
           <Link
             href="/#work"
-            className="inline-flex items-center gap-2 py-0.5 -my-0.5 text-[14px] font-medium text-slate-400 hover:text-white active:text-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950"
+            className="inline-flex items-center gap-2 py-0.5 -my-0.5 text-[14px] font-medium text-slate-400 hover:text-white active:text-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950"
           >
             ← View all projects
           </Link>
@@ -122,7 +122,7 @@ export default async function CaseStudyPage({
           <div className="flex flex-wrap gap-8 md:gap-12 pb-10 md:pb-12 border-b border-slate-800/60">
             {project.metrics.map((m) => (
               <div key={m.label} className="flex flex-col gap-1">
-                <span className="text-[28px] md:text-[36px] font-bold text-purple-300 leading-none">
+                <span className="text-[28px] md:text-[36px] font-bold text-violet-300 leading-none">
                   {m.value}
                 </span>
                 <span className="text-[12px] md:text-[13px] text-slate-400">{m.label}</span>
@@ -266,7 +266,7 @@ export default async function CaseStudyPage({
                 <ul className="flex flex-col gap-3 md:gap-4">
                   {project.research.findings.map((f, i) => (
                     <li key={i} className="flex gap-3 text-[14px] md:text-[15px] leading-[22px] md:leading-[24px] text-slate-300">
-                      <span className="mt-1.5 h-2 w-2 shrink-0 rounded-full bg-purple-300" />
+                      <span className="mt-1.5 h-2 w-2 shrink-0 rounded-full bg-violet-300" />
                       {f}
                     </li>
                   ))}
@@ -286,7 +286,7 @@ export default async function CaseStudyPage({
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-6 mb-8 md:mb-12">
               {project.approach.map((step, i) => (
                 <div key={step.step} className="flex flex-col gap-3 md:gap-4 rounded-xl border border-slate-700 bg-slate-800/50 p-5 md:p-6">
-                  <span className="w-fit rounded-full bg-purple-900/50 px-3 py-1 text-[14px] font-bold text-purple-300">
+                  <span className="w-fit rounded-full bg-violet-900/50 px-3 py-1 text-[14px] font-bold text-violet-300">
                     {String(i + 1).padStart(2, "0")}
                   </span>
                   <h3 className="text-[15px] md:text-[16px] font-semibold text-white">{step.step}</h3>
@@ -396,7 +396,7 @@ export default async function CaseStudyPage({
                   } ${i === 0 ? "" : "border-t border-slate-800/60"}`}
                 >
                   <div className="flex flex-1 flex-col gap-4 md:gap-5">
-                    <span className="w-fit rounded-full bg-purple-900/50 px-3 py-1 text-[14px] md:text-[16px] font-bold text-purple-300">
+                    <span className="w-fit rounded-full bg-violet-900/50 px-3 py-1 text-[14px] md:text-[16px] font-bold text-violet-300">
                       {String(i + 1).padStart(2, "0")}
                     </span>
                     <h3 className="text-[20px] md:text-[24px] font-semibold text-white">
@@ -446,7 +446,7 @@ export default async function CaseStudyPage({
               {project.outcomes.map((o) => (
                 <div key={o.label} className="flex flex-col gap-2 md:gap-3 rounded-xl border border-slate-700 bg-slate-800/50 p-6 md:p-8">
                   {o.icon ? (
-                    <span className="text-purple-300">
+                    <span className="text-violet-300">
                       {o.icon === "check" ? (
                         <Check className="h-10 w-10 md:h-12 md:w-12" strokeWidth={2} />
                       ) : o.icon === "star" ? (
@@ -464,7 +464,7 @@ export default async function CaseStudyPage({
                       )}
                     </span>
                   ) : (
-                    <span className="text-[40px] md:text-[48px] font-bold leading-none text-purple-300">
+                    <span className="text-[40px] md:text-[48px] font-bold leading-none text-violet-300">
                       {o.value}
                     </span>
                   )}

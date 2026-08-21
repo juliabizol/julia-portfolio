@@ -185,7 +185,7 @@ export const projects: Project[] = [
     learningsIntro:
       "Working on BetterPet Passport reinforced that evolving a product requires more than designing new features. It requires understanding the problems behind user behavior, business requirements, and operational constraints before deciding what to build.\n\nThroughout this project, research, product analytics, usability testing, and cross-functional collaboration informed design decisions that balanced user needs, business requirements, and technical constraints. This approach made it possible to continuously evolve a complex product while preserving a clear, intuitive, and consistent experience for guests.",
     learningsImage: "/projects/betterpet-passport/final-thoughts.png",
-    accent: "from-purple-900/70 to-slate-800",
+    accent: "from-violet-900/70 to-slate-800",
     image: "/projects/betterpet-passport/hero.png",
     heroContain: true,
   },

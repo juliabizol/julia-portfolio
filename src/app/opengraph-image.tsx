@@ -36,7 +36,7 @@ export default async function Image() {
             height: 720,
             borderRadius: "50%",
             display: "flex",
-            background: `radial-gradient(circle, ${ogColors.purple800} 0%, rgba(2,6,23,0) 70%)`,
+            background: `radial-gradient(circle, ${ogColors.violet800} 0%, rgba(2,6,23,0) 70%)`,
             opacity: 0.22,
           }}
         />
@@ -55,7 +55,7 @@ export default async function Image() {
               fontWeight: 400,
               letterSpacing: 2,
               textTransform: "uppercase",
-              color: ogColors.purple300,
+              color: ogColors.violet300,
               opacity: 0.75,
               marginBottom: 28,
             }}

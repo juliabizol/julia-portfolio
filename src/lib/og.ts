@@ -48,13 +48,13 @@ export async function loadPublicImageAsDataUri(publicPath: string) {
 /** Colors matching the site's existing Tailwind palette, for reuse in ImageResponse (which can't read Tailwind classes). */
 export const ogColors = {
   background: SITE_THEME_COLOR, // slate-950
-  purple300: "#d8b4fe",
-  purple800: "#6b21a8",
-  purple900: "#581c87",
-  /** purple900 darkened ~2 shades (same hue/saturation, lightness -17pp).
+  violet300: "#c4b5fd",
+  violet800: "#5b21b6",
+  violet900: "#4c1d95",
+  /** violet900 darkened ~2 shades (same hue/saturation, lightness -17pp).
    * Used only for the favicon: a near-black favicon background reads as
    * indistinguishable from Safari's own dark tab chrome. */
-  faviconBackground: "#290d3f",
+  faviconBackground: "#270f4c",
   white: "#ffffff",
   slate300: "#cbd5e1",
   slate700: "#334155",

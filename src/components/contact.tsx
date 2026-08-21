@@ -92,11 +92,11 @@ export function Contact({ divider = false }: { divider?: boolean }) {
       id="contact"
       className={`relative flex flex-col overflow-hidden ${divider ? "border-t border-slate-800/60" : ""}`}
     >
-      {/* Purple glow */}
+      {/* Violet glow */}
       <div
         className="pointer-events-none absolute left-[-100px] bottom-0 h-[400px] w-[400px] md:h-[600px] md:w-[600px] rounded-full opacity-12"
         style={{
-          background: "radial-gradient(circle, var(--color-purple-800) 0%, transparent 70%)",
+          background: "radial-gradient(circle, var(--color-violet-800) 0%, transparent 70%)",
           filter: "blur(100px)",
         }}
       />
@@ -107,7 +107,7 @@ export function Contact({ divider = false }: { divider?: boolean }) {
           divider ? "py-20 md:py-32" : "pb-20 md:pb-28 lg:pb-32"
         }`}
       >
-        <p className="text-[13px] font-medium tracking-[0.03em] text-purple-300">
+        <p className="text-[13px] font-medium tracking-[0.03em] text-violet-300">
           GET IN TOUCH
         </p>
 
@@ -123,7 +123,7 @@ export function Contact({ divider = false }: { divider?: boolean }) {
         </p>
 
         {/* Email copy widget */}
-        <div className="inline-flex max-w-full items-center gap-3 rounded-xl border border-purple-300/20 bg-[#0B1220] p-3">
+        <div className="inline-flex max-w-full items-center gap-3 rounded-xl border border-violet-300/20 bg-[#0B1220] p-3">
           <div className="flex items-center justify-center rounded-lg bg-[#172135] p-2.5">
             <svg
               width="16"
@@ -149,7 +149,7 @@ export function Contact({ divider = false }: { divider?: boolean }) {
           <button
             onClick={handleCopy}
             aria-label="Copy email address"
-            className="flex items-center gap-2 rounded-lg bg-purple-300 px-2 py-2 text-[13px] font-bold text-slate-950 hover:bg-purple-200 active:opacity-90 active:scale-[0.98] transition-all duration-200 ease-out cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950"
+            className="flex items-center gap-2 rounded-lg bg-violet-300 px-2 py-2 text-[13px] font-bold text-slate-950 hover:bg-violet-200 active:opacity-90 active:scale-[0.98] transition-all duration-200 ease-out cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950"
           >
             {copied ? (
               <svg
@@ -200,7 +200,7 @@ export function Contact({ divider = false }: { divider?: boolean }) {
               {...(s.download
                 ? { download: true }
                 : { target: "_blank", rel: "noopener noreferrer" })}
-              className="inline-flex items-center gap-2 py-0.5 -my-0.5 text-[14px] font-medium text-slate-400 hover:text-white active:text-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950"
+              className="inline-flex items-center gap-2 py-0.5 -my-0.5 text-[14px] font-medium text-slate-400 hover:text-white active:text-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950"
             >
               <s.icon />
               {s.label}

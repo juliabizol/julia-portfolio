@@ -13,7 +13,7 @@ export default async function Icon() {
       // are transparent, the rest of the canvas is fully opaque — measured
       // and confirmed this is not a "shrunk icon with a big margin," just a
       // normal rounded-rect clip. Background uses faviconBackground
-      // (purple900 darkened ~2 shades).
+      // (violet900 darkened ~2 shades).
       <div
         style={{
           width: "100%",
@@ -27,7 +27,7 @@ export default async function Icon() {
           fontSize: 18,
           fontWeight: 700,
           letterSpacing: -1,
-          color: ogColors.purple300,
+          color: ogColors.violet300,
         }}
       >
         JB
