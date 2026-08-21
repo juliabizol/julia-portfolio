@@ -1,7 +1,7 @@
 import { notFound } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
-import { Check, TrendingUp, Star, ClockArrowDown, GitFork } from "lucide-react";
+import { Check, TrendingUp, Star, ClockArrowDown, GitFork, CircleDollarSign } from "lucide-react";
 import { getPublishedProject, publishedProjects } from "@/lib/projects";
 import { StickyNav } from "@/components/nav";
 import { ProjectCard } from "@/components/work";
@@ -17,6 +17,7 @@ const outcomeIcons = {
   star: Star,
   "clock-arrow-down": ClockArrowDown,
   "git-fork": GitFork,
+  "circle-dollar-sign": CircleDollarSign,
 };
 
 export function generateStaticParams() {
@@ -455,9 +456,9 @@ export default async function CaseStudyPage({
               {project.outcomes.map((o) => (
                 <div key={o.label} className="flex flex-col gap-2 md:gap-3 rounded-xl border border-slate-700 bg-slate-800/50 p-6 md:p-8">
                   {o.icon ? (
-                    <GlassIcon size="fixed" icon={outcomeIcons[o.icon] ?? TrendingUp} />
+                    <GlassIcon size="fixed" icon={outcomeIcons[o.icon] ?? TrendingUp} className="mb-2" />
                   ) : (
-                    <GlassIcon size="fixed" value={o.value} />
+                    <GlassIcon size="fixed" value={o.value} className="mb-2" />
                   )}
                   <span className="text-[15px] md:text-[16px] font-semibold text-white">{o.label}</span>
                   <p className="text-[13px] md:text-[14px] leading-[21px] md:leading-[22px] text-slate-400">{o.description}</p>

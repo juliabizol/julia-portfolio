@@ -42,7 +42,7 @@ export type Project = {
     value: string;
     label: string;
     description: string;
-    icon?: "check" | "trending-up" | "star" | "clock-arrow-down" | "git-fork";
+    icon?: "check" | "trending-up" | "star" | "clock-arrow-down" | "git-fork" | "circle-dollar-sign";
   }[];
   learningsTitle?: string;
   learningsIntro: string;
@@ -165,8 +165,9 @@ export const projects: Project[] = [
     outcomesTitle: "Making complexity feel simple",
     outcomes: [
       {
-        value: "98%",
-        label: "Submission rate",
+        value: "",
+        icon: "trending-up",
+        label: "98% submission rate",
         description: "Achieved a 98% submission rate while continuously evolving the product to support increasingly complex guest scenarios and business requirements.",
       },
       {
@@ -316,7 +317,7 @@ export const projects: Project[] = [
       },
       {
         value: "",
-        icon: "trending-up",
+        icon: "circle-dollar-sign",
         label: "Enabled marketplace expansion",
         description:
           "The new purchasing model supported the expansion of the marketplace by introducing clear scholarship eligibility guidance directly into the interface, enabling broader product offerings without adding complexity for families.",
