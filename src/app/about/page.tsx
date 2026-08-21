@@ -51,30 +51,40 @@ const experience = [
     title: "Product Designer",
     org: "PetScreening · Pet & Hospitality Technology",
     desc: "Led product design across consumer products and platforms supporting complex operational workflows, balancing user needs, business goals, and technical constraints. Combined product analytics, user research, and usability testing to identify opportunities, validate ideas, and guide product decisions. Collaborated closely with Product and Engineering, contributed to a scalable Design System, and explored AI-powered product experiences.",
+    logo: "/ps-logo.png",
+    company: "PetScreening",
   },
   {
     period: "2021 – 2024",
     title: "Senior UX Designer",
     org: "McFadyen Digital · E-commerce & Marketplaces",
     desc: "Designed end-to-end experiences for enterprise e-commerce and marketplace products, translating complex business requirements into intuitive user experiences. Facilitated workshops, presented UX strategies to stakeholders, and partnered with cross-functional teams across multiple B2B and B2C engagements, including Fortune 500 clients. Promoted to Senior UX Designer and twice recognized with the Unsung Hero Award.",
+    logo: "/mcf-logo.png",
+    company: "McFadyen Digital",
   },
   {
     period: "2020 – 2021",
     title: "UX/UI Designer",
     org: "Henry Schein · Healthcare Technology",
     desc: "Improved the customer experience of a B2B e-commerce platform through UX improvements, responsive design, and close collaboration with Marketing and Engineering, strengthening usability and information architecture across key customer journeys.",
+    logo: "/hs-logo.png",
+    company: "Henry Schein",
   },
   {
     period: "2015 – 2020",
     title: "Product Designer / UX/UI Designer",
     org: "AutoImpact · Automotive Technology",
     desc: "Built the company's digital products from research through implementation, conducting field research, designing mobile applications, websites, and customer-facing experiences while working directly with business stakeholders to translate user needs into practical product solutions.",
+    logo: "/ai-logo.png",
+    company: "AutoImpact",
   },
   {
     period: "2014 – 2015",
     title: "UI Designer",
     org: "Shaw and Partners · Digital Product Agency",
     desc: "Began my design career creating responsive websites and digital experiences for U.S. clients, building the visual design foundation that later evolved into product design.",
+    logo: "/sp-logo.png",
+    company: "Shaw and Partners",
   },
 ];
 
@@ -207,16 +217,25 @@ export default function AboutPage() {
               {experience.map((item, i) => (
                 <div
                   key={i}
-                  className="grid grid-cols-1 md:grid-cols-[200px_1fr] gap-4 md:gap-12 py-8 md:py-10 border-t border-slate-800/60"
+                  className="grid grid-cols-1 md:grid-cols-[240px_1fr] gap-4 md:gap-12 py-8 md:py-10 border-t border-slate-800/60"
                 >
-                  <div>
-                    <p className="text-[13px] font-medium text-slate-400 mb-1">
-                      {item.period}
-                    </p>
-                    <p className="text-[15px] font-semibold text-white">
-                      {item.title}
-                    </p>
-                    <p className="text-[13px] text-slate-400 mt-0.5">{item.org}</p>
+                  <div className="flex items-start gap-3">
+                    <Image
+                      src={item.logo}
+                      alt={`${item.company} logo`}
+                      width={56}
+                      height={56}
+                      className="shrink-0"
+                    />
+                    <div>
+                      <p className="text-[13px] font-medium text-slate-400 mb-1">
+                        {item.period}
+                      </p>
+                      <p className="text-[15px] font-semibold text-white">
+                        {item.title}
+                      </p>
+                      <p className="text-[13px] text-slate-400 mt-0.5">{item.org}</p>
+                    </div>
                   </div>
                   <p className="text-[16px] leading-[26px] text-slate-300 max-w-[68ch]">
                     {item.desc}
