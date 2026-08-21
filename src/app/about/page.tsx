@@ -8,6 +8,7 @@ import { Tag } from "@/components/tag";
 import { SITE_NAME, SITE_DESCRIPTION } from "@/lib/site";
 import { JsonLd } from "@/components/json-ld";
 import { getBreadcrumbJsonLd } from "@/lib/structured-data";
+import { GlassIcon } from "@/components/glass-icon";
 
 const title = "Julia Bizol | About";
 const description = SITE_DESCRIPTION;
@@ -343,20 +344,7 @@ export default function AboutPage() {
                     key={item.label}
                     className="flex h-full flex-col gap-3 rounded-xl border border-slate-700 bg-slate-800/50 p-6 md:p-7"
                   >
-                    {/* Glass icon + ambient glow (static: no hover/interaction states) */}
-                    <div className="relative mb-2 flex h-14 w-14 items-center justify-center md:h-16 md:w-16">
-                      <div
-                        aria-hidden="true"
-                        style={{
-                          background:
-                            "radial-gradient(circle, var(--color-violet-600) 0%, transparent 70%)",
-                        }}
-                        className="pointer-events-none absolute left-1/2 top-1/2 -z-10 h-[220px] w-[220px] -translate-x-1/2 -translate-y-1/2 rounded-full opacity-25 blur-[46px] md:h-[280px] md:w-[280px]"
-                      />
-                      <div className="flex h-14 w-14 items-center justify-center rounded-2xl border-[0.5px] border-violet-300/30 bg-violet-400/10 shadow-[inset_0_1px_0_0_rgba(255,255,255,0.2),0_8px_20px_-8px_rgba(139,92,246,0.35)] backdrop-blur-sm md:h-16 md:w-16">
-                        <Icon className="h-6 w-6 text-violet-400 md:h-7 md:w-7" strokeWidth={1.75} />
-                      </div>
-                    </div>
+                    <GlassIcon icon={Icon} className="mb-2" />
                     <h3 className="text-[17px] md:text-[18px] font-semibold text-white">
                       {item.label}
                     </h3>

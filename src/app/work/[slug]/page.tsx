@@ -9,6 +9,15 @@ import { Tag } from "@/components/tag";
 import { SITE_NAME } from "@/lib/site";
 import { JsonLd } from "@/components/json-ld";
 import { getBreadcrumbJsonLd, getCreativeWorkJsonLd } from "@/lib/structured-data";
+import { GlassIcon } from "@/components/glass-icon";
+
+const outcomeIcons = {
+  check: Check,
+  "trending-up": TrendingUp,
+  star: Star,
+  "clock-arrow-down": ClockArrowDown,
+  "git-fork": GitFork,
+};
 
 export function generateStaticParams() {
   return publishedProjects.map((p) => ({ slug: p.slug }));
@@ -446,27 +455,9 @@ export default async function CaseStudyPage({
               {project.outcomes.map((o) => (
                 <div key={o.label} className="flex flex-col gap-2 md:gap-3 rounded-xl border border-slate-700 bg-slate-800/50 p-6 md:p-8">
                   {o.icon ? (
-                    <span className="text-violet-300">
-                      {o.icon === "check" ? (
-                        <Check className="h-10 w-10 md:h-12 md:w-12" strokeWidth={2} />
-                      ) : o.icon === "star" ? (
-                        <span className="flex items-center gap-1">
-                          {Array.from({ length: 5 }).map((_, si) => (
-                            <Star key={si} className="h-10 w-10 md:h-12 md:w-12" strokeWidth={2} />
-                          ))}
-                        </span>
-                      ) : o.icon === "clock-arrow-down" ? (
-                        <ClockArrowDown className="h-10 w-10 md:h-12 md:w-12" strokeWidth={2} />
-                      ) : o.icon === "git-fork" ? (
-                        <GitFork className="h-10 w-10 md:h-12 md:w-12" strokeWidth={2} />
-                      ) : (
-                        <TrendingUp className="h-10 w-10 md:h-12 md:w-12" strokeWidth={2} />
-                      )}
-                    </span>
+                    <GlassIcon size="fixed" icon={outcomeIcons[o.icon] ?? TrendingUp} />
                   ) : (
-                    <span className="text-[40px] md:text-[48px] font-bold leading-none text-violet-300">
-                      {o.value}
-                    </span>
+                    <GlassIcon size="fixed" value={o.value} />
                   )}
                   <span className="text-[15px] md:text-[16px] font-semibold text-white">{o.label}</span>
                   <p className="text-[13px] md:text-[14px] leading-[21px] md:leading-[22px] text-slate-400">{o.description}</p>
