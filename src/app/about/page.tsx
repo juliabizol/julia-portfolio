@@ -224,7 +224,7 @@ export default function AboutPage() {
                   key={i}
                   className="grid grid-cols-1 md:grid-cols-[240px_1fr] gap-4 md:gap-12 py-8 md:py-10 border-t border-slate-800/60"
                 >
-                  <div className="flex items-start gap-3">
+                  <div className="flex items-start gap-4">
                     <Image
                       src={item.logo}
                       alt={`${item.company} logo`}
