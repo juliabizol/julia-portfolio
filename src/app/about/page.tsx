@@ -100,9 +100,9 @@ const achievements = [
 const testimonials = [
   {
     quote:
-      "Julia has a great ability to understand user needs and turn insights into practical, effective solutions. She also shared her expertise by leading a UX workshop that was incredibly valuable for our team. Her dedication, knowledge, and collaborative mindset made a lasting impact, and I highly recommend her as a UX professional.",
-    name: "Gustavo Felix Gomes",
-    title: "Data Engineer",
+      "When working on the Design System, Julia consistently brought thoughtful and well-considered solutions. She was able to identify opportunities for improvement, connect them with broader product needs, and propose solutions that helped make the system more consistent, scalable, and useful for the teams working with it.",
+    name: "Maryin Ortiz",
+    title: "Senior UX/UI Designer · Design Systems Lead",
   },
   {
     quote:
@@ -112,9 +112,9 @@ const testimonials = [
   },
   {
     quote:
-      "When working on the Design System, Julia consistently brought thoughtful and well-considered solutions. She was able to identify opportunities for improvement, connect them with broader product needs, and propose solutions that helped make the system more consistent, scalable, and useful for the teams working with it.",
-    name: "Maryin Ortiz",
-    title: "Senior UX/UI Designer · Design Systems Lead",
+      "Julia has a great ability to understand user needs and turn insights into practical, effective solutions. She also shared her expertise by leading a UX workshop that was incredibly valuable for our team. Her dedication, knowledge, and collaborative mindset made a lasting impact, and I highly recommend her as a UX professional.",
+    name: "Gustavo Felix Gomes",
+    title: "Data Engineer",
   },
 ];
 
